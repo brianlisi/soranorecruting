@@ -467,21 +467,93 @@ function ProblemSection() {
       icon: <Megaphone size={22} color="#f5a623" />,
       title: "The mandate came from above",
       body: "Leadership announced an AI initiative. Every manager is expected to show what their team is doing. You have 90 days and no roadmap.",
+      clipping: (
+        <div style={{ background: "#1a1d21", borderRadius: "8px", overflow: "hidden", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>
+          <div style={{ padding: "6px 10px", borderBottom: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", gap: "4px" }}>
+            <span style={{ color: "rgba(255,255,255,0.4)" }}>#</span>
+            <span style={{ color: "rgba(255,255,255,0.65)", fontWeight: 500 }}>operations</span>
+            <span style={{ color: "rgba(255,255,255,0.25)", marginLeft: "auto" }}>Slack</span>
+          </div>
+          <div style={{ padding: "8px 10px", display: "flex", gap: "8px" }}>
+            <div style={{ width: "24px", height: "24px", borderRadius: "4px", background: "#4a154b", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <span style={{ color: "#fff", fontSize: "9px", fontWeight: 600 }}>S</span>
+            </div>
+            <div>
+              <div style={{ display: "flex", gap: "6px", marginBottom: "3px", alignItems: "baseline" }}>
+                <span style={{ color: "#fff", fontWeight: 600 }}>Sarah</span>
+                <span style={{ color: "rgba(255,255,255,0.35)", fontSize: "9px" }}>VP Operations</span>
+              </div>
+              <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.45, margin: 0 }}>
+                Hey — leadership wants each team to present their AI strategy by end of quarter. Can you put something together?
+              </p>
+            </div>
+          </div>
+        </div>
+      ),
     },
     {
       icon: <Clock size={22} color="#f5a623" />,
       title: "IT has a 6-month backlog",
       body: "You submitted the request. It went into a queue behind 47 other tickets. Your deadline is next quarter.",
+      clipping: (
+        <div style={{ background: "#fff", borderRadius: "8px", overflow: "hidden", fontFamily: "'Inter', sans-serif" }}>
+          <div style={{ background: "#dc2626", padding: "6px 10px", display: "flex", alignItems: "center", gap: "5px" }}>
+            <span style={{ color: "#fff", fontWeight: 600, fontSize: "10px" }}>MON</span>
+            <div style={{ width: "1px", height: "10px", background: "rgba(255,255,255,0.3)" }} />
+            <span style={{ color: "rgba(255,255,255,0.85)", fontSize: "9px" }}>9:00 AM — 12:00 PM</span>
+          </div>
+          <div style={{ padding: "8px 10px" }}>
+            <div style={{ color: "#111", fontSize: "11px", fontWeight: 700, lineHeight: 1.3 }}>Weekly Manual Reporting — 3 hrs</div>
+            <div style={{ color: "#dc2626", fontSize: "9px", fontWeight: 500, marginTop: "4px" }}>🔁 Repeating every Monday</div>
+            <div style={{ color: "#6b7280", fontSize: "9px", marginTop: "2px" }}>Since 2019</div>
+          </div>
+        </div>
+      ),
     },
     {
       icon: <Hand size={22} color="#f5a623" />,
       title: "You are still doing it manually",
       body: "10 or more hours a week on reports, data entry, outreach, or updates that a system should handle automatically.",
+      clipping: (
+        <div style={{ background: "#fff", borderRadius: "8px", overflow: "hidden", fontFamily: "'Inter', sans-serif" }}>
+          <div style={{ background: "#0a66c2", padding: "6px 10px", display: "flex", alignItems: "center", gap: "5px" }}>
+            <span style={{ color: "#fff", fontWeight: 700, fontSize: "10px", letterSpacing: "0.02em" }}>in</span>
+            <span style={{ color: "rgba(255,255,255,0.8)", fontSize: "9px" }}>Job Posting</span>
+          </div>
+          <div style={{ padding: "8px 10px" }}>
+            <div style={{ color: "#0a66c2", fontSize: "11px", fontWeight: 700 }}>NOW HIRING</div>
+            <div style={{ color: "#111", fontSize: "11px", fontWeight: 600, marginTop: "2px" }}>Operations Manager</div>
+            <div style={{ marginTop: "6px", display: "flex", flexDirection: "column", gap: "3px" }}>
+              {["AI tools proficiency required.", "Workflow automation required."].map((req, ri) => (
+                <div key={ri} style={{ color: "#374151", fontSize: "10px", display: "flex", alignItems: "flex-start", gap: "4px" }}>
+                  <span style={{ color: "#dc2626", fontWeight: 700, flexShrink: 0 }}>✓</span>{req}
+                </div>
+              ))}
+            </div>
+            <div style={{ marginTop: "8px", color: "#0a66c2", fontSize: "10px", fontWeight: 600 }}>Apply →</div>
+          </div>
+        </div>
+      ),
     },
     {
       icon: <Banknote size={22} color="#f5a623" />,
       title: "The budget does not cover agencies",
       body: "$50,000 for a 3-month engagement is not happening. But doing nothing is not an option either.",
+      clipping: (
+        <div style={{ background: "#f9f7f4", borderRadius: "8px", overflow: "hidden", fontFamily: "'Inter', sans-serif" }}>
+          <div style={{ background: "#e8e4de", padding: "6px 10px", borderBottom: "1px solid #d6d0c8" }}>
+            <div style={{ color: "#374151", fontSize: "10px", fontWeight: 600 }}>RE: RE: RE: Q3 Analytics Report</div>
+          </div>
+          <div style={{ padding: "8px 10px" }}>
+            <p style={{ color: "#374151", fontSize: "10px", lineHeight: 1.5, margin: 0 }}>
+              Can you pull this manually again this week? IT said the dashboard request is still in the backlog.
+            </p>
+            <div style={{ marginTop: "8px", paddingTop: "6px", borderTop: "1px solid #d6d0c8", color: "#9ca3af", fontSize: "9px" }}>
+              37 emails in this thread
+            </div>
+          </div>
+        </div>
+      ),
     },
   ];
 
@@ -595,10 +667,12 @@ function ProblemSection() {
                   fontSize: "14px",
                   color: "rgba(240,237,232,0.8)",
                   lineHeight: 1.65,
+                  marginBottom: "1.25rem",
                 }}
               >
                 {card.body}
               </p>
+              {card.clipping}
             </div>
           ))}
         </div>
