@@ -900,29 +900,7 @@ function LiveShowcase() {
   ];
 
   const Card = ({ card }: { card: typeof cards[0] }) => (
-    <div
-      style={{
-        width: "520px",
-        height: "340px",
-        flexShrink: 0,
-        borderRadius: "12px",
-        overflow: "hidden",
-        position: "relative",
-        border: "1px solid rgba(255,255,255,0.08)",
-        transition: "border-color 0.2s",
-        cursor: "pointer",
-      }}
-      onMouseEnter={(e) => {
-        (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(245,166,35,0.5)";
-        const iframe = e.currentTarget.querySelector("iframe");
-        if (iframe) iframe.style.pointerEvents = "auto";
-      }}
-      onMouseLeave={(e) => {
-        (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,255,255,0.08)";
-        const iframe = e.currentTarget.querySelector("iframe");
-        if (iframe) iframe.style.pointerEvents = "none";
-      }}
-    >
+    <div className="showcase-card">
       <iframe
         src={card.src}
         title={card.name}
@@ -933,7 +911,6 @@ function LiveShowcase() {
           transform: "scale(0.5)",
           transformOrigin: "top left",
           border: "none",
-          pointerEvents: "none",
         }}
       />
       <div
@@ -1083,6 +1060,26 @@ function LiveShowcase() {
         }
         .showcase-track:hover {
           animation-play-state: paused;
+        }
+        .showcase-card {
+          width: 520px;
+          height: 340px;
+          flex-shrink: 0;
+          border-radius: 12px;
+          overflow: hidden;
+          position: relative;
+          border: 1px solid rgba(255,255,255,0.08);
+          transition: border-color 0.2s;
+          cursor: pointer;
+        }
+        .showcase-card:hover {
+          border-color: rgba(245,166,35,0.5);
+        }
+        .showcase-card iframe {
+          pointer-events: none;
+        }
+        .showcase-card:hover iframe {
+          pointer-events: auto;
         }
       `}</style>
     </section>
