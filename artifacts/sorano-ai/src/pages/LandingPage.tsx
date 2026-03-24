@@ -468,11 +468,11 @@ function ProblemSection() {
       title: "The mandate came from above",
       body: "Leadership announced an AI initiative. Every manager is expected to show what their team is doing. You have 90 days and no roadmap.",
       clipping: (
-        <div style={{ background: "#1a1d21", borderRadius: "8px", overflow: "hidden", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>
-          <div style={{ padding: "6px 10px", borderBottom: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", gap: "4px" }}>
-            <span style={{ color: "rgba(255,255,255,0.4)" }}>#</span>
-            <span style={{ color: "rgba(255,255,255,0.65)", fontWeight: 500 }}>operations</span>
-            <span style={{ color: "rgba(255,255,255,0.25)", marginLeft: "auto" }}>Slack</span>
+        <div style={{ background: "#f8f9fa", borderRadius: "8px", overflow: "hidden", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>
+          <div style={{ padding: "6px 10px", background: "#4a154b", borderBottom: "1px solid rgba(255,255,255,0.1)", display: "flex", alignItems: "center", gap: "4px" }}>
+            <span style={{ color: "rgba(255,255,255,0.6)" }}>#</span>
+            <span style={{ color: "rgba(255,255,255,0.9)", fontWeight: 500 }}>operations</span>
+            <span style={{ color: "rgba(255,255,255,0.4)", marginLeft: "auto" }}>Slack</span>
           </div>
           <div style={{ padding: "8px 10px", display: "flex", gap: "8px" }}>
             <div style={{ width: "24px", height: "24px", borderRadius: "4px", background: "#4a154b", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -480,10 +480,10 @@ function ProblemSection() {
             </div>
             <div>
               <div style={{ display: "flex", gap: "6px", marginBottom: "3px", alignItems: "baseline" }}>
-                <span style={{ color: "#fff", fontWeight: 600 }}>Sarah</span>
-                <span style={{ color: "rgba(255,255,255,0.35)", fontSize: "9px" }}>VP Operations</span>
+                <span style={{ color: "#111", fontWeight: 600 }}>Sarah</span>
+                <span style={{ color: "#6b7280", fontSize: "9px" }}>VP Operations</span>
               </div>
-              <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.45, margin: 0 }}>
+              <p style={{ color: "#374151", lineHeight: 1.45, margin: 0 }}>
                 Hey — leadership wants each team to present their AI strategy by end of quarter. Can you put something together?
               </p>
             </div>
@@ -677,7 +677,7 @@ function ProblemSection() {
                   </p>
                 </div>
                 {/* Right: mini clipping */}
-                <div style={{ width: "155px", flexShrink: 0, opacity: 0.92 }}>
+                <div style={{ width: "155px", flexShrink: 0, height: "130px", overflow: "hidden", borderRadius: "8px" }}>
                   {card.clipping}
                 </div>
               </div>
