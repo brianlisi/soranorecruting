@@ -45,7 +45,7 @@ function Nav() {
       <a
         href="/"
         style={{
-          fontFamily: "'Inter', sans-serif",
+          fontFamily: "'Barlow', sans-serif",
           fontSize: "18px",
           fontWeight: 500,
           textDecoration: "none",
@@ -69,7 +69,7 @@ function Nav() {
             key={link}
             href={`#${link.toLowerCase()}`}
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Barlow', sans-serif",
               fontSize: "13px",
               color: "rgba(240,237,232,0.75)",
               textDecoration: "none",
@@ -158,7 +158,7 @@ function HeroSection() {
             <span className="pulse-dot" />
             <span
               style={{
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "'Barlow', sans-serif",
                 fontSize: "11px",
                 textTransform: "uppercase",
                 letterSpacing: "0.1em",
@@ -172,10 +172,11 @@ function HeroSection() {
 
           <h1
             style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: "clamp(1.8rem, 3.2vw, 3rem)",
-              fontWeight: 800,
-              lineHeight: 1.05,
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontSize: "clamp(3.5rem, 8vw, 7rem)",
+              fontWeight: 900,
+              lineHeight: 0.95,
+              textTransform: "uppercase",
               letterSpacing: "-0.03em",
               marginBottom: 0,
             }}
@@ -221,7 +222,7 @@ function HeroSection() {
 
           <p
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Barlow', sans-serif",
               fontSize: "17px",
               color: "rgba(240,237,232,0.9)",
               maxWidth: "520px",
@@ -293,20 +294,20 @@ function HeroSection() {
             overflow: "hidden",
           }}>
             <div style={{ padding: "10px 14px 6px", borderBottom: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", gap: "6px" }}>
-              <span style={{ color: "rgba(255,255,255,0.4)", fontFamily: "'Inter', sans-serif", fontSize: "11px" }}>#</span>
-              <span style={{ color: "rgba(255,255,255,0.65)", fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 500 }}>operations</span>
-              <span style={{ color: "rgba(255,255,255,0.25)", fontFamily: "'Inter', sans-serif", fontSize: "10px", marginLeft: "auto" }}>Slack</span>
+              <span style={{ color: "rgba(255,255,255,0.4)", fontFamily: "'Barlow', sans-serif", fontSize: "11px" }}>#</span>
+              <span style={{ color: "rgba(255,255,255,0.65)", fontFamily: "'Barlow', sans-serif", fontSize: "11px", fontWeight: 500 }}>operations</span>
+              <span style={{ color: "rgba(255,255,255,0.25)", fontFamily: "'Barlow', sans-serif", fontSize: "10px", marginLeft: "auto" }}>Slack</span>
             </div>
             <div style={{ padding: "12px 14px 14px", display: "flex", gap: "10px" }}>
               <div style={{ width: "32px", height: "32px", borderRadius: "6px", background: "#4a154b", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ color: "#fff", fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 600 }}>S</span>
+                <span style={{ color: "#fff", fontFamily: "'Barlow', sans-serif", fontSize: "12px", fontWeight: 600 }}>S</span>
               </div>
               <div>
                 <div style={{ display: "flex", alignItems: "baseline", gap: "8px", marginBottom: "4px" }}>
-                  <span style={{ color: "#fff", fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 600 }}>Sarah</span>
-                  <span style={{ color: "rgba(255,255,255,0.3)", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>VP Operations</span>
+                  <span style={{ color: "#fff", fontFamily: "'Barlow', sans-serif", fontSize: "12px", fontWeight: 600 }}>Sarah</span>
+                  <span style={{ color: "rgba(255,255,255,0.3)", fontFamily: "'Barlow', sans-serif", fontSize: "10px" }}>VP Operations</span>
                 </div>
-                <p style={{ color: "rgba(255,255,255,0.82)", fontFamily: "'Inter', sans-serif", fontSize: "12px", lineHeight: 1.55, margin: 0 }}>
+                <p style={{ color: "rgba(255,255,255,0.82)", fontFamily: "'Barlow', sans-serif", fontSize: "12px", lineHeight: 1.55, margin: 0 }}>
                   Hey — leadership wants each team to present their AI strategy by end of quarter. Can you put something together?
                 </p>
               </div>
@@ -322,18 +323,18 @@ function HeroSection() {
             overflow: "hidden",
           }}>
             <div style={{ background: "#dc2626", padding: "8px 12px", display: "flex", alignItems: "center", gap: "6px" }}>
-              <span style={{ color: "#fff", fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 600 }}>MON</span>
+              <span style={{ color: "#fff", fontFamily: "'Barlow', sans-serif", fontSize: "11px", fontWeight: 600 }}>MON</span>
               <div style={{ width: "1px", height: "12px", background: "rgba(255,255,255,0.3)" }} />
-              <span style={{ color: "rgba(255,255,255,0.85)", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>9:00 AM — 12:00 PM</span>
+              <span style={{ color: "rgba(255,255,255,0.85)", fontFamily: "'Barlow', sans-serif", fontSize: "10px" }}>9:00 AM — 12:00 PM</span>
             </div>
             <div style={{ padding: "12px" }}>
-              <div style={{ color: "#111", fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 700, lineHeight: 1.3 }}>
+              <div style={{ color: "#111", fontFamily: "'Barlow', sans-serif", fontSize: "13px", fontWeight: 700, lineHeight: 1.3 }}>
                 Weekly Manual Reporting — 3 hrs
               </div>
-              <div style={{ color: "#dc2626", fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 500, marginTop: "6px" }}>
+              <div style={{ color: "#dc2626", fontFamily: "'Barlow', sans-serif", fontSize: "10px", fontWeight: 500, marginTop: "6px" }}>
                 🔁 Repeating every Monday
               </div>
-              <div style={{ color: "#6b7280", fontFamily: "'Inter', sans-serif", fontSize: "10px", marginTop: "3px" }}>
+              <div style={{ color: "#6b7280", fontFamily: "'Barlow', sans-serif", fontSize: "10px", marginTop: "3px" }}>
                 Since 2019
               </div>
             </div>
@@ -348,20 +349,20 @@ function HeroSection() {
             overflow: "hidden",
           }}>
             <div style={{ background: "#0a66c2", padding: "8px 12px", display: "flex", alignItems: "center", gap: "6px" }}>
-              <span style={{ color: "#fff", fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 700, letterSpacing: "0.02em" }}>in</span>
-              <span style={{ color: "rgba(255,255,255,0.8)", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>Job Posting</span>
+              <span style={{ color: "#fff", fontFamily: "'Barlow', sans-serif", fontSize: "11px", fontWeight: 700, letterSpacing: "0.02em" }}>in</span>
+              <span style={{ color: "rgba(255,255,255,0.8)", fontFamily: "'Barlow', sans-serif", fontSize: "10px" }}>Job Posting</span>
             </div>
             <div style={{ padding: "12px" }}>
-              <div style={{ color: "#0a66c2", fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 700 }}>NOW HIRING</div>
-              <div style={{ color: "#111", fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 600, marginTop: "2px" }}>Operations Manager</div>
+              <div style={{ color: "#0a66c2", fontFamily: "'Barlow', sans-serif", fontSize: "13px", fontWeight: 700 }}>NOW HIRING</div>
+              <div style={{ color: "#111", fontFamily: "'Barlow', sans-serif", fontSize: "13px", fontWeight: 600, marginTop: "2px" }}>Operations Manager</div>
               <div style={{ marginTop: "8px", display: "flex", flexDirection: "column", gap: "4px" }}>
                 {["AI tools proficiency required.", "Workflow automation required."].map((req, i) => (
-                  <div key={i} style={{ color: "#374151", fontFamily: "'Inter', sans-serif", fontSize: "11px", display: "flex", alignItems: "flex-start", gap: "5px" }}>
+                  <div key={i} style={{ color: "#374151", fontFamily: "'Barlow', sans-serif", fontSize: "11px", display: "flex", alignItems: "flex-start", gap: "5px" }}>
                     <span style={{ color: "#dc2626", fontWeight: 700, flexShrink: 0 }}>✓</span> {req}
                   </div>
                 ))}
               </div>
-              <div style={{ marginTop: "10px", color: "#0a66c2", fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 600, cursor: "pointer" }}>Apply →</div>
+              <div style={{ marginTop: "10px", color: "#0a66c2", fontFamily: "'Barlow', sans-serif", fontSize: "11px", fontWeight: 600, cursor: "pointer" }}>Apply →</div>
             </div>
           </div>
 
@@ -374,13 +375,13 @@ function HeroSection() {
             overflow: "hidden",
           }}>
             <div style={{ background: "#e8e4de", padding: "8px 12px", borderBottom: "1px solid #d6d0c8" }}>
-              <div style={{ color: "#374151", fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 600 }}>RE: RE: RE: Q3 Analytics Report</div>
+              <div style={{ color: "#374151", fontFamily: "'Barlow', sans-serif", fontSize: "10px", fontWeight: 600 }}>RE: RE: RE: Q3 Analytics Report</div>
             </div>
             <div style={{ padding: "12px" }}>
-              <p style={{ color: "#374151", fontFamily: "'Inter', sans-serif", fontSize: "11.5px", lineHeight: 1.55, margin: 0 }}>
+              <p style={{ color: "#374151", fontFamily: "'Barlow', sans-serif", fontSize: "11.5px", lineHeight: 1.55, margin: 0 }}>
                 Can you pull this manually again this week? IT said the dashboard request is still in the backlog.
               </p>
-              <div style={{ marginTop: "10px", paddingTop: "8px", borderTop: "1px solid #d6d0c8", color: "#9ca3af", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>
+              <div style={{ marginTop: "10px", paddingTop: "8px", borderTop: "1px solid #d6d0c8", color: "#9ca3af", fontFamily: "'Barlow', sans-serif", fontSize: "10px" }}>
                 37 emails in this thread
               </div>
             </div>
@@ -396,13 +397,13 @@ function HeroSection() {
             overflow: "hidden",
           }}>
             <div style={{ padding: "16px" }}>
-              <div style={{ color: "#f5a623", fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px" }}>
+              <div style={{ color: "#f5a623", fontFamily: "'Barlow', sans-serif", fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px" }}>
                 Sound familiar?
               </div>
-              <div style={{ color: "#f0ede8", fontFamily: "'Syne', sans-serif", fontSize: "14px", fontWeight: 700, lineHeight: 1.4 }}>
+              <div style={{ color: "#f0ede8", fontFamily: "'Barlow Condensed', sans-serif", fontSize: "14px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "-0.02em", lineHeight: 1.0 }}>
                 Is your team still doing manually what AI could do in seconds?
               </div>
-              <div style={{ marginTop: "12px", color: "#f5a623", fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 500 }}>
+              <div style={{ marginTop: "12px", color: "#f5a623", fontFamily: "'Barlow', sans-serif", fontSize: "12px", fontWeight: 500 }}>
                 → Book a call before your next performance review
               </div>
             </div>
@@ -428,7 +429,7 @@ function MarqueeBar() {
 
   const content = items.map((item, i) => (
     <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: "1.5rem", whiteSpace: "nowrap" }}>
-      <span style={{ color: "rgba(245,166,35,0.88)", fontFamily: "'Inter', sans-serif", fontSize: "13px" }}>
+      <span style={{ color: "rgba(245,166,35,0.88)", fontFamily: "'Barlow', sans-serif", fontSize: "13px" }}>
         {item}
       </span>
       <span style={{ color: "#f5a623", fontSize: "10px" }}>·</span>
@@ -497,10 +498,11 @@ function ProblemSection() {
           </div>
           <h2
             style={{
-              fontFamily: "'Syne', sans-serif",
+              fontFamily: "'Barlow Condensed', sans-serif",
               fontSize: "clamp(2rem, 4vw, 3.2rem)",
-              fontWeight: 600,
-              lineHeight: 1.1,
+              fontWeight: 800,
+              lineHeight: 1.0,
+              textTransform: "uppercase",
               letterSpacing: "-0.02em",
               color: "#f0ede8",
             }}
@@ -513,7 +515,7 @@ function ProblemSection() {
           </h2>
           <p
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Barlow', sans-serif",
               fontSize: "15px",
               color: "rgba(240,237,232,0.88)",
               maxWidth: "520px",
@@ -550,7 +552,7 @@ function ProblemSection() {
             >
               <h3
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Barlow', sans-serif",
                   fontSize: "15px",
                   fontWeight: 600,
                   color: "#f0ede8",
@@ -561,7 +563,7 @@ function ProblemSection() {
               </h3>
               <p
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Barlow', sans-serif",
                   fontSize: "14px",
                   color: "rgba(240,237,232,0.88)",
                   lineHeight: 1.65,
@@ -626,10 +628,11 @@ function ServicesSection() {
           </div>
           <h2
             style={{
-              fontFamily: "'Syne', sans-serif",
+              fontFamily: "'Barlow Condensed', sans-serif",
               fontSize: "clamp(2rem, 4vw, 3.2rem)",
-              fontWeight: 600,
-              lineHeight: 1.1,
+              fontWeight: 800,
+              lineHeight: 1.0,
+              textTransform: "uppercase",
               letterSpacing: "-0.02em",
               color: "#f0ede8",
             }}
@@ -659,7 +662,7 @@ function ServicesSection() {
             <div>
               <h3
                 style={{
-                  fontFamily: "'Syne', sans-serif",
+                  fontFamily: "'Barlow Condensed', sans-serif",
                   fontSize: "1.8rem",
                   fontWeight: 600,
                   color: "#f0ede8",
@@ -672,7 +675,7 @@ function ServicesSection() {
             <div style={{ textAlign: "right" }}>
               <div
                 style={{
-                  fontFamily: "'Syne', sans-serif",
+                  fontFamily: "'Barlow Condensed', sans-serif",
                   fontSize: "2rem",
                   fontWeight: 800,
                   color: "#f5a623",
@@ -683,7 +686,7 @@ function ServicesSection() {
               </div>
               <div
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Barlow', sans-serif",
                   fontSize: "12px",
                   color: "rgba(240,237,232,0.78)",
                   marginTop: "0.4rem",
@@ -696,7 +699,7 @@ function ServicesSection() {
 
           <p
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Barlow', sans-serif",
               fontSize: "15px",
               color: "rgba(240,237,232,0.9)",
               marginTop: "1.25rem",
@@ -745,7 +748,7 @@ function ServicesSection() {
                   </div>
                   <span
                     style={{
-                      fontFamily: "'Inter', sans-serif",
+                      fontFamily: "'Barlow', sans-serif",
                       fontSize: "13px",
                       color: "rgba(240,237,232,0.9)",
                       lineHeight: 1.5,
@@ -764,7 +767,7 @@ function ServicesSection() {
             </a>
             <div
               style={{
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "'Barlow', sans-serif",
                 fontSize: "12px",
                 color: "rgba(240,237,232,0.7)",
                 marginTop: "1rem",
@@ -846,10 +849,11 @@ function WorkSection() {
           </div>
           <h2
             style={{
-              fontFamily: "'Syne', sans-serif",
+              fontFamily: "'Barlow Condensed', sans-serif",
               fontSize: "clamp(2rem, 4vw, 3.2rem)",
-              fontWeight: 600,
-              lineHeight: 1.1,
+              fontWeight: 800,
+              lineHeight: 1.0,
+              textTransform: "uppercase",
               letterSpacing: "-0.02em",
               color: "#f0ede8",
             }}
@@ -862,7 +866,7 @@ function WorkSection() {
           </h2>
           <p
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Barlow', sans-serif",
               fontSize: "15px",
               color: "rgba(240,237,232,0.88)",
               maxWidth: "520px",
@@ -914,7 +918,7 @@ function WorkSection() {
 
               <h3
                 style={{
-                  fontFamily: "'Syne', sans-serif",
+                  fontFamily: "'Barlow Condensed', sans-serif",
                   fontSize: "1.3rem",
                   fontWeight: 600,
                   color: "#f0ede8",
@@ -927,7 +931,7 @@ function WorkSection() {
 
               <p
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Barlow', sans-serif",
                   fontSize: "13px",
                   color: "rgba(240,237,232,0.88)",
                   lineHeight: 1.65,
@@ -1030,7 +1034,7 @@ function LiveShowcase() {
       >
         <span
           style={{
-            fontFamily: "'Inter', sans-serif",
+            fontFamily: "'Barlow', sans-serif",
             fontSize: "10px",
             textTransform: "uppercase",
             letterSpacing: "0.06em",
@@ -1045,7 +1049,7 @@ function LiveShowcase() {
         </span>
         <span
           style={{
-            fontFamily: "'Syne', sans-serif",
+            fontFamily: "'Barlow Condensed', sans-serif",
             fontSize: "1.15rem",
             fontWeight: 600,
             color: "#f0ede8",
@@ -1058,7 +1062,7 @@ function LiveShowcase() {
         </span>
         <span
           style={{
-            fontFamily: "'Inter', sans-serif",
+            fontFamily: "'Barlow', sans-serif",
             fontSize: "12px",
             color: "rgba(240,237,232,0.7)",
             marginTop: "2px",
@@ -1085,7 +1089,7 @@ function LiveShowcase() {
         </div>
         <h2
           style={{
-            fontFamily: "'Syne', sans-serif",
+            fontFamily: "'Barlow Condensed', sans-serif",
             fontSize: "clamp(2rem, 4vw, 3.2rem)",
             fontWeight: 600,
             lineHeight: 1.1,
@@ -1101,7 +1105,7 @@ function LiveShowcase() {
         </h2>
         <p
           style={{
-            fontFamily: "'Inter', sans-serif",
+            fontFamily: "'Barlow', sans-serif",
             fontSize: "15px",
             color: "rgba(240,237,232,0.82)",
             maxWidth: "500px",
@@ -1138,7 +1142,7 @@ function LiveShowcase() {
         style={{
           textAlign: "center",
           marginTop: "1.5rem",
-          fontFamily: "'Inter', sans-serif",
+          fontFamily: "'Barlow', sans-serif",
           fontSize: "12px",
           color: "rgba(255,255,255,0.3)",
         }}
@@ -1231,10 +1235,11 @@ function ProcessSection() {
           </div>
           <h2
             style={{
-              fontFamily: "'Syne', sans-serif",
+              fontFamily: "'Barlow Condensed', sans-serif",
               fontSize: "clamp(2rem, 4vw, 3.2rem)",
-              fontWeight: 600,
-              lineHeight: 1.1,
+              fontWeight: 800,
+              lineHeight: 1.0,
+              textTransform: "uppercase",
               letterSpacing: "-0.02em",
               color: "#0f0f0f",
             }}
@@ -1243,7 +1248,7 @@ function ProcessSection() {
           </h2>
           <p
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Barlow', sans-serif",
               fontSize: "15px",
               color: "rgba(15,15,15,0.72)",
               maxWidth: "520px",
@@ -1275,7 +1280,7 @@ function ProcessSection() {
               >
                 <div
                   style={{
-                    fontFamily: "'Syne', sans-serif",
+                    fontFamily: "'Barlow Condensed', sans-serif",
                     fontSize: "3rem",
                     fontWeight: 800,
                     color: "#f5a623",
@@ -1287,7 +1292,7 @@ function ProcessSection() {
                 </div>
                 <h3
                   style={{
-                    fontFamily: "'Inter', sans-serif",
+                    fontFamily: "'Barlow', sans-serif",
                     fontSize: "15px",
                     fontWeight: 500,
                     color: "#0f0f0f",
@@ -1298,7 +1303,7 @@ function ProcessSection() {
                 </h3>
                 <p
                   style={{
-                    fontFamily: "'Inter', sans-serif",
+                    fontFamily: "'Barlow', sans-serif",
                     fontSize: "13px",
                     color: "rgba(15,15,15,0.75)",
                     lineHeight: 1.65,
@@ -1378,10 +1383,11 @@ function WhoSection() {
           </div>
           <h2
             style={{
-              fontFamily: "'Syne', sans-serif",
+              fontFamily: "'Barlow Condensed', sans-serif",
               fontSize: "clamp(2rem, 4vw, 3.2rem)",
-              fontWeight: 600,
-              lineHeight: 1.1,
+              fontWeight: 800,
+              lineHeight: 1.0,
+              textTransform: "uppercase",
               letterSpacing: "-0.02em",
               color: "#f0ede8",
             }}
@@ -1414,7 +1420,7 @@ function WhoSection() {
             >
               <h3
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Barlow', sans-serif",
                   fontSize: "15px",
                   fontWeight: 600,
                   color: "#f0ede8",
@@ -1426,7 +1432,7 @@ function WhoSection() {
               </h3>
               <p
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Barlow', sans-serif",
                   fontSize: "14px",
                   color: "rgba(240,237,232,0.88)",
                   lineHeight: 1.65,
@@ -1469,11 +1475,12 @@ function FinalCTA() {
         <h2
           className="reveal"
           style={{
-            fontFamily: "'Syne', sans-serif",
+            fontFamily: "'Barlow Condensed', sans-serif",
             fontSize: "clamp(1.8rem, 2.8vw, 2.6rem)",
             fontWeight: 800,
-            lineHeight: 1.08,
-            letterSpacing: "-0.03em",
+            lineHeight: 1.0,
+            textTransform: "uppercase",
+            letterSpacing: "-0.02em",
             color: "#f0ede8",
           }}
         >
@@ -1485,7 +1492,7 @@ function FinalCTA() {
         <p
           className="reveal"
           style={{
-            fontFamily: "'Inter', sans-serif",
+            fontFamily: "'Barlow', sans-serif",
             fontSize: "16px",
             color: "rgba(240,237,232,0.88)",
             maxWidth: "500px",
@@ -1519,7 +1526,7 @@ function FinalCTA() {
         <div
           className="reveal"
           style={{
-            fontFamily: "'Inter', sans-serif",
+            fontFamily: "'Barlow', sans-serif",
             fontSize: "12px",
             color: "rgba(240,237,232,0.65)",
             marginTop: "1.25rem",
@@ -1551,7 +1558,7 @@ function Footer() {
       <a
         href="/"
         style={{
-          fontFamily: "'Inter', sans-serif",
+          fontFamily: "'Barlow', sans-serif",
           fontSize: "16px",
           fontWeight: 500,
           textDecoration: "none",
@@ -1572,7 +1579,7 @@ function Footer() {
             key={link.label}
             href={link.href}
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Barlow', sans-serif",
               fontSize: "12px",
               color: "rgba(240,237,232,0.7)",
               textDecoration: "none",
@@ -1593,7 +1600,7 @@ function Footer() {
 
       <div
         style={{
-          fontFamily: "'Inter', sans-serif",
+          fontFamily: "'Barlow', sans-serif",
           fontSize: "12px",
           color: "rgba(240,237,232,0.6)",
         }}
