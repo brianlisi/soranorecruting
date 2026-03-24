@@ -55,18 +55,12 @@ function Nav() {
         justifyContent: "space-between",
       }}
     >
-      <a
-        href="/"
-        style={{
-          fontFamily: "'Inter', sans-serif",
-          fontSize: "20px",
-          fontWeight: 600,
-          textDecoration: "none",
-          color: "#f0ede8",
-          letterSpacing: "-0.01em",
-        }}
-      >
-        Sorano<span style={{ color: "#f5a623" }}>AI</span>
+      <a href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+        <img
+          src={`${import.meta.env.BASE_URL}sorano-logo.png`}
+          alt="Sorano AI"
+          style={{ height: "38px", display: "block" }}
+        />
       </a>
 
       <div
@@ -1682,15 +1676,13 @@ function Footer() {
     >
       <a
         href="/"
-        style={{
-          fontFamily: "'Inter', sans-serif",
-          fontSize: "16px",
-          fontWeight: 500,
-          textDecoration: "none",
-          color: "#f0ede8",
-        }}
+        style={{ textDecoration: "none", display: "flex", alignItems: "center" }}
       >
-        Sorano<span style={{ color: "#f5a623" }}>AI</span>
+        <img
+          src={`${import.meta.env.BASE_URL}sorano-logo.png`}
+          alt="Sorano AI"
+          style={{ height: "30px", display: "block" }}
+        />
       </a>
 
       <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
