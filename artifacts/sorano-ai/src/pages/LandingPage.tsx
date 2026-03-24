@@ -59,7 +59,7 @@ function Nav() {
         <img
           src={`${import.meta.env.BASE_URL}sorano-logo-clear.png`}
           alt="Sorano AI"
-          style={{ height: "52px", display: "block" }}
+          style={{ height: "72px", display: "block" }}
         />
       </a>
 
