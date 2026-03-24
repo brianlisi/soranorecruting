@@ -36,7 +36,7 @@ function Nav() {
         backdropFilter: "blur(16px)",
         borderBottom: "1px solid rgba(255,255,255,0.08)",
         padding: "0 2.5rem",
-        height: "68px",
+        height: "76px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
@@ -46,8 +46,8 @@ function Nav() {
         href="/"
         style={{
           fontFamily: "'Inter', sans-serif",
-          fontSize: "18px",
-          fontWeight: 500,
+          fontSize: "20px",
+          fontWeight: 600,
           textDecoration: "none",
           color: "#f0ede8",
           letterSpacing: "-0.01em",
@@ -70,7 +70,8 @@ function Nav() {
             href={`#${link.toLowerCase()}`}
             style={{
               fontFamily: "'Inter', sans-serif",
-              fontSize: "13px",
+              fontSize: "15px",
+              fontWeight: 400,
               color: "rgba(240,237,232,0.75)",
               textDecoration: "none",
               transition: "color 0.2s ease",
@@ -88,7 +89,7 @@ function Nav() {
         ))}
       </div>
 
-      <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn-primary" style={{ fontSize: "13px", padding: "10px 20px" }}>
+      <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn-primary" style={{ fontSize: "15px", padding: "11px 24px" }}>
         Book a Free Call
       </a>
 
@@ -125,13 +126,12 @@ function HeroSection() {
     <section
       id="hero"
       style={{
-        minHeight: "100vh",
         display: "flex",
-        alignItems: "center",
+        alignItems: "flex-start",
         background: "#0f0f0f",
         position: "relative",
         overflow: "hidden",
-        padding: "120px 2.5rem 5rem",
+        padding: "96px 2.5rem 4rem",
       }}
     >
       <div
@@ -147,37 +147,26 @@ function HeroSection() {
         }}
       >
         <div style={{ flex: "0 0 58%", maxWidth: "58%" }}>
-          <div
+          <div className="label-style"
             style={{
-              display: "flex",
+              display: "inline-flex",
               alignItems: "center",
               gap: "0.6rem",
-              marginBottom: "1.5rem",
+              marginBottom: "0.8rem",
             }}
           >
             <span className="pulse-dot" />
-            <span
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                fontSize: "11px",
-                textTransform: "uppercase",
-                letterSpacing: "0.1em",
-                color: "#f5a623",
-                fontWeight: 500,
-              }}
-            >
-              AI Build Agency
-            </span>
+            <span>AI Build Agency</span>
           </div>
 
           <h1
             style={{
               fontFamily: "'Inter', sans-serif",
-              fontSize: "clamp(3.2rem, 6vw, 5.5rem)",
+              fontSize: "clamp(2.4rem, 4vw, 4rem)",
               fontWeight: 700,
               lineHeight: 1.05,
               letterSpacing: "-0.04em",
-              marginBottom: 0,
+              marginBottom: "1rem",
             }}
           >
             <div style={{ marginBottom: "0.1em" }}>
@@ -223,9 +212,10 @@ function HeroSection() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "17px",
-              color: "rgba(240,237,232,0.9)",
+              color: "rgba(240,237,232,0.8)",
               maxWidth: "520px",
-              marginTop: "1.75rem",
+              marginTop: "0",
+              marginBottom: "1.5rem",
               lineHeight: 1.7,
             }}
           >
@@ -239,7 +229,7 @@ function HeroSection() {
             style={{
               display: "flex",
               gap: "1rem",
-              marginTop: "2.5rem",
+              marginBottom: "2rem",
               flexWrap: "wrap",
             }}
           >
@@ -254,9 +244,9 @@ function HeroSection() {
           <div
             style={{
               display: "flex",
-              gap: "2rem",
-              marginTop: "3rem",
-              paddingTop: "1.75rem",
+              gap: "1.5rem",
+              marginTop: "1.5rem",
+              paddingTop: "1.5rem",
               borderTop: "1px solid rgba(255,255,255,0.08)",
               flexWrap: "nowrap",
             }}
@@ -266,10 +256,13 @@ function HeroSection() {
               { num: "5 days", label: "Average Build Time" },
               { num: "100%", label: "Client Ownership" },
               { num: "$0", label: "Ongoing Platform Fees" },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <div className="stat-number">{stat.num}</div>
-                <div className="stat-label">{stat.label}</div>
+            ].map((stat, i) => (
+              <div key={stat.label} style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
+                <div>
+                  <div className="stat-number">{stat.num}</div>
+                  <div className="stat-label">{stat.label}</div>
+                </div>
+                {i < 3 && <div style={{ width: "1px", height: "40px", background: "rgba(255,255,255,0.1)" }} />}
               </div>
             ))}
           </div>
@@ -428,20 +421,22 @@ function MarqueeBar() {
 
   const content = items.map((item, i) => (
     <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: "1.5rem", whiteSpace: "nowrap" }}>
-      <span style={{ color: "rgba(245,166,35,0.88)", fontFamily: "'Inter', sans-serif", fontSize: "13px" }}>
+      <span style={{ color: "rgba(240,237,232,0.65)", fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "13px" }}>
         {item}
       </span>
-      <span style={{ color: "#f5a623", fontSize: "10px" }}>·</span>
+      <span style={{ color: "rgba(240,237,232,0.3)", fontSize: "10px" }}>·</span>
     </span>
   ));
 
   return (
     <div
       style={{
-        background: "rgba(245,166,35,0.06)",
-        borderTop: "1px solid rgba(245,166,35,0.15)",
-        borderBottom: "1px solid rgba(245,166,35,0.15)",
-        padding: "14px 0",
+        background: "#141414",
+        borderTop: "1px solid rgba(255,255,255,0.05)",
+        borderBottom: "1px solid rgba(255,255,255,0.05)",
+        height: "48px",
+        display: "flex",
+        alignItems: "center",
         overflow: "hidden",
       }}
     >
@@ -515,7 +510,7 @@ function ProblemSection() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
-              color: "rgba(240,237,232,0.88)",
+              color: "rgba(240,237,232,0.8)",
               maxWidth: "520px",
               marginTop: "1.25rem",
               lineHeight: 1.7,
@@ -541,7 +536,7 @@ function ProblemSection() {
               key={i}
               className="glass-card reveal"
               style={{
-                padding: "2rem",
+                padding: "1.75rem",
                 borderLeft: "2px solid #f5a623",
                 borderRadius: "0",
                 animationDelay: `${i * 80}ms`,
@@ -563,7 +558,7 @@ function ProblemSection() {
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "14px",
-                  color: "rgba(240,237,232,0.88)",
+                  color: "rgba(240,237,232,0.8)",
                   lineHeight: 1.65,
                 }}
               >
@@ -864,7 +859,7 @@ function WorkSection() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
-              color: "rgba(240,237,232,0.88)",
+              color: "rgba(240,237,232,0.8)",
               maxWidth: "520px",
               marginTop: "1.25rem",
               lineHeight: 1.7,
@@ -929,7 +924,7 @@ function WorkSection() {
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "13px",
-                  color: "rgba(240,237,232,0.88)",
+                  color: "rgba(240,237,232,0.8)",
                   lineHeight: 1.65,
                 }}
               >
@@ -1278,7 +1273,7 @@ function ProcessSection() {
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "3rem",
                     fontWeight: 800,
-                    color: "#f5a623",
+                    color: "rgba(0,0,0,0.07)",
                     lineHeight: 1,
                     marginBottom: "1rem",
                   }}
@@ -1408,7 +1403,7 @@ function WhoSection() {
               key={i}
               className="glass-card reveal"
               style={{
-                padding: "2rem",
+                padding: "1.75rem",
                 transitionDelay: `${i * 80}ms`,
               }}
             >
@@ -1428,7 +1423,7 @@ function WhoSection() {
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "14px",
-                  color: "rgba(240,237,232,0.88)",
+                  color: "rgba(240,237,232,0.8)",
                   lineHeight: 1.65,
                 }}
               >
@@ -1487,7 +1482,7 @@ function FinalCTA() {
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "16px",
-            color: "rgba(240,237,232,0.88)",
+            color: "rgba(240,237,232,0.8)",
             maxWidth: "500px",
             margin: "1.25rem auto 0",
             lineHeight: 1.7,
@@ -1538,7 +1533,7 @@ function Footer() {
   return (
     <footer
       style={{
-        background: "#080808",
+        background: "#0a0a0a",
         padding: "2rem 2.5rem",
         display: "flex",
         justifyContent: "space-between",
@@ -1594,8 +1589,9 @@ function Footer() {
       <div
         style={{
           fontFamily: "'Inter', sans-serif",
-          fontSize: "12px",
-          color: "rgba(240,237,232,0.6)",
+          fontSize: "0.875rem",
+          fontWeight: 400,
+          color: "rgba(240,237,232,0.45)",
         }}
       >
         © 2026 Sorano AI. All rights reserved.
