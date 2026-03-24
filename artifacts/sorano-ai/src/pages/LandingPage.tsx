@@ -1,4 +1,17 @@
 import { useEffect, useRef } from "react";
+import {
+  Megaphone,
+  Clock,
+  Hand,
+  Banknote,
+  Building2,
+  GitBranch,
+  Zap,
+  LayoutDashboard,
+  Bot,
+  Database,
+  FileText,
+} from "lucide-react";
 
 const CALENDLY_URL = "https://calendly.com";
 const EMAIL = "mailto:hello@soranoai.ai";
@@ -451,18 +464,22 @@ function MarqueeBar() {
 function ProblemSection() {
   const cards = [
     {
+      icon: <Megaphone size={22} color="#f5a623" />,
       title: "The mandate came from above",
       body: "Leadership announced an AI initiative. Every manager is expected to show what their team is doing. You have 90 days and no roadmap.",
     },
     {
+      icon: <Clock size={22} color="#f5a623" />,
       title: "IT has a 6-month backlog",
       body: "You submitted the request. It went into a queue behind 47 other tickets. Your deadline is next quarter.",
     },
     {
+      icon: <Hand size={22} color="#f5a623" />,
       title: "You are still doing it manually",
       body: "10 or more hours a week on reports, data entry, outreach, or updates that a system should handle automatically.",
     },
     {
+      icon: <Banknote size={22} color="#f5a623" />,
       title: "The budget does not cover agencies",
       body: "$50,000 for a 3-month engagement is not happening. But doing nothing is not an option either.",
     },
@@ -543,6 +560,21 @@ function ProblemSection() {
                 transitionDelay: `${i * 80}ms`,
               }}
             >
+              <div
+                style={{
+                  width: "42px",
+                  height: "42px",
+                  background: "rgba(245,166,35,0.1)",
+                  border: "1px solid rgba(245,166,35,0.2)",
+                  borderRadius: "10px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: "1.25rem",
+                }}
+              >
+                {card.icon}
+              </div>
               <h3
                 style={{
                   fontFamily: "'Inter', sans-serif",
@@ -1336,14 +1368,17 @@ function ProcessSection() {
 function WhoSection() {
   const cards = [
     {
+      icon: <Building2 size={22} color="#f5a623" />,
       title: "You are a Director or Senior Manager",
       body: "Your company is rolling out AI and you need something your team actually uses — not a pilot that dies in a committee meeting.",
     },
     {
+      icon: <GitBranch size={22} color="#f5a623" />,
       title: "You have a specific workflow problem",
       body: "Not a vague mandate to use AI. A concrete process that takes too long, costs too much, or breaks too often.",
     },
     {
+      icon: <Zap size={22} color="#f5a623" />,
       title: "You can make a fast decision",
       body: "Not enterprise procurement. Not a 6-month approval chain. You can greenlight $997 this week if it solves a real problem.",
     },
@@ -1407,6 +1442,21 @@ function WhoSection() {
                 transitionDelay: `${i * 80}ms`,
               }}
             >
+              <div
+                style={{
+                  width: "42px",
+                  height: "42px",
+                  background: "rgba(245,166,35,0.1)",
+                  border: "1px solid rgba(245,166,35,0.2)",
+                  borderRadius: "10px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: "1.25rem",
+                }}
+              >
+                {card.icon}
+              </div>
               <h3
                 style={{
                   fontFamily: "'Inter', sans-serif",
