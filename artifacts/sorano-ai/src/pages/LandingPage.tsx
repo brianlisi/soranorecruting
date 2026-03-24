@@ -560,32 +560,35 @@ function ProblemSection() {
                 transitionDelay: `${i * 80}ms`,
               }}
             >
-              <div
-                style={{
-                  width: "42px",
-                  height: "42px",
-                  background: "rgba(245,166,35,0.1)",
-                  border: "1px solid rgba(245,166,35,0.2)",
-                  borderRadius: "10px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: "1.25rem",
-                }}
-              >
-                {card.icon}
+              <div style={{ display: "flex", alignItems: "center", gap: "0.85rem", marginBottom: "0.85rem" }}>
+                <div
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    flexShrink: 0,
+                    background: "rgba(245,166,35,0.1)",
+                    border: "1px solid rgba(245,166,35,0.2)",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  {card.icon}
+                </div>
+                <h3
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: "15px",
+                    fontWeight: 600,
+                    color: "#f0ede8",
+                    margin: 0,
+                    lineHeight: 1.3,
+                  }}
+                >
+                  {card.title}
+                </h3>
               </div>
-              <h3
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "15px",
-                  fontWeight: 600,
-                  color: "#f0ede8",
-                  marginBottom: "0.75rem",
-                }}
-              >
-                {card.title}
-              </h3>
               <p
                 style={{
                   fontFamily: "'Inter', sans-serif",
@@ -1442,33 +1445,35 @@ function WhoSection() {
                 transitionDelay: `${i * 80}ms`,
               }}
             >
-              <div
-                style={{
-                  width: "42px",
-                  height: "42px",
-                  background: "rgba(245,166,35,0.1)",
-                  border: "1px solid rgba(245,166,35,0.2)",
-                  borderRadius: "10px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: "1.25rem",
-                }}
-              >
-                {card.icon}
+              <div style={{ display: "flex", alignItems: "center", gap: "0.85rem", marginBottom: "0.85rem" }}>
+                <div
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    flexShrink: 0,
+                    background: "rgba(245,166,35,0.1)",
+                    border: "1px solid rgba(245,166,35,0.2)",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  {card.icon}
+                </div>
+                <h3
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: "15px",
+                    fontWeight: 600,
+                    color: "#f0ede8",
+                    margin: 0,
+                    lineHeight: 1.3,
+                  }}
+                >
+                  {card.title}
+                </h3>
               </div>
-              <h3
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "15px",
-                  fontWeight: 600,
-                  color: "#f0ede8",
-                  marginBottom: "0.75rem",
-                  lineHeight: 1.4,
-                }}
-              >
-                {card.title}
-              </h3>
               <p
                 style={{
                   fontFamily: "'Inter', sans-serif",
