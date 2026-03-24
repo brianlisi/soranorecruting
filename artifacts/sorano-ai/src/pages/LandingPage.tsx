@@ -871,6 +871,224 @@ function WorkSection() {
   );
 }
 
+function LiveShowcase() {
+  const cards = [
+    {
+      src: "https://investment-thesis-dashboard.replit.app",
+      tag: "Sovereign Wealth / Private Equity",
+      name: "Investor Financial Model",
+      desc: "$200M+ equity raise · IC-ready",
+    },
+    {
+      src: "https://akamai-investor-dashboard--admin4277.replit.app",
+      tag: "Enterprise Technology",
+      name: "Akamai Investor Dashboard",
+      desc: "Live infrastructure analytics",
+    },
+    {
+      src: "https://garden-dashboard.replit.app",
+      tag: "Hospitality / Real Estate",
+      name: "Hotel Portfolio Dashboard",
+      desc: "STR benchmarking · Weekly reporting",
+    },
+    {
+      src: "https://martech-ai-platform-admin4277.replit.app",
+      tag: "MarTech / AI Platform",
+      name: "AI Outreach Platform",
+      desc: "Clay + Brevo · 13K contacts · 40% open rate",
+    },
+  ];
+
+  const Card = ({ card }: { card: typeof cards[0] }) => (
+    <div
+      style={{
+        width: "520px",
+        height: "340px",
+        flexShrink: 0,
+        borderRadius: "12px",
+        overflow: "hidden",
+        position: "relative",
+        border: "1px solid rgba(255,255,255,0.08)",
+        transition: "border-color 0.2s",
+        cursor: "pointer",
+      }}
+      onMouseEnter={(e) => {
+        (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(245,166,35,0.5)";
+        const iframe = e.currentTarget.querySelector("iframe");
+        if (iframe) iframe.style.pointerEvents = "auto";
+      }}
+      onMouseLeave={(e) => {
+        (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,255,255,0.08)";
+        const iframe = e.currentTarget.querySelector("iframe");
+        if (iframe) iframe.style.pointerEvents = "none";
+      }}
+    >
+      <iframe
+        src={card.src}
+        title={card.name}
+        scrolling="no"
+        style={{
+          width: "1040px",
+          height: "680px",
+          transform: "scale(0.5)",
+          transformOrigin: "top left",
+          border: "none",
+          pointerEvents: "none",
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: "130px",
+          background: "linear-gradient(transparent, rgba(10,10,10,0.98))",
+          pointerEvents: "none",
+          zIndex: 2,
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          padding: "1.25rem",
+          zIndex: 3,
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: "10px",
+            textTransform: "uppercase",
+            letterSpacing: "0.06em",
+            color: "#f5a623",
+            background: "rgba(245,166,35,0.12)",
+            border: "1px solid rgba(245,166,35,0.3)",
+            borderRadius: "20px",
+            padding: "3px 10px",
+          }}
+        >
+          {card.tag}
+        </span>
+        <span
+          style={{
+            fontFamily: "'Fraunces', serif",
+            fontSize: "1.15rem",
+            fontWeight: 600,
+            color: "#f0ede8",
+            marginTop: "6px",
+            display: "block",
+            lineHeight: 1.2,
+          }}
+        >
+          {card.name}
+        </span>
+        <span
+          style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: "12px",
+            color: "rgba(240,237,232,0.7)",
+            marginTop: "2px",
+            display: "block",
+          }}
+        >
+          {card.desc}
+        </span>
+      </div>
+    </div>
+  );
+
+  return (
+    <section
+      style={{
+        background: "#0a0a0a",
+        padding: "4rem 0",
+        overflow: "hidden",
+      }}
+    >
+      <div style={{ textAlign: "center", marginBottom: "2.5rem", padding: "0 2.5rem" }}>
+        <div className="label-style" style={{ marginBottom: "1rem" }}>
+          Live Systems
+        </div>
+        <h2
+          style={{
+            fontFamily: "'Fraunces', serif",
+            fontSize: "clamp(2rem, 4vw, 3.2rem)",
+            fontWeight: 600,
+            lineHeight: 1.1,
+            letterSpacing: "-0.02em",
+            color: "#f0ede8",
+          }}
+        >
+          See the Work Running.
+          <br />
+          <span style={{ color: "#f5a623", fontStyle: "italic" }}>
+            These Are Not Mockups.
+          </span>
+        </h2>
+        <p
+          style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: "15px",
+            color: "rgba(240,237,232,0.82)",
+            maxWidth: "500px",
+            margin: "1.25rem auto 0",
+            lineHeight: 1.7,
+          }}
+        >
+          Every tool below is built, deployed, and live. Hover any card to
+          interact with it directly.
+        </p>
+      </div>
+
+      <div style={{ overflow: "hidden" }}>
+        <div
+          className="showcase-track"
+          style={{
+            display: "flex",
+            gap: "24px",
+            width: "fit-content",
+            animation: "scrollLeft 55s linear infinite",
+            paddingLeft: "24px",
+          }}
+        >
+          {cards.map((card, i) => (
+            <Card key={i} card={card} />
+          ))}
+          {cards.map((card, i) => (
+            <Card key={`dup-${i}`} card={card} />
+          ))}
+        </div>
+      </div>
+
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: "1.5rem",
+          fontFamily: "'DM Sans', sans-serif",
+          fontSize: "12px",
+          color: "rgba(255,255,255,0.3)",
+        }}
+      >
+        Hover any card to interact with the live system · Built and deployed
+        in under 5 days each
+      </div>
+
+      <style>{`
+        @keyframes scrollLeft {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .showcase-track:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+    </section>
+  );
+}
+
 function ProcessSection() {
   const steps = [
     {
@@ -1307,6 +1525,7 @@ export default function LandingPage() {
         <ProblemSection />
         <ServicesSection />
         <WorkSection />
+        <LiveShowcase />
         <ProcessSection />
         <WhoSection />
         <FinalCTA />

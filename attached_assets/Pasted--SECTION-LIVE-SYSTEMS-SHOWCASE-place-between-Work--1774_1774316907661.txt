@@ -1,0 +1,116 @@
+────────────────────────────────────────────────
+SECTION: LIVE SYSTEMS SHOWCASE
+(place between Work section and Process section)
+────────────────────────────────────────────────
+Background: #0a0a0a
+Padding: 4rem 0
+
+Section label (centered): "LIVE SYSTEMS"
+Title (Fraunces centered white):
+"See the Work Running."
+Second line (accent italic Fraunces):
+"These Are Not Mockups."
+Subtitle (DM Sans 15px muted centered, 
+max-width 500px, margin auto, margin-bottom 2.5rem):
+"Every tool below is built, deployed, and live. 
+Hover any card to interact with it directly."
+
+Full-width overflow hidden container below the title.
+
+Inner scrolling track:
+- Display: flex
+- Gap: 24px
+- Width: fit-content
+- Animation: CSS keyframes scrollLeft
+  translateX from 0 to -50%, 
+  linear infinite 55s
+- Contains TWO identical sets of all 4 cards
+  for seamless infinite loop
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+Pause animation on hover of the outer container:
+.showcase-track:hover { 
+  animation-play-state: paused; 
+}
+
+Each card:
+- Width: 520px
+- Height: 340px  
+- Flex-shrink: 0
+- Border-radius: 12px
+- Overflow: hidden
+- Position: relative
+- Border: 1px solid rgba(255,255,255,0.08)
+- Transition: border-color 0.2s
+
+Card hover:
+- Border-color: rgba(245,166,35,0.5)
+- iframe pointer-events: auto (default: none)
+
+iframe inside each card:
+- Width: 1040px (2x card width for scale trick)
+- Height: 680px (2x card height)
+- Transform: scale(0.5)
+- Transform-origin: top left
+- Border: none
+- Pointer-events: none (switches to auto on hover)
+- Scrolling: no
+
+This scale trick makes the full desktop app 
+fit perfectly inside the card at half size.
+
+Gradient overlay (position absolute, 
+bottom 0, left 0, right 0, height 130px,
+background: linear-gradient(
+  transparent, rgba(10,10,10,0.98)),
+pointer-events: none, z-index 2):
+
+Project label inside gradient (position absolute, 
+bottom 0, left 0, padding 1.25rem, z-index 3):
+- Industry tag pill top 
+  (DM Sans 10px uppercase, amber text, 
+  background rgba(245,166,35,0.12), 
+  border 1px solid rgba(245,166,35,0.3),
+  border-radius 20px, padding 3px 10px)
+- Project name (Fraunces 1.15rem white, 
+  margin-top 6px, display block)
+- Short description (DM Sans 12px muted, 
+  margin-top 2px)
+
+CARD 1:
+iframe src: "https://investment-thesis-dashboard.replit.app"
+Tag: "Sovereign Wealth / Private Equity"
+Name: "Investor Financial Model"
+Desc: "$200M+ equity raise · IC-ready"
+
+CARD 2:
+iframe src: "https://akamai-investor-dashboard--admin4277.replit.app"
+Tag: "Enterprise Technology"
+Name: "Akamai Investor Dashboard"
+Desc: "Live infrastructure analytics"
+
+CARD 3:
+iframe src: "https://garden-dashboard.replit.app"
+Tag: "Hospitality / Real Estate"
+Name: "Hotel Portfolio Dashboard"
+Desc: "STR benchmarking · Weekly reporting"
+
+CARD 4:
+iframe src: "https://martech-ai-platform-admin4277.replit.app"
+Tag: "MarTech / AI Platform"
+Name: "AI Outreach Platform"
+Desc: "Clay + Brevo · 13K contacts · 40% open rate"
+
+Duplicate all 4 cards identically immediately 
+after the first set (same HTML, same iframes) 
+to create the seamless infinite loop.
+
+Below the scrolling track (margin-top 1.5rem, 
+text-align center):
+DM Sans 12px color rgba(255,255,255,0.3):
+"Hover any card to interact with the live system  ·  
+Built and deployed in under 5 days each"
