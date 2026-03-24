@@ -1,0 +1,513 @@
+Build a production-ready single-page HTML landing page for 
+Sorano AI (soranoai.ai) — an AI build agency that creates 
+custom dashboards, automations, and workflow tools for 
+business managers who need to show results with AI fast 
+and affordably. The primary goal of this page is one 
+action: get the visitor to book a free 20-minute call.
+
+═══════════════════════════════════════════════════════════════
+DESIGN DIRECTION — ORIGINAL, DO NOT COPY ANY EXISTING SITE
+═══════════════════════════════════════════════════════════════
+
+Create a completely original design. Premium, modern, 
+confident AI agency aesthetic. Not a startup. Not a 
+hyperscaler. A specialist who has shipped real systems 
+for real companies.
+
+Color palette:
+- Base background: #0f0f0f (near black)
+- Surface cards: rgba(255,255,255,0.04)
+- Card borders: 1px solid rgba(255,255,255,0.08)
+- Primary text: #f0ede8 (warm off-white)
+- Muted text: rgba(240,237,232,0.5)
+- Accent: #f5a623 (electric amber) — used sparingly 
+  for maximum impact on headlines, numbers, CTAs, 
+  and key moments only
+- Light section background: #f7f4ef (warm off-white) 
+  used for the process section only as a contrast break
+
+Typography:
+- Display font: "Fraunces" from Google Fonts
+  Used for all headlines and large numbers
+  Italic variant for emphasis words in headlines
+- Body font: "DM Sans" from Google Fonts
+  Used for all body copy, UI, labels, nav
+- Import both via Google Fonts link tag
+
+Type scale:
+- Hero H1: clamp(3.2rem, 7vw, 6rem), weight 700, 
+  line-height 1.0, letter-spacing -0.03em
+- Section titles: clamp(2rem, 4vw, 3.2rem), weight 600
+- Body: 16px, line-height 1.7, weight 400
+- Labels: 11px, uppercase, letter-spacing 0.1em, muted
+- Card body: 14px, line-height 1.65
+
+Layout principles:
+- Asymmetric and editorial — not a SaaS template
+- Large typographic watermark section numbers 
+  (01, 02, 03...) in the background of each section 
+  at 3% opacity in accent color
+- Generous whitespace — sections breathe
+- Strong visual hierarchy — the headline always dominates
+
+Buttons:
+- Primary: solid accent (#f5a623) background, 
+  #0f0f0f text, sharp corners (border-radius 4px), 
+  padding 14px 28px, font-weight 500, font-size 14px
+- Secondary: transparent background, 1px solid accent, 
+  accent text, same padding and radius
+- Hover: primary darkens 10%, secondary fills lightly
+
+Cards:
+- Background: rgba(255,255,255,0.04)
+- Border: 1px solid rgba(255,255,255,0.08)
+- Border-radius: 12px
+- Hover: border brightens to rgba(245,166,35,0.3), 
+  transition 0.2s
+
+Animations:
+- Page load: hero headline words animate in 
+  sequentially, each word fades up with 80ms delay
+- Scroll: IntersectionObserver fadeUp on all sections
+  opacity 0 to 1, translateY 20px to 0, 
+  transition 0.6s ease, staggered 80ms per child
+- Marquee trust bar: seamless CSS infinite scroll
+- Accent pulse: small dot before eyebrow badge 
+  pulses with CSS animation
+
+═══════════════════════════════════════════════════════════════
+PAGE SECTIONS — BUILD ALL IN THIS EXACT ORDER
+═══════════════════════════════════════════════════════════════
+
+────────────────────────────────────────────────
+SECTION 1: FIXED NAV
+────────────────────────────────────────────────
+Position: fixed top, full width, z-index 100
+Background: rgba(15,15,15,0.92) backdrop-filter blur(16px)
+Border-bottom: 1px solid rgba(255,255,255,0.08)
+
+Left: Logo — "Sorano" in #f0ede8 + "AI" in #f5a623 
+      DM Sans 18px font-weight 500
+
+Center: Nav links — Work | Services | Pricing | Process
+        DM Sans 13px, color muted, 
+        hover: accent color transition 0.2s
+
+Right: "Book a Free Call" primary button
+       → https://calendly.com (placeholder)
+
+Mobile (below 768px): hide center links, 
+keep logo and CTA button only
+
+────────────────────────────────────────────────
+SECTION 2: HERO
+────────────────────────────────────────────────
+Min-height: 100vh
+Display: flex, align-items center
+Padding-top: 80px (nav offset)
+Background: #0f0f0f
+
+Left column (60% width on desktop):
+
+Eyebrow badge:
+Small amber pulse dot (CSS keyframe animation) 
+followed by "AI Build Agency" text
+Font: DM Sans 11px uppercase letter-spacing 0.1em
+Color: accent #f5a623
+Margin-bottom: 1.5rem
+
+H1 — Fraunces display:
+Line 1 (white): "Your Team Needs an AI Win."
+Line 2 (accent italic Fraunces): "We Build It in 5 Days."
+
+Subheading (DM Sans 17px muted, max-width 520px, 
+margin-top 1.75rem, line-height 1.7):
+"We build custom AI dashboards, automations, and 
+workflow tools for managers who need to show results 
+— fast, affordable, and without an IT department. 
+You bring the problem. We deliver a working system. 
+You own it completely."
+
+CTA buttons (margin-top 2.5rem, display flex gap 1rem):
+- Primary: "Book a Free 20-Min Call" → https://calendly.com
+- Secondary outline: "See Our Work →" → anchor #work
+
+Stats row (margin-top 4rem, padding-top 2rem, 
+border-top 1px solid rgba(255,255,255,0.08),
+display flex, gap 3rem, flex-wrap wrap):
+
+Stat 1: "13" / "AI SYSTEMS SHIPPED"
+Stat 2: "5 days" / "AVERAGE BUILD TIME"
+Stat 3: "100%" / "CLIENT OWNERSHIP"
+Stat 4: "$0" / "ONGOING PLATFORM FEES"
+
+Stat number style: Fraunces 2.5rem #f5a623
+Stat label style: DM Sans 11px uppercase muted
+
+Right column (40% desktop only, hidden mobile):
+Decorative typographic element:
+Number "5" in Fraunces, font-size 45vw, 
+color #f5a623 at 4% opacity,
+position absolute right -5%, top 50% transform -50%,
+pointer-events none, overflow hidden, 
+z-index 0 (behind content)
+Small label underneath in DM Sans 11px uppercase muted: 
+"DAYS TO BUILD"
+
+────────────────────────────────────────────────
+SECTION 3: MARQUEE TRUST BAR
+────────────────────────────────────────────────
+Background: rgba(245,166,35,0.06)
+Border-top and border-bottom: 1px solid rgba(245,166,35,0.15)
+Padding: 14px 0
+Overflow: hidden
+
+CSS infinite scroll marquee — seamless loop:
+Text content (repeated twice for seamless loop):
+"AI Dashboards  ·  Built in 5 Days  ·  
+Fixed Price  ·  You Own Everything  ·  
+No IT Department Required  ·  
+13 Real Systems Shipped  ·  
+Workflow Automation  ·  
+Done-With-You Builds  ·  
+100% Client Ownership  ·  "
+
+Font: DM Sans 13px, color rgba(245,166,35,0.5)
+Dots: accent color at full opacity
+Animation: linear infinite 30s left scroll
+
+────────────────────────────────────────────────
+SECTION 4: PROBLEM (id="problem")
+────────────────────────────────────────────────
+Background: #0f0f0f
+Watermark: "01" Fraunces, 20rem, accent 3% opacity, 
+absolute top right of section
+
+Section label: "SOUND FAMILIAR?"
+Title (Fraunces):
+"Your Company Is Deploying AI."
+Second line (accent italic): "Your Team Is Still Using Spreadsheets."
+
+Subtitle (DM Sans 15px muted, max-width 520px):
+"Most managers are about to show their boss a 
+ChatGPT screenshot. A few will show something 
+that actually runs. We build the thing that runs."
+
+4 problem cards in a 2x2 grid (gap 1px, 
+cards use glass style):
+Left border on each card: 2px solid #f5a623
+
+Card 1 title: "The mandate came from above"
+Card 1 body: "Leadership announced an AI initiative. 
+Every manager is expected to show what their team 
+is doing. You have 90 days and no roadmap."
+
+Card 2 title: "IT has a 6-month backlog"
+Card 2 body: "You submitted the request. It went 
+into a queue behind 47 other tickets. 
+Your deadline is next quarter."
+
+Card 3 title: "You are still doing it manually"
+Card 3 body: "10 or more hours a week on reports, 
+data entry, outreach, or updates that a system 
+should handle automatically."
+
+Card 4 title: "The budget does not cover agencies"
+Card 4 body: "$50,000 for a 3-month engagement 
+is not happening. But doing nothing is 
+not an option either."
+
+────────────────────────────────────────────────
+SECTION 5: SERVICE (id="services")
+────────────────────────────────────────────────
+Background: #0f0f0f
+Watermark: "02"
+
+Section label: "THE OFFER"
+Title (Fraunces): "One Service. One Price. One Week."
+
+ONE single featured service card — full width, 
+centered, max-width 780px, margin auto.
+Make it dominant and generous with padding (3rem).
+Accent top border 3px solid #f5a623.
+Glass card style.
+
+Top row: 
+Left — "Done-With-You AI Build" 
+       Fraunces 1.8rem white
+Right — Price chip: "$997" Fraunces 2rem accent color
+         Below price: "Fixed price · 5 days · 
+         you own everything"
+         DM Sans 12px muted
+
+Description (DM Sans 15px, margin-top 1.25rem):
+"You bring your biggest manual headache. 
+We build the AI system that solves it together. 
+One week. Fixed price. Your team uses it on day six."
+
+Divider: 1px solid rgba(255,255,255,0.08) margin 1.5rem 0
+
+Deliverables — two column grid:
+Each item: checkmark circle (green #22c55e bg, 
+white checkmark) + text DM Sans 13px muted
+
+Left column:
+✓ 60-min discovery call to map your workflow
+✓ Custom build — dashboard, automation, or AI tool
+✓ Claude API or OpenAI integration where needed
+✓ Data connections — Sheets, Airtable, CRM, APIs
+
+Right column:
+✓ Live walkthrough and full handoff session
+✓ 30 days of follow-up support included
+✓ Full documentation — your team runs it independently
+✓ No subscriptions, no platform lock-in, ever
+
+CTA button below deliverables (margin-top 2rem, 
+centered):
+Primary: "Book a Free 20-Min Call" → https://calendly.com
+
+Small muted text below button:
+"3 spots available this month · 
+Fixed price before we start · 
+Response within 24 hours"
+
+────────────────────────────────────────────────
+SECTION 6: WORK (id="work")
+────────────────────────────────────────────────
+Background: slightly lighter — #141414
+Watermark: "03"
+
+Section label: "REAL WORK. REAL OUTPUT."
+Title (Fraunces): "13 Systems Shipped."
+Second line (accent italic): "Zero Theoretical."
+Subtitle (muted): "Every project below was built, 
+deployed, and is in active use. 
+No mockups. No case study fluff."
+
+4 project cards in 2x2 grid:
+
+Each card structure:
+- Top: industry tag pill (amber text, dark pill bg) 
+  left + "DELIVERED" badge right 
+  (green dot + DM Sans 10px green text)
+- Headline: Fraunces 1.3rem white, margin-top 0.75rem
+- Detail: DM Sans 13px muted, line-height 1.65, 
+  margin-top 0.5rem
+- Bottom: flex wrap of tech stack pills 
+  (DM Sans 10px, dark pill bg, muted text, 
+  border-radius 20px, padding 3px 10px)
+- Hover: card border brightens to accent
+
+PROJECT 1:
+Tag: "Sovereign Wealth / Private Equity"
+Headline: "Institutional-grade financial model 
+for a $200M+ equity raise"
+Detail: "Bottom-up financial model for a joint venture 
+targeting digital banking expansion across African and 
+Asian markets. Structured for sovereign investor IC 
+review with full sensitivity analysis, regulatory 
+market matrix, and executive summary."
+Stack: Excel · Financial Modeling · Investor Relations · 
+Scenario Analysis
+
+PROJECT 2:
+Tag: "Hospitality / Real Estate"
+Headline: "Portfolio analytics dashboard replacing 
+12 hours of weekly manual reporting"
+Detail: "Live performance dashboard for a boutique 
+hotel portfolio in New Orleans. STR and STAR 
+benchmarking, acquisition tear sheet, and 
+AI-generated weekly investor summary emails. 
+Built and deployed in under a week."
+Stack: React · Streamlit · AI Analysis · Airtable
+
+PROJECT 3:
+Tag: "Enterprise Technology"
+Headline: "Interactive AI proposal builder 
+cutting sales cycles by 40%"
+Detail: "Dynamic proposal tool built for a $200M+ 
+infrastructure product launch. Custom pricing 
+calculator, AI-generated sections tailored to each 
+prospect, and one-click PDF export. Deployed and 
+in active use."
+Stack: React · Claude API · PDF Export · CRM Integration
+
+PROJECT 4:
+Tag: "Market Intelligence"
+Headline: "AI-powered TAM and market analysis 
+engine delivering research in minutes"
+Detail: "Claude API-powered market research tool 
+delivering structured competitive analysis, TAM 
+sizing, and go-to-market recommendations in minutes 
+instead of weeks. Used to evaluate market 
+opportunities before committing resources."
+Stack: Claude API · Market Research · React · 
+Competitive Analysis
+
+────────────────────────────────────────────────
+SECTION 7: PROCESS
+────────────────────────────────────────────────
+Background: #f7f4ef (warm off-white — contrast break)
+Watermark: "04" in dark ink at 3% opacity
+
+Section label (dark ink): "HOW IT WORKS"
+Title (Fraunces dark ink):
+"From First Call to Live System in 5 Days"
+Subtitle (dark muted): 
+"No discovery decks. No 6-week timelines. 
+No surprise invoices. Just a working system."
+
+4 steps in horizontal timeline on desktop, 
+vertical stack on mobile:
+
+Between each step on desktop: 
+thin accent color connecting line
+
+Each step:
+- Large accent number (Fraunces 3rem #f5a623)
+- Title (DM Sans 15px dark font-weight 500)
+- Body (DM Sans 13px dark muted)
+
+Step 01: "You tell us the problem"
+"Book a free 20-minute call. Tell us the one 
+workflow that costs your team the most time. 
+No prep required. No deck needed."
+
+Step 02: "We scope it same day"
+"You get a fixed price and delivery date before 
+we hang up. No proposals. No waiting. 
+If it does not fit, we will tell you honestly."
+
+Step 03: "We build it together"
+"5 days. Daily progress updates. You stay as 
+involved as you want. You see the build happen 
+not just the final output."
+
+Step 04: "You own it completely"
+"Full handoff, documentation, walkthrough, and 
+30 days of support. No subscriptions. 
+No platform lock-in. Yours forever."
+
+────────────────────────────────────────────────
+SECTION 8: WHO THIS IS FOR
+────────────────────────────────────────────────
+Background: #0f0f0f
+Watermark: "05"
+
+Section label: "THE RIGHT FIT"
+Title (Fraunces): "Built for Managers."
+Second line (accent italic): "Not IT Departments."
+
+3 cards horizontal grid (equal width):
+
+Card 1:
+Title: "You are a Director or Senior Manager"
+Body: "Your company is rolling out AI and you need 
+something your team actually uses — not a pilot 
+that dies in a committee meeting."
+
+Card 2:
+Title: "You have a specific workflow problem"
+Body: "Not a vague mandate to use AI. A concrete 
+process that takes too long, costs too much, 
+or breaks too often."
+
+Card 3:
+Title: "You can make a fast decision"
+Body: "Not enterprise procurement. Not a 6-month 
+approval chain. You can greenlight $997 this week 
+if it solves a real problem."
+
+────────────────────────────────────────────────
+SECTION 9: FINAL CTA
+────────────────────────────────────────────────
+Background: #0f0f0f
+Centered content, max-width 680px, margin auto
+Generous padding top and bottom (6rem)
+
+Large Fraunces headline centered (white):
+"Your Boss Is About to Ask
+ What You Are Doing With AI."
+
+Subheading (DM Sans 16px muted centered, 
+max-width 500px margin auto, margin-top 1.25rem):
+"Book a free 20-minute call. Tell us your biggest 
+manual workflow problem. We will tell you exactly 
+what we would build, how long it takes, and what 
+it costs. No pitch. No obligation. No deck required."
+
+Two buttons centered (margin-top 2.5rem, 
+display flex justify-content center gap 1rem flex-wrap):
+- Primary solid: "Book a Free 20-Min Call" 
+  → https://calendly.com
+- Secondary ghost: "Send a Message" 
+  → mailto:hello@soranoai.ai
+
+Three trust signals below buttons 
+(DM Sans 12px muted centered, margin-top 1.25rem):
+"3 spots available this month  ·  
+Response within 24 hours  ·  
+Fixed price before we start"
+
+────────────────────────────────────────────────
+SECTION 10: FOOTER
+────────────────────────────────────────────────
+Background: #080808
+Padding: 2rem 2.5rem
+Display: flex justify-content space-between 
+align-items center flex-wrap gap 1rem
+
+Left: "Sorano" + "AI" in accent, DM Sans 16px font-weight 500
+Center: Work · Services · Process · Contact
+        DM Sans 12px muted, hover accent, gap 1.5rem
+Right: "© 2026 Sorano AI. All rights reserved." 
+       DM Sans 12px muted
+
+═══════════════════════════════════════════════════════════════
+TECHNICAL REQUIREMENTS
+═══════════════════════════════════════════════════════════════
+
+- Single HTML file — all CSS and JS inline, no exceptions
+- External dependencies: Google Fonts only
+- Vanilla JS only — no frameworks, no libraries
+- IntersectionObserver scroll reveals:
+  Every section child animates in on scroll
+  opacity 0 to 1, translateY 20px to 0
+  transition 0.6s ease, staggered 80ms per element
+- Hero headline: words animate in sequentially on 
+  page load, each word fades up with 100ms delay
+- Marquee: pure CSS animation, seamless infinite loop, 
+  pauses on hover
+- Smooth scroll behavior on all anchor links
+- Fully responsive — mobile first below 768px
+- Nav collapses to logo + CTA only on mobile
+- All "Book a Free Call" buttons 
+  → https://calendly.com (placeholder, easy to update)
+- All email links → mailto:hello@soranoai.ai
+- Zero lorem ipsum — all copy exactly as written above
+- Page title: 
+  "Sorano AI — We Build Your AI System in 5 Days"
+- Meta description: 
+  "Custom AI dashboards, automations, and workflow tools 
+  for managers who need results fast. Fixed price. 
+  5-day delivery. You own everything."
+
+═══════════════════════════════════════════════════════════════
+COPY RULES — ENFORCE ON EVERY LINE OF COPY
+═══════════════════════════════════════════════════════════════
+
+- Direct and peer-level — never salesy or deferential
+- Short punchy paragraphs — no walls of text
+- No passive voice anywhere on the page
+- No hyphens and no em dashes anywhere
+- No AI buzzwords: leverage, utilize, synergy, 
+  cutting-edge, revolutionary, game-changing, 
+  unlock, empower, transform
+- "We" and "you" throughout — never third person
+- Every sentence should sound like it was written 
+  by someone who has actually shipped these systems
+- Numbers are always specific — never vague ranges 
+  when an exact number exists
+- Scarcity is real — "3 spots this month" not 
+  "limited availability"

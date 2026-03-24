@@ -4,6 +4,19 @@
 
 pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
 
+## Artifacts
+
+### `artifacts/sorano-ai` (`@workspace/sorano-ai`)
+
+Production-ready landing page for Sorano AI (soranoai.ai) — an AI build agency. React + Vite single-page application.
+
+- Serves at `previewPath: "/"` (root)
+- Fonts: Fraunces (display/serif) + DM Sans (body) from Google Fonts
+- Color scheme: #0f0f0f base, #f5a623 amber accent, #f0ede8 warm off-white text
+- All 10 sections: Nav, Hero, Marquee, Problem, Services, Work, Process, Who It's For, Final CTA, Footer
+- Animations: hero word-by-word fade in, IntersectionObserver scroll reveals, CSS marquee
+- CTA links: https://calendly.com (book call) and mailto:hello@soranoai.ai
+
 ## Stack
 
 - **Monorepo tool**: pnpm workspaces

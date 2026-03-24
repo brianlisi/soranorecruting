@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Sorano AI Landing Page"
+version = "1.0.0"
+id = "artifacts/sorano-ai"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22254
+
+[services.development]
+run = "pnpm --filter @workspace/sorano-ai run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/sorano-ai", "run", "build" ]
+publicDir = "artifacts/sorano-ai/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22254"
+BASE_PATH = "/"
