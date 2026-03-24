@@ -146,7 +146,7 @@ function HeroSection() {
           zIndex: 1,
         }}
       >
-        <div style={{ flex: "0 0 52%", maxWidth: "52%" }}>
+        <div style={{ flex: "0 0 58%", maxWidth: "58%" }}>
           <div
             style={{
               display: "flex",
@@ -173,9 +173,9 @@ function HeroSection() {
           <h1
             style={{
               fontFamily: "'Syne', sans-serif",
-              fontSize: "clamp(3.2rem, 7vw, 6rem)",
+              fontSize: "clamp(1.8rem, 3.2vw, 3rem)",
               fontWeight: 800,
-              lineHeight: 1.0,
+              lineHeight: 1.05,
               letterSpacing: "-0.03em",
               marginBottom: 0,
             }}
@@ -254,11 +254,11 @@ function HeroSection() {
           <div
             style={{
               display: "flex",
-              gap: "3rem",
-              marginTop: "4rem",
-              paddingTop: "2rem",
+              gap: "2rem",
+              marginTop: "3rem",
+              paddingTop: "1.75rem",
               borderTop: "1px solid rgba(255,255,255,0.08)",
-              flexWrap: "wrap",
+              flexWrap: "nowrap",
             }}
           >
             {[
@@ -1470,9 +1470,9 @@ function FinalCTA() {
           className="reveal"
           style={{
             fontFamily: "'Syne', sans-serif",
-            fontSize: "clamp(2.2rem, 5vw, 3.6rem)",
+            fontSize: "clamp(1.8rem, 2.8vw, 2.6rem)",
             fontWeight: 800,
-            lineHeight: 1.05,
+            lineHeight: 1.08,
             letterSpacing: "-0.03em",
             color: "#f0ede8",
           }}
