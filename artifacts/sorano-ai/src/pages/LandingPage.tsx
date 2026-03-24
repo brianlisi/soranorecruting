@@ -57,9 +57,9 @@ function Nav() {
     >
       <a href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
         <img
-          src={`${import.meta.env.BASE_URL}sorano-logo-transparent.png`}
+          src={`${import.meta.env.BASE_URL}sorano-logo-clear.png`}
           alt="Sorano AI"
-          style={{ height: "38px", display: "block" }}
+          style={{ height: "52px", display: "block" }}
         />
       </a>
 
@@ -1679,9 +1679,9 @@ function Footer() {
         style={{ textDecoration: "none", display: "flex", alignItems: "center" }}
       >
         <img
-          src={`${import.meta.env.BASE_URL}sorano-logo-transparent.png`}
+          src={`${import.meta.env.BASE_URL}sorano-logo-clear.png`}
           alt="Sorano AI"
-          style={{ height: "30px", display: "block" }}
+          style={{ height: "40px", display: "block" }}
         />
       </a>
 
