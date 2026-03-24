@@ -45,7 +45,7 @@ function Nav() {
       <a
         href="/"
         style={{
-          fontFamily: "'DM Sans', sans-serif",
+          fontFamily: "'Inter', sans-serif",
           fontSize: "18px",
           fontWeight: 500,
           textDecoration: "none",
@@ -69,7 +69,7 @@ function Nav() {
             key={link}
             href={`#${link.toLowerCase()}`}
             style={{
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontSize: "13px",
               color: "rgba(240,237,232,0.75)",
               textDecoration: "none",
@@ -146,7 +146,7 @@ function HeroSection() {
           zIndex: 1,
         }}
       >
-        <div style={{ flex: "0 0 60%", maxWidth: "60%" }}>
+        <div style={{ flex: "0 0 52%", maxWidth: "52%" }}>
           <div
             style={{
               display: "flex",
@@ -158,7 +158,7 @@ function HeroSection() {
             <span className="pulse-dot" />
             <span
               style={{
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 fontSize: "11px",
                 textTransform: "uppercase",
                 letterSpacing: "0.1em",
@@ -172,9 +172,9 @@ function HeroSection() {
 
           <h1
             style={{
-              fontFamily: "'Fraunces', serif",
+              fontFamily: "'Syne', sans-serif",
               fontSize: "clamp(3.2rem, 7vw, 6rem)",
-              fontWeight: 700,
+              fontWeight: 800,
               lineHeight: 1.0,
               letterSpacing: "-0.03em",
               marginBottom: 0,
@@ -210,7 +210,6 @@ function HeroSection() {
                     style={{
                       marginRight: "0.25em",
                       color: "#f5a623",
-                      fontStyle: "italic",
                     }}
                   >
                     {word}
@@ -222,7 +221,7 @@ function HeroSection() {
 
           <p
             style={{
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontSize: "17px",
               color: "rgba(240,237,232,0.9)",
               maxWidth: "520px",
@@ -277,41 +276,136 @@ function HeroSection() {
         </div>
 
         <div
-          className="hero-number-bg"
+          className="hero-montage"
           style={{
-            position: "absolute",
-            right: "-5%",
-            top: "50%",
-            transform: "translateY(-50%)",
+            flex: 1,
+            position: "relative",
+            minHeight: "540px",
             pointerEvents: "none",
-            zIndex: 0,
-            overflow: "hidden",
-            userSelect: "none",
           }}
         >
-          <div
-            style={{
-              fontFamily: "'Fraunces', serif",
-              fontSize: "45vw",
-              color: "#f5a623",
-              opacity: 0.04,
-              lineHeight: 1,
-            }}
-          >
-            5
+          {/* Clipping 1 — Slack message */}
+          <div style={{
+            position: "absolute", top: 0, left: "6%",
+            width: "258px", transform: "rotate(-2.2deg)",
+            background: "#1a1d21", borderRadius: "10px",
+            boxShadow: "0 8px 32px rgba(0,0,0,0.55)",
+            overflow: "hidden",
+          }}>
+            <div style={{ padding: "10px 14px 6px", borderBottom: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", gap: "6px" }}>
+              <span style={{ color: "rgba(255,255,255,0.4)", fontFamily: "'Inter', sans-serif", fontSize: "11px" }}>#</span>
+              <span style={{ color: "rgba(255,255,255,0.65)", fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 500 }}>operations</span>
+              <span style={{ color: "rgba(255,255,255,0.25)", fontFamily: "'Inter', sans-serif", fontSize: "10px", marginLeft: "auto" }}>Slack</span>
+            </div>
+            <div style={{ padding: "12px 14px 14px", display: "flex", gap: "10px" }}>
+              <div style={{ width: "32px", height: "32px", borderRadius: "6px", background: "#4a154b", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <span style={{ color: "#fff", fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 600 }}>S</span>
+              </div>
+              <div>
+                <div style={{ display: "flex", alignItems: "baseline", gap: "8px", marginBottom: "4px" }}>
+                  <span style={{ color: "#fff", fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 600 }}>Sarah</span>
+                  <span style={{ color: "rgba(255,255,255,0.3)", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>VP Operations</span>
+                </div>
+                <p style={{ color: "rgba(255,255,255,0.82)", fontFamily: "'Inter', sans-serif", fontSize: "12px", lineHeight: 1.55, margin: 0 }}>
+                  Hey — leadership wants each team to present their AI strategy by end of quarter. Can you put something together?
+                </p>
+              </div>
+            </div>
           </div>
-          <div
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: "11px",
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              color: "rgba(240,237,232,0.6)",
-              textAlign: "center",
-              marginTop: "0.5rem",
-            }}
-          >
-            Days to Build
+
+          {/* Clipping 2 — Calendar block */}
+          <div style={{
+            position: "absolute", top: "28px", right: "2%",
+            width: "205px", transform: "rotate(2.5deg)",
+            background: "#fff", borderRadius: "10px",
+            boxShadow: "0 8px 32px rgba(0,0,0,0.45)",
+            overflow: "hidden",
+          }}>
+            <div style={{ background: "#dc2626", padding: "8px 12px", display: "flex", alignItems: "center", gap: "6px" }}>
+              <span style={{ color: "#fff", fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 600 }}>MON</span>
+              <div style={{ width: "1px", height: "12px", background: "rgba(255,255,255,0.3)" }} />
+              <span style={{ color: "rgba(255,255,255,0.85)", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>9:00 AM — 12:00 PM</span>
+            </div>
+            <div style={{ padding: "12px" }}>
+              <div style={{ color: "#111", fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 700, lineHeight: 1.3 }}>
+                Weekly Manual Reporting — 3 hrs
+              </div>
+              <div style={{ color: "#dc2626", fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 500, marginTop: "6px" }}>
+                🔁 Repeating every Monday
+              </div>
+              <div style={{ color: "#6b7280", fontFamily: "'Inter', sans-serif", fontSize: "10px", marginTop: "3px" }}>
+                Since 2019
+              </div>
+            </div>
+          </div>
+
+          {/* Clipping 3 — LinkedIn job posting */}
+          <div style={{
+            position: "absolute", top: "185px", left: "14%",
+            width: "268px", transform: "rotate(-1.2deg)",
+            background: "#fff", borderRadius: "10px",
+            boxShadow: "0 8px 32px rgba(0,0,0,0.42)",
+            overflow: "hidden",
+          }}>
+            <div style={{ background: "#0a66c2", padding: "8px 12px", display: "flex", alignItems: "center", gap: "6px" }}>
+              <span style={{ color: "#fff", fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 700, letterSpacing: "0.02em" }}>in</span>
+              <span style={{ color: "rgba(255,255,255,0.8)", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>Job Posting</span>
+            </div>
+            <div style={{ padding: "12px" }}>
+              <div style={{ color: "#0a66c2", fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 700 }}>NOW HIRING</div>
+              <div style={{ color: "#111", fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 600, marginTop: "2px" }}>Operations Manager</div>
+              <div style={{ marginTop: "8px", display: "flex", flexDirection: "column", gap: "4px" }}>
+                {["AI tools proficiency required.", "Workflow automation required."].map((req, i) => (
+                  <div key={i} style={{ color: "#374151", fontFamily: "'Inter', sans-serif", fontSize: "11px", display: "flex", alignItems: "flex-start", gap: "5px" }}>
+                    <span style={{ color: "#dc2626", fontWeight: 700, flexShrink: 0 }}>✓</span> {req}
+                  </div>
+                ))}
+              </div>
+              <div style={{ marginTop: "10px", color: "#0a66c2", fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 600, cursor: "pointer" }}>Apply →</div>
+            </div>
+          </div>
+
+          {/* Clipping 4 — Email thread */}
+          <div style={{
+            position: "absolute", top: "215px", right: "0%",
+            width: "245px", transform: "rotate(1.8deg)",
+            background: "#f9f7f4", borderRadius: "10px",
+            boxShadow: "0 8px 32px rgba(0,0,0,0.38)",
+            overflow: "hidden",
+          }}>
+            <div style={{ background: "#e8e4de", padding: "8px 12px", borderBottom: "1px solid #d6d0c8" }}>
+              <div style={{ color: "#374151", fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 600 }}>RE: RE: RE: Q3 Analytics Report</div>
+            </div>
+            <div style={{ padding: "12px" }}>
+              <p style={{ color: "#374151", fontFamily: "'Inter', sans-serif", fontSize: "11.5px", lineHeight: 1.55, margin: 0 }}>
+                Can you pull this manually again this week? IT said the dashboard request is still in the backlog.
+              </p>
+              <div style={{ marginTop: "10px", paddingTop: "8px", borderTop: "1px solid #d6d0c8", color: "#9ca3af", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>
+                37 emails in this thread
+              </div>
+            </div>
+          </div>
+
+          {/* Clipping 5 — Dark CTA card */}
+          <div style={{
+            position: "absolute", bottom: "20px", left: "10%",
+            width: "280px", transform: "rotate(-0.8deg)",
+            background: "#111", border: "1px solid rgba(245,166,35,0.25)",
+            borderRadius: "10px",
+            boxShadow: "0 8px 32px rgba(0,0,0,0.6)",
+            overflow: "hidden",
+          }}>
+            <div style={{ padding: "16px" }}>
+              <div style={{ color: "#f5a623", fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px" }}>
+                Sound familiar?
+              </div>
+              <div style={{ color: "#f0ede8", fontFamily: "'Syne', sans-serif", fontSize: "14px", fontWeight: 700, lineHeight: 1.4 }}>
+                Is your team still doing manually what AI could do in seconds?
+              </div>
+              <div style={{ marginTop: "12px", color: "#f5a623", fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 500 }}>
+                → Book a call before your next performance review
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -334,7 +428,7 @@ function MarqueeBar() {
 
   const content = items.map((item, i) => (
     <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: "1.5rem", whiteSpace: "nowrap" }}>
-      <span style={{ color: "rgba(245,166,35,0.88)", fontFamily: "'DM Sans', sans-serif", fontSize: "13px" }}>
+      <span style={{ color: "rgba(245,166,35,0.88)", fontFamily: "'Inter', sans-serif", fontSize: "13px" }}>
         {item}
       </span>
       <span style={{ color: "#f5a623", fontSize: "10px" }}>·</span>
@@ -403,7 +497,7 @@ function ProblemSection() {
           </div>
           <h2
             style={{
-              fontFamily: "'Fraunces', serif",
+              fontFamily: "'Syne', sans-serif",
               fontSize: "clamp(2rem, 4vw, 3.2rem)",
               fontWeight: 600,
               lineHeight: 1.1,
@@ -413,13 +507,13 @@ function ProblemSection() {
           >
             Your Company Is Deploying AI.
             <br />
-            <span style={{ color: "#f5a623", fontStyle: "italic" }}>
+            <span style={{ color: "#f5a623" }}>
               Your Team Is Still Using Spreadsheets.
             </span>
           </h2>
           <p
             style={{
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
               color: "rgba(240,237,232,0.88)",
               maxWidth: "520px",
@@ -456,7 +550,7 @@ function ProblemSection() {
             >
               <h3
                 style={{
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontSize: "15px",
                   fontWeight: 600,
                   color: "#f0ede8",
@@ -467,7 +561,7 @@ function ProblemSection() {
               </h3>
               <p
                 style={{
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontSize: "14px",
                   color: "rgba(240,237,232,0.88)",
                   lineHeight: 1.65,
@@ -532,7 +626,7 @@ function ServicesSection() {
           </div>
           <h2
             style={{
-              fontFamily: "'Fraunces', serif",
+              fontFamily: "'Syne', sans-serif",
               fontSize: "clamp(2rem, 4vw, 3.2rem)",
               fontWeight: 600,
               lineHeight: 1.1,
@@ -565,7 +659,7 @@ function ServicesSection() {
             <div>
               <h3
                 style={{
-                  fontFamily: "'Fraunces', serif",
+                  fontFamily: "'Syne', sans-serif",
                   fontSize: "1.8rem",
                   fontWeight: 600,
                   color: "#f0ede8",
@@ -578,9 +672,9 @@ function ServicesSection() {
             <div style={{ textAlign: "right" }}>
               <div
                 style={{
-                  fontFamily: "'Fraunces', serif",
+                  fontFamily: "'Syne', sans-serif",
                   fontSize: "2rem",
-                  fontWeight: 700,
+                  fontWeight: 800,
                   color: "#f5a623",
                   lineHeight: 1,
                 }}
@@ -589,7 +683,7 @@ function ServicesSection() {
               </div>
               <div
                 style={{
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontSize: "12px",
                   color: "rgba(240,237,232,0.78)",
                   marginTop: "0.4rem",
@@ -602,7 +696,7 @@ function ServicesSection() {
 
           <p
             style={{
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
               color: "rgba(240,237,232,0.9)",
               marginTop: "1.25rem",
@@ -651,7 +745,7 @@ function ServicesSection() {
                   </div>
                   <span
                     style={{
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'Inter', sans-serif",
                       fontSize: "13px",
                       color: "rgba(240,237,232,0.9)",
                       lineHeight: 1.5,
@@ -670,7 +764,7 @@ function ServicesSection() {
             </a>
             <div
               style={{
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 fontSize: "12px",
                 color: "rgba(240,237,232,0.7)",
                 marginTop: "1rem",
@@ -752,7 +846,7 @@ function WorkSection() {
           </div>
           <h2
             style={{
-              fontFamily: "'Fraunces', serif",
+              fontFamily: "'Syne', sans-serif",
               fontSize: "clamp(2rem, 4vw, 3.2rem)",
               fontWeight: 600,
               lineHeight: 1.1,
@@ -762,13 +856,13 @@ function WorkSection() {
           >
             13 Systems Shipped.
             <br />
-            <span style={{ color: "#f5a623", fontStyle: "italic" }}>
+            <span style={{ color: "#f5a623" }}>
               Zero Theoretical.
             </span>
           </h2>
           <p
             style={{
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
               color: "rgba(240,237,232,0.88)",
               maxWidth: "520px",
@@ -820,7 +914,7 @@ function WorkSection() {
 
               <h3
                 style={{
-                  fontFamily: "'Fraunces', serif",
+                  fontFamily: "'Syne', sans-serif",
                   fontSize: "1.3rem",
                   fontWeight: 600,
                   color: "#f0ede8",
@@ -833,7 +927,7 @@ function WorkSection() {
 
               <p
                 style={{
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontSize: "13px",
                   color: "rgba(240,237,232,0.88)",
                   lineHeight: 1.65,
@@ -936,7 +1030,7 @@ function LiveShowcase() {
       >
         <span
           style={{
-            fontFamily: "'DM Sans', sans-serif",
+            fontFamily: "'Inter', sans-serif",
             fontSize: "10px",
             textTransform: "uppercase",
             letterSpacing: "0.06em",
@@ -951,7 +1045,7 @@ function LiveShowcase() {
         </span>
         <span
           style={{
-            fontFamily: "'Fraunces', serif",
+            fontFamily: "'Syne', sans-serif",
             fontSize: "1.15rem",
             fontWeight: 600,
             color: "#f0ede8",
@@ -964,7 +1058,7 @@ function LiveShowcase() {
         </span>
         <span
           style={{
-            fontFamily: "'DM Sans', sans-serif",
+            fontFamily: "'Inter', sans-serif",
             fontSize: "12px",
             color: "rgba(240,237,232,0.7)",
             marginTop: "2px",
@@ -991,7 +1085,7 @@ function LiveShowcase() {
         </div>
         <h2
           style={{
-            fontFamily: "'Fraunces', serif",
+            fontFamily: "'Syne', sans-serif",
             fontSize: "clamp(2rem, 4vw, 3.2rem)",
             fontWeight: 600,
             lineHeight: 1.1,
@@ -1001,13 +1095,13 @@ function LiveShowcase() {
         >
           See the Work Running.
           <br />
-          <span style={{ color: "#f5a623", fontStyle: "italic" }}>
+          <span style={{ color: "#f5a623" }}>
             These Are Not Mockups.
           </span>
         </h2>
         <p
           style={{
-            fontFamily: "'DM Sans', sans-serif",
+            fontFamily: "'Inter', sans-serif",
             fontSize: "15px",
             color: "rgba(240,237,232,0.82)",
             maxWidth: "500px",
@@ -1044,7 +1138,7 @@ function LiveShowcase() {
         style={{
           textAlign: "center",
           marginTop: "1.5rem",
-          fontFamily: "'DM Sans', sans-serif",
+          fontFamily: "'Inter', sans-serif",
           fontSize: "12px",
           color: "rgba(255,255,255,0.3)",
         }}
@@ -1137,7 +1231,7 @@ function ProcessSection() {
           </div>
           <h2
             style={{
-              fontFamily: "'Fraunces', serif",
+              fontFamily: "'Syne', sans-serif",
               fontSize: "clamp(2rem, 4vw, 3.2rem)",
               fontWeight: 600,
               lineHeight: 1.1,
@@ -1149,7 +1243,7 @@ function ProcessSection() {
           </h2>
           <p
             style={{
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
               color: "rgba(15,15,15,0.72)",
               maxWidth: "520px",
@@ -1181,9 +1275,9 @@ function ProcessSection() {
               >
                 <div
                   style={{
-                    fontFamily: "'Fraunces', serif",
+                    fontFamily: "'Syne', sans-serif",
                     fontSize: "3rem",
-                    fontWeight: 700,
+                    fontWeight: 800,
                     color: "#f5a623",
                     lineHeight: 1,
                     marginBottom: "1rem",
@@ -1193,7 +1287,7 @@ function ProcessSection() {
                 </div>
                 <h3
                   style={{
-                    fontFamily: "'DM Sans', sans-serif",
+                    fontFamily: "'Inter', sans-serif",
                     fontSize: "15px",
                     fontWeight: 500,
                     color: "#0f0f0f",
@@ -1204,7 +1298,7 @@ function ProcessSection() {
                 </h3>
                 <p
                   style={{
-                    fontFamily: "'DM Sans', sans-serif",
+                    fontFamily: "'Inter', sans-serif",
                     fontSize: "13px",
                     color: "rgba(15,15,15,0.75)",
                     lineHeight: 1.65,
@@ -1284,7 +1378,7 @@ function WhoSection() {
           </div>
           <h2
             style={{
-              fontFamily: "'Fraunces', serif",
+              fontFamily: "'Syne', sans-serif",
               fontSize: "clamp(2rem, 4vw, 3.2rem)",
               fontWeight: 600,
               lineHeight: 1.1,
@@ -1294,7 +1388,7 @@ function WhoSection() {
           >
             Built for Managers.
             <br />
-            <span style={{ color: "#f5a623", fontStyle: "italic" }}>
+            <span style={{ color: "#f5a623" }}>
               Not IT Departments.
             </span>
           </h2>
@@ -1320,7 +1414,7 @@ function WhoSection() {
             >
               <h3
                 style={{
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontSize: "15px",
                   fontWeight: 600,
                   color: "#f0ede8",
@@ -1332,7 +1426,7 @@ function WhoSection() {
               </h3>
               <p
                 style={{
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontSize: "14px",
                   color: "rgba(240,237,232,0.88)",
                   lineHeight: 1.65,
@@ -1375,11 +1469,11 @@ function FinalCTA() {
         <h2
           className="reveal"
           style={{
-            fontFamily: "'Fraunces', serif",
+            fontFamily: "'Syne', sans-serif",
             fontSize: "clamp(2.2rem, 5vw, 3.6rem)",
-            fontWeight: 700,
+            fontWeight: 800,
             lineHeight: 1.05,
-            letterSpacing: "-0.02em",
+            letterSpacing: "-0.03em",
             color: "#f0ede8",
           }}
         >
@@ -1391,7 +1485,7 @@ function FinalCTA() {
         <p
           className="reveal"
           style={{
-            fontFamily: "'DM Sans', sans-serif",
+            fontFamily: "'Inter', sans-serif",
             fontSize: "16px",
             color: "rgba(240,237,232,0.88)",
             maxWidth: "500px",
@@ -1425,7 +1519,7 @@ function FinalCTA() {
         <div
           className="reveal"
           style={{
-            fontFamily: "'DM Sans', sans-serif",
+            fontFamily: "'Inter', sans-serif",
             fontSize: "12px",
             color: "rgba(240,237,232,0.65)",
             marginTop: "1.25rem",
@@ -1457,7 +1551,7 @@ function Footer() {
       <a
         href="/"
         style={{
-          fontFamily: "'DM Sans', sans-serif",
+          fontFamily: "'Inter', sans-serif",
           fontSize: "16px",
           fontWeight: 500,
           textDecoration: "none",
@@ -1478,7 +1572,7 @@ function Footer() {
             key={link.label}
             href={link.href}
             style={{
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontSize: "12px",
               color: "rgba(240,237,232,0.7)",
               textDecoration: "none",
@@ -1499,7 +1593,7 @@ function Footer() {
 
       <div
         style={{
-          fontFamily: "'DM Sans', sans-serif",
+          fontFamily: "'Inter', sans-serif",
           fontSize: "12px",
           color: "rgba(240,237,232,0.6)",
         }}
