@@ -632,47 +632,55 @@ function ProblemSection() {
                 transitionDelay: `${i * 80}ms`,
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", gap: "0.85rem", marginBottom: "0.85rem" }}>
-                <div
-                  style={{
-                    width: "36px",
-                    height: "36px",
-                    flexShrink: 0,
-                    background: "rgba(245,166,35,0.1)",
-                    border: "1px solid rgba(245,166,35,0.2)",
-                    borderRadius: "8px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  {card.icon}
+              <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
+                {/* Left: text content */}
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.85rem", marginBottom: "0.85rem" }}>
+                    <div
+                      style={{
+                        width: "36px",
+                        height: "36px",
+                        flexShrink: 0,
+                        background: "rgba(245,166,35,0.1)",
+                        border: "1px solid rgba(245,166,35,0.2)",
+                        borderRadius: "8px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {card.icon}
+                    </div>
+                    <h3
+                      style={{
+                        fontFamily: "'Inter', sans-serif",
+                        fontSize: "15px",
+                        fontWeight: 600,
+                        color: "#f0ede8",
+                        margin: 0,
+                        lineHeight: 1.3,
+                      }}
+                    >
+                      {card.title}
+                    </h3>
+                  </div>
+                  <p
+                    style={{
+                      fontFamily: "'Inter', sans-serif",
+                      fontSize: "14px",
+                      color: "rgba(240,237,232,0.8)",
+                      lineHeight: 1.65,
+                      margin: 0,
+                    }}
+                  >
+                    {card.body}
+                  </p>
                 </div>
-                <h3
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    fontSize: "15px",
-                    fontWeight: 600,
-                    color: "#f0ede8",
-                    margin: 0,
-                    lineHeight: 1.3,
-                  }}
-                >
-                  {card.title}
-                </h3>
+                {/* Right: mini clipping */}
+                <div style={{ width: "155px", flexShrink: 0, opacity: 0.92 }}>
+                  {card.clipping}
+                </div>
               </div>
-              <p
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "14px",
-                  color: "rgba(240,237,232,0.8)",
-                  lineHeight: 1.65,
-                  marginBottom: "1.25rem",
-                }}
-              >
-                {card.body}
-              </p>
-              {card.clipping}
             </div>
           ))}
         </div>
