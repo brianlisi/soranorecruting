@@ -71,7 +71,7 @@ function Nav() {
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: "13px",
-              color: "rgba(240,237,232,0.5)",
+              color: "rgba(240,237,232,0.75)",
               textDecoration: "none",
               transition: "color 0.2s ease",
             }}
@@ -80,7 +80,7 @@ function Nav() {
             }}
             onMouseLeave={(e) => {
               (e.target as HTMLAnchorElement).style.color =
-                "rgba(240,237,232,0.5)";
+                "rgba(240,237,232,0.75)";
             }}
           >
             {link}
@@ -224,7 +224,7 @@ function HeroSection() {
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: "17px",
-              color: "rgba(240,237,232,0.6)",
+              color: "rgba(240,237,232,0.9)",
               maxWidth: "520px",
               marginTop: "1.75rem",
               lineHeight: 1.7,
@@ -306,7 +306,7 @@ function HeroSection() {
               fontSize: "11px",
               textTransform: "uppercase",
               letterSpacing: "0.1em",
-              color: "rgba(240,237,232,0.3)",
+              color: "rgba(240,237,232,0.6)",
               textAlign: "center",
               marginTop: "0.5rem",
             }}
@@ -334,7 +334,7 @@ function MarqueeBar() {
 
   const content = items.map((item, i) => (
     <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: "1.5rem", whiteSpace: "nowrap" }}>
-      <span style={{ color: "rgba(245,166,35,0.5)", fontFamily: "'DM Sans', sans-serif", fontSize: "13px" }}>
+      <span style={{ color: "rgba(245,166,35,0.88)", fontFamily: "'DM Sans', sans-serif", fontSize: "13px" }}>
         {item}
       </span>
       <span style={{ color: "#f5a623", fontSize: "10px" }}>·</span>
@@ -421,7 +421,7 @@ function ProblemSection() {
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: "15px",
-              color: "rgba(240,237,232,0.5)",
+              color: "rgba(240,237,232,0.88)",
               maxWidth: "520px",
               marginTop: "1.25rem",
               lineHeight: 1.7,
@@ -469,7 +469,7 @@ function ProblemSection() {
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: "14px",
-                  color: "rgba(240,237,232,0.55)",
+                  color: "rgba(240,237,232,0.88)",
                   lineHeight: 1.65,
                 }}
               >
@@ -591,7 +591,7 @@ function ServicesSection() {
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: "12px",
-                  color: "rgba(240,237,232,0.5)",
+                  color: "rgba(240,237,232,0.78)",
                   marginTop: "0.4rem",
                 }}
               >
@@ -604,7 +604,7 @@ function ServicesSection() {
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: "15px",
-              color: "rgba(240,237,232,0.7)",
+              color: "rgba(240,237,232,0.9)",
               marginTop: "1.25rem",
               lineHeight: 1.7,
             }}
@@ -653,7 +653,7 @@ function ServicesSection() {
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
                       fontSize: "13px",
-                      color: "rgba(240,237,232,0.6)",
+                      color: "rgba(240,237,232,0.9)",
                       lineHeight: 1.5,
                     }}
                   >
@@ -672,7 +672,7 @@ function ServicesSection() {
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: "12px",
-                color: "rgba(240,237,232,0.4)",
+                color: "rgba(240,237,232,0.7)",
                 marginTop: "1rem",
               }}
             >
@@ -770,7 +770,7 @@ function WorkSection() {
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: "15px",
-              color: "rgba(240,237,232,0.5)",
+              color: "rgba(240,237,232,0.88)",
               maxWidth: "520px",
               marginTop: "1.25rem",
               lineHeight: 1.7,
@@ -835,7 +835,7 @@ function WorkSection() {
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: "13px",
-                  color: "rgba(240,237,232,0.55)",
+                  color: "rgba(240,237,232,0.88)",
                   lineHeight: 1.65,
                 }}
               >
@@ -916,7 +916,7 @@ function ProcessSection() {
         <div className="reveal">
           <div
             className="label-style"
-            style={{ color: "rgba(15,15,15,0.45)", marginBottom: "1rem" }}
+            style={{ color: "rgba(15,15,15,0.65)", marginBottom: "1rem" }}
           >
             How It Works
           </div>
@@ -936,7 +936,7 @@ function ProcessSection() {
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: "15px",
-              color: "rgba(15,15,15,0.5)",
+              color: "rgba(15,15,15,0.72)",
               maxWidth: "520px",
               marginTop: "1.25rem",
               lineHeight: 1.7,
@@ -991,7 +991,7 @@ function ProcessSection() {
                   style={{
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: "13px",
-                    color: "rgba(15,15,15,0.55)",
+                    color: "rgba(15,15,15,0.75)",
                     lineHeight: 1.65,
                   }}
                 >
@@ -1119,7 +1119,7 @@ function WhoSection() {
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: "14px",
-                  color: "rgba(240,237,232,0.55)",
+                  color: "rgba(240,237,232,0.88)",
                   lineHeight: 1.65,
                 }}
               >
@@ -1178,7 +1178,7 @@ function FinalCTA() {
           style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: "16px",
-            color: "rgba(240,237,232,0.5)",
+            color: "rgba(240,237,232,0.88)",
             maxWidth: "500px",
             margin: "1.25rem auto 0",
             lineHeight: 1.7,
@@ -1212,7 +1212,7 @@ function FinalCTA() {
           style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: "12px",
-            color: "rgba(240,237,232,0.35)",
+            color: "rgba(240,237,232,0.65)",
             marginTop: "1.25rem",
             letterSpacing: "0.02em",
           }}
@@ -1265,7 +1265,7 @@ function Footer() {
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: "12px",
-              color: "rgba(240,237,232,0.4)",
+              color: "rgba(240,237,232,0.7)",
               textDecoration: "none",
               transition: "color 0.2s ease",
             }}
@@ -1274,7 +1274,7 @@ function Footer() {
             }}
             onMouseLeave={(e) => {
               (e.target as HTMLAnchorElement).style.color =
-                "rgba(240,237,232,0.4)";
+                "rgba(240,237,232,0.7)";
             }}
           >
             {link.label}
@@ -1286,7 +1286,7 @@ function Footer() {
         style={{
           fontFamily: "'DM Sans', sans-serif",
           fontSize: "12px",
-          color: "rgba(240,237,232,0.35)",
+          color: "rgba(240,237,232,0.6)",
         }}
       >
         © 2026 Sorano AI. All rights reserved.
