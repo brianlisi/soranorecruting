@@ -1374,7 +1374,7 @@ function ProcessSection() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
-              color: "#999999",
+              color: "#f0ede8",
               maxWidth: "520px",
               marginTop: "1.25rem",
               lineHeight: 1.7,
@@ -1429,7 +1429,7 @@ function ProcessSection() {
                   style={{
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "13px",
-                    color: "#999999",
+                    color: "#f0ede8",
                     lineHeight: 1.65,
                   }}
                 >
