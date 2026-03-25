@@ -1,0 +1,25 @@
+
+I need you to update my existing Sorano AI landing page with the following specific changes. Do not rebuild the page from scratch. Make surgical edits only.
+CHANGE 1 — Navigation
+Remove the "AI BUILD AGENCY" badge/label that sits above the hero headline. Replace it with this text in the same badge style: "YOUR BOSS IS ABOUT TO ASK WHAT YOU ARE DOING WITH AI."
+CHANGE 2 — Hero headline
+Keep the existing headline and amber line exactly as they are. Do not touch any hero copy, layout, buttons, or stats row visuals.
+CHANGE 3 — Stats row
+Reorder the four stats. New order left to right: 13 SYSTEMS SHIPPED / 5 DAYS AVERAGE BUILD TIME / 100% CLIENT OWNERSHIP / $0 ONGOING PLATFORM FEES. Change the label under 13 from "AI SYSTEMS SHIPPED" to "SYSTEMS SHIPPED."
+CHANGE 4 — Problems section
+Keep the four pain cards exactly as they are. After the last card, add one standalone line centered on the page with generous padding above and below. No card, no box, no border. Just this text in white at approximately 20–22px, slightly larger than body copy:
+"The managers who cannot show a working system in 90 days are being reclassified as the bottleneck."
+CHANGE 5 — How It Works section
+Change the background of the "From First Call to Live System in 5 Days" section from cream / off-white (#F0EDE6 or whatever it currently is) to dark (#0D0D0D or matching the rest of the page). Update all text colors in that section so they remain readable on dark: headings white, body text #999999, step numbers in whatever muted style they currently use but visible on dark. Keep all copy, layout, and step structure exactly as-is.
+CHANGE 6 — New section after pricing card
+After the $997 pricing card and before the final CTA section, insert a new block. No section heading. No nav anchor. Layout: full width, dark background matching the page, centered text, max-width 640px, generous vertical padding.
+Add a thin amber horizontal rule (2px, color #E8A020, width 60px) centered above the text.
+Then this copy in white at body size:
+"Sorano AI is run by a 23-year operator who has raised $30M, built and sold companies, and shipped AI systems for Fortune 500 clients. We built this agency because smart managers kept hitting the same wall — mandate with no roadmap. We close that gap in five days."
+No button. No CTA in this block. Let it breathe and flow directly into the next section.
+CHANGE 7 — Final CTA section
+The current closing headline reads "Your Boss Is About to Ask What You Are Doing With AI." Replace that headline with:
+"Show Up to Your Next Review With Something Running."
+Keep the amber styling on "Something Running." Keep all sub-copy, button, and fine print exactly as they are.
+
+Do not change anything else. Do not reorganize sections. Do not change fonts, colors, spacing, or component styles anywhere except where explicitly specified above.

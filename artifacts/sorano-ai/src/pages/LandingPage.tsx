@@ -163,7 +163,7 @@ function HeroSection() {
             }}
           >
             <span className="pulse-dot" />
-            <span>AI Build Agency</span>
+            <span>Your boss is about to ask what you are doing with AI.</span>
           </div>
 
           <h1
@@ -259,7 +259,7 @@ function HeroSection() {
             }}
           >
             {[
-              { num: "13", label: "AI Systems Shipped" },
+              { num: "13", label: "Systems Shipped" },
               { num: "5 days", label: "Average Build Time" },
               { num: "100%", label: "Client Ownership" },
               { num: "$0", label: "Ongoing Platform Fees" },
@@ -678,6 +678,29 @@ function ProblemSection() {
             </div>
           ))}
         </div>
+      </div>
+
+      <div
+        className="reveal"
+        style={{
+          textAlign: "center",
+          padding: "3.5rem 2rem 1rem",
+          maxWidth: "780px",
+          margin: "0 auto",
+        }}
+      >
+        <p
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: "clamp(1.05rem, 1.8vw, 1.25rem)",
+            color: "#f0ede8",
+            lineHeight: 1.65,
+            fontWeight: 400,
+            letterSpacing: "-0.01em",
+          }}
+        >
+          The managers who cannot show a working system in 90 days are being reclassified as the bottleneck.
+        </p>
       </div>
 
       <style>{`
@@ -1314,7 +1337,7 @@ function ProcessSection() {
     <section
       id="process"
       style={{
-        background: "#f7f4ef",
+        background: "#0d0d0d",
         padding: "7rem 2.5rem",
         position: "relative",
         overflow: "hidden",
@@ -1331,7 +1354,7 @@ function ProcessSection() {
         <div className="reveal">
           <div
             className="label-style"
-            style={{ color: "rgba(15,15,15,0.65)", marginBottom: "1rem" }}
+            style={{ color: "rgba(240,237,232,0.5)", marginBottom: "1rem" }}
           >
             How It Works
           </div>
@@ -1342,7 +1365,7 @@ function ProcessSection() {
               fontWeight: 700,
               lineHeight: 1.1,
               letterSpacing: "-0.03em",
-              color: "#0f0f0f",
+              color: "#f0ede8",
             }}
           >
             From First Call to Live System in 5 Days
@@ -1351,7 +1374,7 @@ function ProcessSection() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
-              color: "rgba(15,15,15,0.72)",
+              color: "#999999",
               maxWidth: "520px",
               marginTop: "1.25rem",
               lineHeight: 1.7,
@@ -1384,7 +1407,7 @@ function ProcessSection() {
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "3rem",
                     fontWeight: 800,
-                    color: "rgba(0,0,0,0.07)",
+                    color: "rgba(255,255,255,0.08)",
                     lineHeight: 1,
                     marginBottom: "1rem",
                   }}
@@ -1396,7 +1419,7 @@ function ProcessSection() {
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "15px",
                     fontWeight: 500,
-                    color: "#0f0f0f",
+                    color: "#f0ede8",
                     marginBottom: "0.6rem",
                   }}
                 >
@@ -1406,7 +1429,7 @@ function ProcessSection() {
                   style={{
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "13px",
-                    color: "rgba(15,15,15,0.75)",
+                    color: "#999999",
                     lineHeight: 1.65,
                   }}
                 >
@@ -1574,6 +1597,47 @@ function WhoSection() {
   );
 }
 
+function FounderBioBlock() {
+  return (
+    <section
+      style={{
+        background: "#0f0f0f",
+        padding: "6rem 2.5rem",
+        borderTop: "1px solid rgba(255,255,255,0.06)",
+      }}
+    >
+      <div
+        className="reveal"
+        style={{
+          maxWidth: "640px",
+          margin: "0 auto",
+          textAlign: "center",
+        }}
+      >
+        <div
+          style={{
+            width: "60px",
+            height: "2px",
+            background: "#E8A020",
+            margin: "0 auto 2.5rem",
+          }}
+        />
+        <p
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: "16px",
+            color: "#f0ede8",
+            lineHeight: 1.8,
+            fontWeight: 400,
+          }}
+        >
+          Sorano AI is run by a 23-year operator who has raised $30M, built and sold companies, and shipped AI systems for Fortune 500 clients. We built this agency because smart managers kept hitting the same wall — mandate with no roadmap. We close that gap in five days.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 function FinalCTA() {
   return (
     <section
@@ -1603,9 +1667,9 @@ function FinalCTA() {
             color: "#f0ede8",
           }}
         >
-          Your Boss Is About to Ask
+          Show Up to Your Next Review
           <br />
-          What You Are Doing With AI.
+          With <span style={{ color: "#f5a623" }}>Something Running.</span>
         </h2>
 
         <p
@@ -1744,6 +1808,7 @@ export default function LandingPage() {
         <LiveShowcase />
         <ProcessSection />
         <WhoSection />
+        <FounderBioBlock />
         <FinalCTA />
       </main>
       <Footer />
