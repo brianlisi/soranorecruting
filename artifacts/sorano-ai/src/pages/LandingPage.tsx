@@ -1635,8 +1635,8 @@ function FounderBioBlock() {
           style={{
             display: "flex",
             flexDirection: "row",
-            alignItems: "center",
-            gap: "24px",
+            alignItems: "flex-start",
+            gap: "32px",
             maxWidth: "640px",
             width: "100%",
             textAlign: "left",
@@ -1648,10 +1648,13 @@ function FounderBioBlock() {
             src={`${import.meta.env.BASE_URL}brian-headshot.jpg`}
             alt="Brian Lisi"
             style={{
-              width: "80px",
-              height: "80px",
+              width: "120px",
+              height: "120px",
               borderRadius: "50%",
               objectFit: "cover",
+              objectPosition: "center 8%",
+              border: "3px solid rgba(245,166,35,0.4)",
+              boxShadow: "0 0 0 6px rgba(245,166,35,0.08)",
               flexShrink: 0,
               backgroundColor: "#333333",
               display: "block",
