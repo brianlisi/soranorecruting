@@ -1602,14 +1602,14 @@ function FounderBioBlock() {
     <section
       style={{
         background: "#0f0f0f",
-        padding: "8rem 2.5rem",
+        padding: "9rem 2.5rem",
         borderTop: "1px solid rgba(255,255,255,0.06)",
       }}
     >
       <div
         className="reveal"
         style={{
-          maxWidth: "720px",
+          maxWidth: "860px",
           margin: "0 auto",
           textAlign: "center",
           display: "flex",
@@ -1637,7 +1637,7 @@ function FounderBioBlock() {
             flexDirection: "row",
             alignItems: "flex-start",
             gap: "32px",
-            maxWidth: "640px",
+            maxWidth: "860px",
             width: "100%",
             textAlign: "left",
           }}
@@ -1648,11 +1648,11 @@ function FounderBioBlock() {
             src={`${import.meta.env.BASE_URL}brian-headshot.jpg`}
             alt="Brian Lisi"
             style={{
-              width: "120px",
-              height: "120px",
+              width: "160px",
+              height: "160px",
               borderRadius: "50%",
               objectFit: "cover",
-              objectPosition: "center 8%",
+              objectPosition: "50% 2%",
               border: "3px solid rgba(245,166,35,0.4)",
               boxShadow: "0 0 0 6px rgba(245,166,35,0.08)",
               flexShrink: 0,
@@ -1666,7 +1666,7 @@ function FounderBioBlock() {
             <p
               style={{
                 fontFamily: "'Inter', sans-serif",
-                fontSize: "clamp(16px, 2.5vw, 20px)",
+                fontSize: "clamp(18px, 2.5vw, 22px)",
                 color: "#f0ede8",
                 lineHeight: 1.75,
                 fontWeight: 400,
