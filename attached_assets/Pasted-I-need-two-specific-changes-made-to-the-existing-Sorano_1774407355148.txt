@@ -1,0 +1,17 @@
+I need two specific changes made to the existing Sorano AI landing page. Do not touch anything else.
+CHANGE 1 — Add missing consequence line after the four pain cards
+Find the section that contains the four pain cards ("The mandate came from above," "IT has a 6-month backlog," "You are still doing it manually," "The budget does not cover agencies"). Immediately after the last card and before the next section begins, add the following line as a standalone centered text element:
+"The managers who cannot show a working system in 90 days are being reclassified as the bottleneck."
+Styling: white text, italic, centered, font size 20–22px, max-width 640px centered on the page, padding-top 48px, padding-bottom 48px. No card, no box, no border, no background. Just the text floating with space above and below it. Do not add a CTA or button after it. Let it breathe directly into the next section.
+
+CHANGE 2 — Add logo scroll ticker under the bio block
+Find the existing bio block that reads "Sorano AI is run by a 23-year operator who has raised $30M..." and the amber rule above it.
+Directly below the three-sentence bio text, add the following in order:
+First, a small centered label in uppercase, muted gray (#666666), font size 12px, letter spacing 0.1em, margin-bottom 24px:
+"CLIENTS AND PARTNERS FROM OUR OPERATOR HISTORY"
+Second, a horizontally scrolling logo ticker using the same component and animation style as the existing ticker at the bottom of the hero section. Reuse that component exactly — same speed, same fade edges on left and right, same infinite scroll behavior.
+The logos to include are: NFL, FloSports, Sony Music, Goldman Sachs, Merrill Lynch, Morgan Stanley, Slack, Tableau, Disney, Harley Davidson, iHeart Radio, Amazon Music, Fenway Sports Group, Snapchat, Uber Freight.
+Since we do not have image assets for these logos, render them as text-only wordmarks for now. White text, font size 14px, font weight 600, opacity 0.5, all caps, with 60px of horizontal spacing between each name. The ticker should scroll left continuously and loop seamlessly.
+No border above or below the ticker. No additional padding after it — let it flow naturally into the section divider or next section below.
+
+Do not change any other section, component, copy, color, or layout anywhere on the page. Confirm each change as complete.

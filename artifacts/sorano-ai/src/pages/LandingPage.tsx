@@ -684,19 +684,19 @@ function ProblemSection() {
         className="reveal"
         style={{
           textAlign: "center",
-          padding: "3.5rem 2rem 1rem",
-          maxWidth: "780px",
+          padding: "48px 2rem 48px",
+          maxWidth: "640px",
           margin: "0 auto",
         }}
       >
         <p
           style={{
             fontFamily: "'Inter', sans-serif",
-            fontSize: "clamp(1.05rem, 1.8vw, 1.25rem)",
+            fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)",
             color: "#f0ede8",
             lineHeight: 1.65,
             fontWeight: 400,
-            letterSpacing: "-0.01em",
+            fontStyle: "italic",
           }}
         >
           The managers who cannot show a working system in 90 days are being reclassified as the bottleneck.
@@ -1633,6 +1633,84 @@ function FounderBioBlock() {
         >
           Sorano AI is run by a 23-year operator who has raised $30M, built and sold companies, and shipped AI systems for Fortune 500 clients. We built this agency because smart managers kept hitting the same wall — mandate with no roadmap. We close that gap in five days.
         </p>
+      </div>
+
+      {/* Partner ticker */}
+      <div style={{ marginTop: "3rem" }}>
+        <div style={{ textAlign: "center", marginBottom: "24px" }}>
+          <span
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: "12px",
+              color: "#666666",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              fontWeight: 500,
+            }}
+          >
+            Clients and partners from our operator history
+          </span>
+        </div>
+        <div
+          style={{
+            overflow: "hidden",
+            position: "relative",
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+              bottom: 0,
+              width: "80px",
+              background: "linear-gradient(to right, #0f0f0f, transparent)",
+              zIndex: 2,
+              pointerEvents: "none",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              right: 0,
+              top: 0,
+              bottom: 0,
+              width: "80px",
+              background: "linear-gradient(to left, #0f0f0f, transparent)",
+              zIndex: 2,
+              pointerEvents: "none",
+            }}
+          />
+          <div className="marquee-track">
+            {[
+              "NFL", "FloSports", "Sony Music", "Goldman Sachs", "Merrill Lynch",
+              "Morgan Stanley", "Slack", "Tableau", "Disney", "Harley Davidson",
+              "iHeart Radio", "Amazon Music", "Fenway Sports Group", "Snapchat", "Uber Freight",
+            ].concat([
+              "NFL", "FloSports", "Sony Music", "Goldman Sachs", "Merrill Lynch",
+              "Morgan Stanley", "Slack", "Tableau", "Disney", "Harley Davidson",
+              "iHeart Radio", "Amazon Music", "Fenway Sports Group", "Snapchat", "Uber Freight",
+            ]).map((name, i) => (
+              <span
+                key={i}
+                style={{
+                  display: "inline-block",
+                  whiteSpace: "nowrap",
+                  marginRight: "60px",
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: "14px",
+                  fontWeight: 600,
+                  color: "#fff",
+                  opacity: 0.5,
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                }}
+              >
+                {name}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
