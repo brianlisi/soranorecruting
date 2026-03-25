@@ -1602,48 +1602,65 @@ function FounderBioBlock() {
     <section
       style={{
         background: "#0f0f0f",
-        padding: "6rem 2.5rem",
+        padding: "8rem 2.5rem",
         borderTop: "1px solid rgba(255,255,255,0.06)",
       }}
     >
       <div
         className="reveal"
         style={{
-          maxWidth: "640px",
+          maxWidth: "720px",
           margin: "0 auto",
           textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
         }}
       >
+        <div className="label-style" style={{ marginBottom: "2rem" }}>
+          WHO BUILT THIS
+        </div>
         <div
           style={{
-            width: "60px",
-            height: "2px",
-            background: "#E8A020",
-            margin: "0 auto 2.5rem",
+            width: "120px",
+            height: "3px",
+            background: "#f5a623",
+            margin: "0 auto 3rem",
           }}
         />
         <p
           style={{
             fontFamily: "'Inter', sans-serif",
-            fontSize: "16px",
+            fontSize: "clamp(20px, 4vw, 24px)",
             color: "#f0ede8",
-            lineHeight: 1.8,
+            lineHeight: 1.75,
             fontWeight: 400,
           }}
         >
-          Sorano AI is run by a 23-year operator who has raised $30M, built and sold companies, and shipped AI systems for Fortune 500 clients. We built this agency because smart managers kept hitting the same wall — mandate with no roadmap. We close that gap in five days.
+          Sorano AI is run by a 23-year operator who has raised <strong style={{ fontWeight: 700, color: "#fff" }}>$30M</strong>, built and sold companies, and shipped AI systems for <strong style={{ fontWeight: 700, color: "#fff" }}>Fortune 500</strong> clients.
+          <br /><br />
+          We built this agency because smart managers kept hitting the same wall — mandate with no roadmap. We close that gap in <strong style={{ fontWeight: 700, color: "#fff" }}>five days</strong>.
         </p>
       </div>
 
+      <div
+        style={{
+          width: "100%",
+          height: "1px",
+          background: "rgba(255,255,255,0.08)",
+          margin: "3rem 0",
+        }}
+      />
+
       {/* Partner ticker */}
-      <div style={{ marginTop: "3rem" }}>
+      <div>
         <div style={{ textAlign: "center", marginBottom: "24px" }}>
           <span
             style={{
               fontFamily: "'Inter', sans-serif",
-              fontSize: "12px",
-              color: "#666666",
-              letterSpacing: "0.1em",
+              fontSize: "13px",
+              color: "#888",
+              letterSpacing: "0.15em",
               textTransform: "uppercase",
               fontWeight: 500,
             }}
@@ -1663,7 +1680,7 @@ function FounderBioBlock() {
               left: 0,
               top: 0,
               bottom: 0,
-              width: "80px",
+              width: "160px",
               background: "linear-gradient(to right, #0f0f0f, transparent)",
               zIndex: 2,
               pointerEvents: "none",
@@ -1675,7 +1692,7 @@ function FounderBioBlock() {
               right: 0,
               top: 0,
               bottom: 0,
-              width: "80px",
+              width: "160px",
               background: "linear-gradient(to left, #0f0f0f, transparent)",
               zIndex: 2,
               pointerEvents: "none",
@@ -1696,12 +1713,12 @@ function FounderBioBlock() {
                 style={{
                   display: "inline-block",
                   whiteSpace: "nowrap",
-                  marginRight: "60px",
+                  marginRight: "80px",
                   fontFamily: "'Inter', sans-serif",
-                  fontSize: "14px",
-                  fontWeight: 600,
+                  fontSize: "16px",
+                  fontWeight: 700,
                   color: "#fff",
-                  opacity: 0.5,
+                  opacity: 0.6,
                   letterSpacing: "0.06em",
                   textTransform: "uppercase",
                 }}
