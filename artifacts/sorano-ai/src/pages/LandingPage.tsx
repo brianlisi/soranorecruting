@@ -715,16 +715,16 @@ function ProblemSection() {
 function ServicesSection() {
   const deliverables = {
     left: [
-      "60-min discovery call to map your workflow",
-      "Custom build — dashboard, automation, or AI tool",
-      "Claude API or OpenAI integration where needed",
-      "Data connections — Sheets, Airtable, CRM, APIs",
+      "Institutional-grade dashboard or model — built for stakeholder and board-level use",
+      "Replaces manual spreadsheets, PowerPoints, and analyst reports your team builds by hand",
+      "Connected to your live data — Sheets, Airtable, CRM, or any API",
+      "Built with Claude AI or OpenAI, configured for your exact workflow and output",
     ],
     right: [
-      "Live walkthrough and full handoff session",
-      "30 days of follow-up support included",
-      "Full documentation — your team runs it independently",
-      "No subscriptions, no platform lock-in, ever",
+      "Full walkthrough — your team presents and runs it independently from day one",
+      "30 days of support so nothing breaks after handoff",
+      "Complete documentation — no black boxes, no dependency on us",
+      "You own it completely. No subscriptions. No lock-in. Ever.",
     ],
   };
 
@@ -763,7 +763,7 @@ function ServicesSection() {
               color: "#f0ede8",
             }}
           >
-            One Service. One Price. One Week.
+            One System. One Week. One Decision.
           </h2>
         </div>
 
@@ -795,7 +795,7 @@ function ServicesSection() {
                   lineHeight: 1.1,
                 }}
               >
-                Done-With-You AI Build
+                Your Team's AI-Powered Analyst. Built in 5 Days.
               </h3>
             </div>
             <div style={{ textAlign: "right" }}>
@@ -808,7 +808,7 @@ function ServicesSection() {
                   lineHeight: 1,
                 }}
               >
-                $997
+                $1,497
               </div>
               <div
                 style={{
@@ -832,9 +832,7 @@ function ServicesSection() {
               lineHeight: 1.7,
             }}
           >
-            You bring your biggest manual headache. We build the AI system that
-            solves it together. One week. Fixed price. Your team uses it on day
-            six.
+            We build institutional-grade dashboards, models, and analysis tools that replace the spreadsheets, PowerPoints, and manual reports your team produces by hand. The kind of work product you bring to a board meeting, a budget review, or a stakeholder presentation — live, automated, and owned by your team completely.
           </p>
 
           <div
@@ -887,7 +885,22 @@ function ServicesSection() {
             })}
           </div>
 
-          <div style={{ textAlign: "center", marginTop: "2rem" }}>
+          <p
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: "14px",
+              color: "#666666",
+              fontStyle: "italic",
+              textAlign: "center",
+              maxWidth: "480px",
+              margin: "24px auto 24px",
+              lineHeight: 1.6,
+            }}
+          >
+            We scope the build on the first call. If it is not a fit, we tell you honestly before any money changes hands.
+          </p>
+
+          <div style={{ textAlign: "center", marginTop: "0" }}>
             <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn-primary">
               Book a Free 20-Min Call
             </a>
@@ -899,8 +912,7 @@ function ServicesSection() {
                 marginTop: "1rem",
               }}
             >
-              3 spots available this month · Fixed price before we start ·
-              Response within 24 hours
+              Every week your team spends doing this manually is a week your boss is waiting for results.
             </div>
           </div>
         </div>
@@ -1471,18 +1483,18 @@ function WhoSection() {
   const cards = [
     {
       icon: <Building2 size={22} color="#f5a623" />,
-      title: "You are a Director or Senior Manager",
-      body: "Your company is rolling out AI and you need something your team actually uses — not a pilot that dies in a committee meeting.",
+      title: "You need a work product, not a pilot",
+      body: "Your company is rolling out AI and leadership wants results. Not a proof of concept that dies in a meeting. A live system your team uses to produce the reports, dashboards, and analysis that used to take days.",
     },
     {
       icon: <GitBranch size={22} color="#f5a623" />,
-      title: "You have a specific workflow problem",
-      body: "Not a vague mandate to use AI. A concrete process that takes too long, costs too much, or breaks too often.",
+      title: "You have a specific deliverable in mind",
+      body: "A board deck that updates automatically. A budget model that pulls live data. A stakeholder report that used to take your team eight hours every week. If you can describe the output, we can build it.",
     },
     {
       icon: <Zap size={22} color="#f5a623" />,
       title: "You can make a fast decision",
-      body: "Not enterprise procurement. Not a 6-month approval chain. You can greenlight $997 this week if it solves a real problem.",
+      body: "Not enterprise procurement. Not a six-month approval chain. You can greenlight $1,497 this week if it means walking into your next review with something that runs.",
     },
   ];
 

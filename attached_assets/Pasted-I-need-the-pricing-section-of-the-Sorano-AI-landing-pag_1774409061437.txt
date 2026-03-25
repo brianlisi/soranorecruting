@@ -1,0 +1,48 @@
+I need the pricing section of the Sorano AI landing page updated with the following specific changes. Do not touch anything outside this section.
+CHANGE 1 — Section headline
+Find the headline "One Service. One Price. One Week." and replace it with:
+"One System. One Week. One Decision."
+CHANGE 2 — Card headline
+Find "Done-With-You AI Build" and replace with:
+"Your Team's AI-Powered Analyst. Built in 5 Days."
+CHANGE 3 — Price
+Change "$997" to "$1,497" — keep all existing amber color styling on the price exactly as-is.
+CHANGE 4 — Sub-line
+Keep "Fixed price · 5 days · you own everything" exactly as-is.
+CHANGE 5 — Body copy inside the card
+Replace the existing body paragraph with:
+"We build institutional-grade dashboards, models, and analysis tools that replace the spreadsheets, PowerPoints, and manual reports your team produces by hand. The kind of work product you bring to a board meeting, a budget review, or a stakeholder presentation — live, automated, and owned by your team completely."
+CHANGE 6 — Rewrite all eight feature bullets as outcomes
+Replace the existing eight bullet points with these eight in the same two-column layout and same green checkmark styling:
+Left column:
+
+Institutional-grade dashboard or model — built for stakeholder and board-level use
+Replaces manual spreadsheets, PowerPoints, and analyst reports your team builds by hand
+Connected to your live data — Sheets, Airtable, CRM, or any API
+Built with Claude AI or OpenAI, configured for your exact workflow and output
+
+Right column:
+
+Full walkthrough — your team presents and runs it independently from day one
+30 days of support so nothing breaks after handoff
+Complete documentation — no black boxes, no dependency on us
+You own it completely. No subscriptions. No lock-in. Ever.
+
+CHANGE 7 — Add risk reversal line
+Between the bullet points and the CTA button, add a new centered line:
+"We scope the build on the first call. If it is not a fit, we tell you honestly before any money changes hands."
+Styled as: muted gray #666666, italic, font size 14px, centered, max-width 480px centered on the page, margin-top 24px, margin-bottom 24px.
+CHANGE 8 — Replace scarcity line
+Find "3 spots available this month · Fixed price before we start · Response within 24 hours" and replace with:
+"Every week your team spends doing this manually is a week your boss is waiting for results."
+Keep the same font size, same muted styling, same centered alignment.
+CHANGE 9 — Update the ICP section
+Find the section with the headline "Built for Managers. Not IT Departments." and the three cards beneath it. Replace the three card headlines and body copy with the following, keeping all existing card styling, icons, and layout exactly as-is:
+Card 1 headline: "You need a work product, not a pilot"
+Card 1 body: "Your company is rolling out AI and leadership wants results. Not a proof of concept that dies in a meeting. A live system your team uses to produce the reports, dashboards, and analysis that used to take days."
+Card 2 headline: "You have a specific deliverable in mind"
+Card 2 body: "A board deck that updates automatically. A budget model that pulls live data. A stakeholder report that used to take your team eight hours every week. If you can describe the output, we can build it."
+Card 3 headline: "You can make a fast decision"
+Card 3 body: "Not enterprise procurement. Not a six-month approval chain. You can greenlight $1,497 this week if it means walking into your next review with something that runs."
+
+Do not change the CTA button, the badge, the card border, any colors, spacing, or anything outside the pricing and ICP sections. Confirm each change as complete
