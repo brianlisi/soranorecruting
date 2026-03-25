@@ -1617,9 +1617,20 @@ function FounderBioBlock() {
           alignItems: "center",
         }}
       >
-        <div className="label-style" style={{ marginBottom: "2rem" }}>
-          WHO BUILT THIS
-        </div>
+        <h2
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: "clamp(36px, 5vw, 56px)",
+            fontWeight: 700,
+            color: "#f0ede8",
+            letterSpacing: "-0.02em",
+            lineHeight: 1.1,
+            margin: "0 0 2rem 0",
+            textAlign: "center",
+          }}
+        >
+          Who Built This
+        </h2>
         <div
           style={{
             width: "120px",
