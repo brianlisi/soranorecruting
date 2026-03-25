@@ -13,7 +13,7 @@ import {
   FileText,
 } from "lucide-react";
 
-const CALENDLY_URL = "https://calendly.com";
+const CALENDLY_URL = "https://calendly.com/brian-mobilerider/30min";
 const EMAIL = "mailto:hello@soranoai.ai";
 
 function useScrollReveal() {
