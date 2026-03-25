@@ -1628,20 +1628,86 @@ function FounderBioBlock() {
             margin: "0 auto 3rem",
           }}
         />
-        <p
+
+        {/* Flex row: headshot + bio */}
+        <div
+          className="bio-row"
           style={{
-            fontFamily: "'Inter', sans-serif",
-            fontSize: "clamp(20px, 4vw, 24px)",
-            color: "#f0ede8",
-            lineHeight: 1.75,
-            fontWeight: 400,
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            gap: "24px",
+            maxWidth: "640px",
+            width: "100%",
+            textAlign: "left",
           }}
         >
-          Sorano AI is run by a 23-year operator who has raised <strong style={{ fontWeight: 700, color: "#fff" }}>$30M</strong>, built and sold companies, and shipped AI systems for <strong style={{ fontWeight: 700, color: "#fff" }}>Fortune 500</strong> clients.
-          <br /><br />
-          We built this agency because smart managers kept hitting the same wall — mandate with no roadmap. We close that gap in <strong style={{ fontWeight: 700, color: "#fff" }}>five days</strong>.
-        </p>
+          {/* Left: circular headshot */}
+          <img
+            id="brian-headshot"
+            src={`${import.meta.env.BASE_URL}brian-headshot.jpg`}
+            alt="Brian Lisi"
+            style={{
+              width: "80px",
+              height: "80px",
+              borderRadius: "50%",
+              objectFit: "cover",
+              flexShrink: 0,
+              backgroundColor: "#333333",
+              display: "block",
+            }}
+          />
+
+          {/* Right: bio text + LinkedIn */}
+          <div>
+            <p
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: "clamp(16px, 2.5vw, 20px)",
+                color: "#f0ede8",
+                lineHeight: 1.75,
+                fontWeight: 400,
+                margin: 0,
+              }}
+            >
+              Sorano AI is run by a 23-year operator who has raised{" "}
+              <strong style={{ fontWeight: 700, color: "#fff" }}>$30M</strong>, built and sold companies, and shipped AI systems for{" "}
+              <strong style={{ fontWeight: 700, color: "#fff" }}>Fortune 500</strong> clients. We built this agency because smart managers kept hitting the same wall — mandate with no roadmap. We close that gap in{" "}
+              <strong style={{ fontWeight: 700, color: "#fff" }}>five days</strong>.
+            </p>
+            <a
+              href="https://linkedin.com/in/brianlisi"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: "inline-block",
+                marginTop: "8px",
+                fontFamily: "'Inter', sans-serif",
+                fontSize: "14px",
+                color: "#E8A020",
+                textDecoration: "none",
+                fontWeight: 500,
+              }}
+              onMouseEnter={e => (e.currentTarget.style.textDecoration = "underline")}
+              onMouseLeave={e => (e.currentTarget.style.textDecoration = "none")}
+            >
+              linkedin.com/in/brianlisi →
+            </a>
+          </div>
+        </div>
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .bio-row {
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+          }
+          .bio-row p { text-align: center !important; }
+          .bio-row a { text-align: center !important; }
+        }
+      `}</style>
 
       <div
         style={{
