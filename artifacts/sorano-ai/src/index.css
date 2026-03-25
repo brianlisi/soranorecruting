@@ -345,4 +345,21 @@
   .hero-montage {
     display: none;
   }
+
+  .problem-clipping {
+    display: none;
+  }
+
+  .hero-stat-divider {
+    display: none;
+  }
+
+  .label-style {
+    font-size: 10px;
+    padding: 3px 8px;
+    max-width: 90vw;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.5;
+  }
 }

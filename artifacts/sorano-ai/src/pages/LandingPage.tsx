@@ -252,7 +252,7 @@ function HeroSection() {
               marginTop: "1.5rem",
               paddingTop: "1.5rem",
               borderTop: "1px solid rgba(255,255,255,0.08)",
-              flexWrap: "nowrap",
+              flexWrap: "wrap",
             }}
           >
             {[
@@ -266,7 +266,7 @@ function HeroSection() {
                   <div className="stat-number">{stat.num}</div>
                   <div className="stat-label">{stat.label}</div>
                 </div>
-                {i < 3 && <div style={{ width: "1px", height: "40px", background: "rgba(255,255,255,0.1)" }} />}
+                {i < 3 && <div className="hero-stat-divider" style={{ width: "1px", height: "40px", background: "rgba(255,255,255,0.1)" }} />}
               </div>
             ))}
           </div>
@@ -668,7 +668,7 @@ function ProblemSection() {
                   </p>
                 </div>
                 {/* Right: mini clipping */}
-                <div style={{ width: "155px", flexShrink: 0, height: "130px", overflow: "hidden", borderRadius: "8px" }}>
+                <div className="problem-clipping" style={{ width: "155px", flexShrink: 0, height: "130px", overflow: "hidden", borderRadius: "8px" }}>
                   {card.clipping}
                 </div>
               </div>
