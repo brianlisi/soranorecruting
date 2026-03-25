@@ -713,21 +713,6 @@ function ProblemSection() {
 }
 
 function ServicesSection() {
-  const deliverables = {
-    left: [
-      "Institutional-grade dashboard or model — built for stakeholder and board-level use",
-      "Replaces manual spreadsheets, PowerPoints, and analyst reports your team builds by hand",
-      "Connected to your live data — Sheets, Airtable, CRM, or any API",
-      "Built with Claude AI or OpenAI, configured for your exact workflow and output",
-    ],
-    right: [
-      "Full walkthrough — your team presents and runs it independently from day one",
-      "30 days of support so nothing breaks after handoff",
-      "Complete documentation — no black boxes, no dependency on us",
-      "You own it completely. No subscriptions. No lock-in. Ever.",
-    ],
-  };
-
   return (
     <section
       id="services"
@@ -772,16 +757,16 @@ function ServicesSection() {
           style={{
             maxWidth: "780px",
             margin: "0 auto",
-            padding: "3rem",
+            padding: "60px 48px",
             borderTop: "3px solid #f5a623",
           }}
         >
           <div
             style={{
               display: "flex",
-              justifyContent: "space-between",
-              alignItems: "flex-start",
-              flexWrap: "wrap",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
               gap: "1.5rem",
             }}
           >
@@ -798,11 +783,11 @@ function ServicesSection() {
                 Your Team's AI-Powered Analyst. Built in 5 Days.
               </h3>
             </div>
-            <div style={{ textAlign: "right" }}>
+            <div style={{ textAlign: "center" }}>
               <div
                 style={{
                   fontFamily: "'Inter', sans-serif",
-                  fontSize: "2rem",
+                  fontSize: "52px",
                   fontWeight: 800,
                   color: "#f5a623",
                   lineHeight: 1,
@@ -816,6 +801,7 @@ function ServicesSection() {
                   fontSize: "12px",
                   color: "rgba(240,237,232,0.78)",
                   marginTop: "0.4rem",
+                  textAlign: "center",
                 }}
               >
                 Fixed price · 5 days · you own everything
@@ -830,9 +816,10 @@ function ServicesSection() {
               color: "rgba(240,237,232,0.9)",
               marginTop: "1.25rem",
               lineHeight: 1.7,
+              textAlign: "center",
             }}
           >
-            We build institutional-grade dashboards, models, and analysis tools that replace the spreadsheets, PowerPoints, and manual reports your team produces by hand. The kind of work product you bring to a board meeting, a budget review, or a stakeholder presentation — live, automated, and owned by your team completely.
+            Institutional-grade dashboards, models, and analysis tools that replace the reports your team builds by hand. Board meetings. Budget reviews. Stakeholder presentations. Live, automated, yours forever.
           </p>
 
           <div
@@ -844,25 +831,34 @@ function ServicesSection() {
 
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "0.75rem 2rem",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "0",
             }}
-            className="deliverables-grid"
           >
-            {[...deliverables.left, ...deliverables.right].map((item, i) => {
-              const isRight = i >= deliverables.left.length;
-              const col = isRight ? 2 : 1;
-              const row = isRight ? i - deliverables.left.length + 1 : i + 1;
-              return (
+            <div
+              style={{
+                maxWidth: "480px",
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                gap: "16px",
+              }}
+            >
+              {[
+                "Built for board meetings, budget reviews, and stakeholder presentations",
+                "Replaces manual spreadsheets, PowerPoints, and analyst reports",
+                "Connected to your live data — Sheets, Airtable, CRM, or any API",
+                "You own it completely. No subscriptions. No lock-in. Ever.",
+                "30 days of support included. Your team runs it independently.",
+              ].map((item, i) => (
                 <div
                   key={i}
                   style={{
                     display: "flex",
                     alignItems: "flex-start",
                     gap: "0.75rem",
-                    gridColumn: col,
-                    gridRow: row,
                   }}
                 >
                   <div className="check-circle" style={{ marginTop: "1px" }}>
@@ -873,16 +869,16 @@ function ServicesSection() {
                   <span
                     style={{
                       fontFamily: "'Inter', sans-serif",
-                      fontSize: "13px",
+                      fontSize: "14px",
                       color: "rgba(240,237,232,0.9)",
-                      lineHeight: 1.5,
+                      lineHeight: 1.6,
                     }}
                   >
                     {item}
                   </span>
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
 
           <p
@@ -917,13 +913,6 @@ function ServicesSection() {
           </div>
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 640px) {
-          .deliverables-grid { grid-template-columns: 1fr !important; }
-          .deliverables-grid > div { grid-column: 1 !important; grid-row: auto !important; }
-        }
-      `}</style>
     </section>
   );
 }

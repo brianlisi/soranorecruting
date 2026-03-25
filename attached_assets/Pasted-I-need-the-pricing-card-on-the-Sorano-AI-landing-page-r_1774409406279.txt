@@ -1,0 +1,30 @@
+I need the pricing card on the Sorano AI landing page redesigned and the copy tightened. Do not touch anything outside this card.
+CHANGE 1 — Card layout and spacing
+Double the padding inside the pricing card on all sides. The card needs significantly more breathing room. Top and bottom padding should be at least 60px. Left and right padding at least 48px.
+CHANGE 2 — Card headline
+Keep "Your Team's AI-Powered Analyst. Built in 5 Days." exactly as-is. No change to styling or size.
+CHANGE 3 — Price block
+Move the price "$1,497" to be more visually prominent. It should be the largest element in the card after the headline. Keep amber color. Increase font size to at least 52px if it is not already. Center it. The sub-line "Fixed price · 5 days · you own everything" stays directly beneath it in muted gray, centered.
+CHANGE 4 — Body copy
+Replace the existing body paragraph with this shorter version:
+"Institutional-grade dashboards, models, and analysis tools that replace the reports your team builds by hand. Board meetings. Budget reviews. Stakeholder presentations. Live, automated, yours forever."
+CHANGE 5 — Bullets
+Remove the two-column bullet layout entirely. Replace with a single centered column of exactly five bullets using the same green checkmark styling. The five bullets are:
+
+Built for board meetings, budget reviews, and stakeholder presentations
+Replaces manual spreadsheets, PowerPoints, and analyst reports
+Connected to your live data — Sheets, Airtable, CRM, or any API
+You own it completely. No subscriptions. No lock-in. Ever.
+30 days of support included. Your team runs it independently.
+
+Single column, left-aligned text, centered on the card, max-width 480px, generous line spacing between each bullet — at least 16px gap between items.
+CHANGE 6 — Divider
+Add a subtle horizontal divider line between the body copy and the bullet list. Same style as the existing divider already in the card. If there is no existing divider, use a 1px line in #2A2A2A.
+CHANGE 7 — Risk reversal line
+Keep exactly as-is: "We scope the build on the first call. If it is not a fit, we tell you honestly before any money changes hands." Same muted gray italic styling, centered, with generous padding above and below.
+CHANGE 8 — CTA button
+Keep exactly as-is. No changes.
+CHANGE 9 — Bottom line
+Keep exactly as-is: "Every week your team spends doing this manually is a week your boss is waiting for results." No changes.
+
+Do not change the card border, the amber outline around the card, the section headline above the card, the badge, or anything outside the pricing card. The goal is a cleaner, more spacious card with a single column of bullets and better visual hierarchy. Confirm each change as complete.
