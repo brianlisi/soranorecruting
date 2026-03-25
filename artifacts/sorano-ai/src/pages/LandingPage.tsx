@@ -113,10 +113,9 @@ function HeroSection() {
   const wordsRef = useRef<HTMLSpanElement[]>([]);
 
   useEffect(() => {
-    const line1 = ["Show", "Up", "to", "Your", "Next", "Review"];
-    const line2 = ["With", "Something", "Running."];
-    const line3 = ["We", "Build", "It", "In", "5", "Days."];
-    const allWords = [...line1, ...line2, ...line3];
+    const line1 = ["Your", "Team", "Needs", "An", "AI", "Win."];
+    const line2 = ["We", "Build", "It", "In", "5", "Days."];
+    const allWords = [...line1, ...line2];
 
     allWords.forEach((_, i) => {
       const el = wordsRef.current[i];
@@ -126,9 +125,8 @@ function HeroSection() {
     });
   }, []);
 
-  const line1 = ["Show", "Up", "to", "Your", "Next", "Review"];
-  const line2 = ["With", "Something", "Running."];
-  const line3 = ["We", "Build", "It", "In", "5", "Days."];
+  const line1 = ["Your", "Team", "Needs", "An", "AI", "Win."];
+  const line2 = ["We", "Build", "It", "In", "5", "Days."];
   let wordIdx = 0;
 
   return (
@@ -195,25 +193,8 @@ function HeroSection() {
                 );
               })}
             </div>
-            <div style={{ marginBottom: "0.1em" }}>
-              {line2.map((word, i) => {
-                const idx = wordIdx++;
-                return (
-                  <span
-                    key={i}
-                    ref={(el) => {
-                      if (el) wordsRef.current[idx] = el;
-                    }}
-                    className="hero-word"
-                    style={{ marginRight: "0.25em", color: "#f0ede8" }}
-                  >
-                    {word}
-                  </span>
-                );
-              })}
-            </div>
             <div>
-              {line3.map((word, i) => {
+              {line2.map((word, i) => {
                 const idx = wordIdx++;
                 return (
                   <span
@@ -242,7 +223,10 @@ function HeroSection() {
               lineHeight: 1.7,
             }}
           >
-            We build institutional-grade dashboards, models, and analysis tools for directors and senior managers who need to show AI results — fast, without IT, and without a six-figure consulting engagement. You bring the workflow. We deliver the work product. You own it completely.
+            We build custom AI dashboards, automations, and workflow tools for
+            managers who need to show results — fast, affordable, and without
+            an IT department. You bring the problem. We deliver a working
+            system. You own it completely.
           </p>
 
           <div
@@ -435,7 +419,7 @@ function MarqueeBar() {
     "No IT Department Required",
     "13 Real Systems Shipped",
     "Workflow Automation",
-    "Done-For-You Builds",
+    "Done-With-You Builds",
     "100% Client Ownership",
   ];
 
