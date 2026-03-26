@@ -79,7 +79,7 @@ function Nav() {
               fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
               fontWeight: 400,
-              color: "rgba(240,237,232,0.75)",
+              color: "rgba(240,237,232,0.88)",
               textDecoration: "none",
               transition: "color 0.2s ease",
             }}
@@ -88,7 +88,7 @@ function Nav() {
             }}
             onMouseLeave={(e) => {
               (e.target as HTMLAnchorElement).style.color =
-                "rgba(240,237,232,0.75)";
+                "rgba(240,237,232,0.88)";
             }}
           >
             {link}
@@ -1352,7 +1352,7 @@ function ProcessSection() {
         <div className="reveal">
           <div
             className="label-style"
-            style={{ color: "rgba(240,237,232,0.5)", marginBottom: "1rem" }}
+            style={{ marginBottom: "1rem" }}
           >
             How It Works
           </div>
@@ -1405,7 +1405,7 @@ function ProcessSection() {
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "3rem",
                     fontWeight: 800,
-                    color: "rgba(255,255,255,0.08)",
+                    color: "rgba(255,255,255,0.2)",
                     lineHeight: 1,
                     marginBottom: "1rem",
                   }}
@@ -1873,7 +1873,7 @@ function FinalCTA() {
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "12px",
-            color: "rgba(240,237,232,0.65)",
+            color: "rgba(240,237,232,0.78)",
             marginTop: "1.25rem",
             letterSpacing: "0.02em",
           }}
@@ -1924,7 +1924,7 @@ function Footer() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "12px",
-              color: "rgba(240,237,232,0.7)",
+              color: "rgba(240,237,232,0.82)",
               textDecoration: "none",
               transition: "color 0.2s ease",
             }}
@@ -1933,7 +1933,7 @@ function Footer() {
             }}
             onMouseLeave={(e) => {
               (e.target as HTMLAnchorElement).style.color =
-                "rgba(240,237,232,0.7)";
+                "rgba(240,237,232,0.82)";
             }}
           >
             {link.label}
@@ -1946,7 +1946,7 @@ function Footer() {
           fontFamily: "'Inter', sans-serif",
           fontSize: "0.875rem",
           fontWeight: 400,
-          color: "rgba(240,237,232,0.45)",
+          color: "rgba(240,237,232,0.65)",
         }}
       >
         © 2026 Sorano AI. All rights reserved.
