@@ -1949,9 +1949,9 @@ export default function LandingPage() {
         <ProcessSection />
         <ServicesSection />
         <LiveShowcase />
-        <WorkSection />
         <WhoSection />
         <FounderBioBlock />
+        <WorkSection />
         <FinalCTA />
       </main>
       <Footer />
