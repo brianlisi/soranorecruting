@@ -1992,8 +1992,8 @@ export default function LandingPage() {
         <MarqueeBar />
         <ProblemSection />
         <ProcessSection />
-        <ServicesSection />
         <LiveShowcase />
+        <ServicesSection />
         <WhoSection />
         <FounderBioBlock />
         <WorkSection />
