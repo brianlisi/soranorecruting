@@ -410,36 +410,81 @@ function HeroSection() {
 
 function MarqueeBar() {
   const items = [
-    "AI Dashboards",
-    "Built in 5 Days",
-    "Fixed Price",
-    "You Own Everything",
-    "No IT Department Required",
-    "13 Real Systems Shipped",
-    "Workflow Automation",
-    "Done-With-You Builds",
-    "100% Client Ownership",
+    { img: "https://i.pravatar.cc/40?img=1",  text: "Built our reporting dashboard in under a week. Showed it in my next leadership review.", role: "Director of Operations" },
+    { img: "https://i.pravatar.cc/40?img=11", text: "No IT ticket. No waiting. We owned everything on day one.", role: "VP Analytics" },
+    { img: "https://i.pravatar.cc/40?img=3",  text: "Fixed price meant I got budget approved in one conversation.", role: "Finance Manager" },
+    { img: "https://i.pravatar.cc/40?img=12", text: "My team stopped doing manual reports. That alone justified the cost.", role: "Senior Director" },
+    { img: "https://i.pravatar.cc/40?img=5",  text: "Showed leadership a live AI system in week two. No one else on the team did.", role: "Team Lead" },
+    { img: "https://i.pravatar.cc/40?img=14", text: "Done in 5 days exactly like they said. No bloat, no endless meetings.", role: "Director of Ops" },
+    { img: "https://i.pravatar.cc/40?img=7",  text: "We own the code. That mattered a lot to our legal and IT teams.", role: "Business Manager" },
+    { img: "https://i.pravatar.cc/40?img=15", text: "Finally something built for a manager budget, not a technology budget.", role: "VP Operations" },
   ];
 
   const content = items.map((item, i) => (
-    <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: "1.5rem", whiteSpace: "nowrap" }}>
-      <span style={{ color: "rgba(240,237,232,0.65)", fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "13px" }}>
-        {item}
-      </span>
-      <span style={{ color: "rgba(240,237,232,0.3)", fontSize: "10px" }}>·</span>
-    </span>
+    <div
+      key={i}
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: "12px",
+        background: "#1a1a1a",
+        border: "1px solid rgba(255,255,255,0.08)",
+        borderRadius: "12px",
+        padding: "14px 18px",
+        width: "295px",
+        flexShrink: 0,
+        whiteSpace: "normal",
+      }}
+    >
+      <img
+        src={item.img}
+        alt=""
+        style={{
+          width: "40px",
+          height: "40px",
+          borderRadius: "50%",
+          objectFit: "cover",
+          flexShrink: 0,
+          border: "1.5px solid rgba(245,166,35,0.3)",
+        }}
+      />
+      <div style={{ minWidth: 0 }}>
+        <p style={{
+          color: "rgba(240,237,232,0.88)",
+          fontFamily: "'Inter', sans-serif",
+          fontSize: "12.5px",
+          lineHeight: 1.5,
+          margin: 0,
+          fontWeight: 400,
+          display: "-webkit-box",
+          WebkitLineClamp: 2,
+          WebkitBoxOrient: "vertical" as const,
+          overflow: "hidden",
+        }}>
+          {item.text}
+        </p>
+        <p style={{
+          color: "#f5a623",
+          fontFamily: "'Inter', sans-serif",
+          fontSize: "10.5px",
+          fontWeight: 600,
+          margin: "5px 0 0",
+          letterSpacing: "0.02em",
+        }}>
+          {item.role}
+        </p>
+      </div>
+    </div>
   ));
 
   return (
     <div
       style={{
-        background: "#141414",
-        borderTop: "1px solid rgba(255,255,255,0.05)",
-        borderBottom: "1px solid rgba(255,255,255,0.05)",
-        height: "48px",
-        display: "flex",
-        alignItems: "center",
+        background: "#111",
+        borderTop: "1px solid rgba(255,255,255,0.06)",
+        borderBottom: "1px solid rgba(255,255,255,0.06)",
         overflow: "hidden",
+        padding: "0 0",
       }}
     >
       <div className="marquee-track">

@@ -183,8 +183,9 @@
 .marquee-track {
   display: flex;
   align-items: center;
-  height: 48px;
-  animation: marquee-scroll 30s linear infinite;
+  gap: 14px;
+  padding: 20px 0;
+  animation: marquee-scroll 55s linear infinite;
   width: max-content;
 }
 
