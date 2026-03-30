@@ -155,7 +155,7 @@ function HeroSection() {
           zIndex: 1,
         }}
       >
-        <div style={{ flex: "0 0 58%", maxWidth: "58%" }}>
+        <div style={{ maxWidth: "720px", width: "100%" }}>
           <div className="label-style"
             style={{
               display: "inline-flex",
@@ -292,137 +292,6 @@ function HeroSection() {
           </div>
         </div>
 
-        <div
-          className="hero-montage"
-          style={{
-            flex: 1,
-            position: "relative",
-            minHeight: "540px",
-            pointerEvents: "none",
-          }}
-        >
-          {/* Clipping 1 — Goldman Sachs research stat */}
-          <div style={{
-            position: "absolute", top: 0, left: "6%",
-            width: "262px", transform: "rotate(-2.2deg)",
-            background: "#0a0a0a", borderRadius: "10px",
-            boxShadow: "0 8px 32px rgba(0,0,0,0.7)",
-            overflow: "hidden",
-            border: "1px solid rgba(255,255,255,0.08)",
-          }}>
-            <div style={{ padding: "10px 14px 8px", borderBottom: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", gap: "6px" }}>
-              <span style={{ color: "#a78b4f", fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.06em" }}>GOLDMAN SACHS RESEARCH</span>
-            </div>
-            <div style={{ padding: "14px" }}>
-              <div style={{ color: "#fff", fontFamily: "'Inter', sans-serif", fontSize: "22px", fontWeight: 800, lineHeight: 1, letterSpacing: "-0.03em" }}>
-                300M
-              </div>
-              <div style={{ color: "rgba(255,255,255,0.75)", fontFamily: "'Inter', sans-serif", fontSize: "11.5px", lineHeight: 1.5, marginTop: "6px" }}>
-                full-time jobs at risk from generative AI. <span style={{ color: "#f5a623", fontWeight: 600 }}>Knowledge workers most exposed.</span>
-              </div>
-              <div style={{ marginTop: "10px", paddingTop: "8px", borderTop: "1px solid rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.35)", fontFamily: "'Inter', sans-serif", fontSize: "9.5px" }}>
-                Global Investment Research · 2024
-              </div>
-            </div>
-          </div>
-
-          {/* Clipping 2 — Performance review card */}
-          <div style={{
-            position: "absolute", top: "28px", right: "2%",
-            width: "215px", transform: "rotate(2.5deg)",
-            background: "#fff", borderRadius: "10px",
-            boxShadow: "0 8px 32px rgba(0,0,0,0.45)",
-            overflow: "hidden",
-          }}>
-            <div style={{ background: "#1e293b", padding: "8px 12px" }}>
-              <div style={{ color: "rgba(255,255,255,0.9)", fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 600 }}>Q2 Performance Review</div>
-              <div style={{ color: "rgba(255,255,255,0.5)", fontFamily: "'Inter', sans-serif", fontSize: "9px", marginTop: "1px" }}>Director, Analytics</div>
-            </div>
-            <div style={{ padding: "11px 12px" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "7px" }}>
-                <span style={{ color: "#374151", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>AI Workflow Adoption</span>
-                <span style={{ background: "#fee2e2", color: "#dc2626", fontFamily: "'Inter', sans-serif", fontSize: "9px", fontWeight: 700, padding: "2px 6px", borderRadius: "3px" }}>NEEDS IMPROVEMENT</span>
-              </div>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "7px" }}>
-                <span style={{ color: "#374151", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>Team Productivity</span>
-                <span style={{ background: "#fef9c3", color: "#854d0e", fontFamily: "'Inter', sans-serif", fontSize: "9px", fontWeight: 700, padding: "2px 6px", borderRadius: "3px" }}>BELOW TARGET</span>
-              </div>
-              <div style={{ marginTop: "8px", paddingTop: "8px", borderTop: "1px solid #e5e7eb", color: "#6b7280", fontFamily: "'Inter', sans-serif", fontSize: "9.5px", lineHeight: 1.4 }}>
-                "Team continues to produce reports manually. No automation demonstrated this quarter."
-              </div>
-            </div>
-          </div>
-
-          {/* Clipping 3 — McKinsey insight card */}
-          <div style={{
-            position: "absolute", top: "200px", left: "8%",
-            width: "268px", transform: "rotate(-1.2deg)",
-            background: "#fff", borderRadius: "10px",
-            boxShadow: "0 8px 32px rgba(0,0,0,0.42)",
-            overflow: "hidden",
-          }}>
-            <div style={{ background: "#051c2c", padding: "8px 12px", display: "flex", alignItems: "center", gap: "6px" }}>
-              <span style={{ color: "#fff", fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.05em" }}>McKINSEY GLOBAL INSTITUTE</span>
-            </div>
-            <div style={{ padding: "12px" }}>
-              <div style={{ color: "#111", fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 700, lineHeight: 1.3 }}>
-                "Managers who cannot demonstrate AI output will be the first restructured."
-              </div>
-              <div style={{ marginTop: "8px", display: "flex", flexDirection: "column", gap: "5px" }}>
-                {[
-                  "Mid-level management most at risk",
-                  "AI proficiency now a baseline expectation",
-                ].map((point, i) => (
-                  <div key={i} style={{ color: "#374151", fontFamily: "'Inter', sans-serif", fontSize: "10.5px", display: "flex", alignItems: "flex-start", gap: "5px" }}>
-                    <span style={{ color: "#dc2626", fontWeight: 700, flexShrink: 0, marginTop: "1px" }}>▸</span> {point}
-                  </div>
-                ))}
-              </div>
-              <div style={{ marginTop: "9px", color: "#9ca3af", fontFamily: "'Inter', sans-serif", fontSize: "9px" }}>The State of AI in the Enterprise · 2025</div>
-            </div>
-          </div>
-
-          {/* Clipping 4 — Internal leadership email */}
-          <div style={{
-            position: "absolute", top: "225px", right: "0%",
-            width: "248px", transform: "rotate(1.8deg)",
-            background: "#f9f7f4", borderRadius: "10px",
-            boxShadow: "0 8px 32px rgba(0,0,0,0.38)",
-            overflow: "hidden",
-          }}>
-            <div style={{ background: "#e8e4de", padding: "8px 12px", borderBottom: "1px solid #d6d0c8" }}>
-              <div style={{ color: "#374151", fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 600 }}>Q3 All-Leadership Directive</div>
-              <div style={{ color: "#9ca3af", fontFamily: "'Inter', sans-serif", fontSize: "9px", marginTop: "1px" }}>From: Office of the CEO</div>
-            </div>
-            <div style={{ padding: "12px" }}>
-              <p style={{ color: "#374151", fontFamily: "'Inter', sans-serif", fontSize: "11px", lineHeight: 1.6, margin: 0 }}>
-                Every department must demonstrate measurable AI integration by EOQ. <strong>Teams that cannot show automation in their reporting workflows will be restructured.</strong>
-              </p>
-            </div>
-          </div>
-
-          {/* Clipping 5 — Dark branded CTA */}
-          <div style={{
-            position: "absolute", bottom: "20px", left: "10%",
-            width: "280px", transform: "rotate(-0.8deg)",
-            background: "#111", border: "1px solid rgba(245,166,35,0.25)",
-            borderRadius: "10px",
-            boxShadow: "0 8px 32px rgba(0,0,0,0.6)",
-            overflow: "hidden",
-          }}>
-            <div style={{ padding: "16px" }}>
-              <div style={{ color: "#f5a623", fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "8px" }}>
-                The window is closing
-              </div>
-              <div style={{ color: "#f0ede8", fontFamily: "'Inter', sans-serif", fontSize: "14px", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.2 }}>
-                The managers who show AI results in the next 90 days keep their seats.
-              </div>
-              <div style={{ marginTop: "12px", color: "#f5a623", fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 500 }}>
-                → Build yours in 5 days. Not 6 months.
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
