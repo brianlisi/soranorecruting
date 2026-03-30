@@ -140,7 +140,7 @@ function HeroSection() {
         background: "#0f0f0f",
         position: "relative",
         overflow: "hidden",
-        padding: "48px 2.5rem 24px",
+        padding: "80px 2.5rem 20px",
       }}
     >
       <div
@@ -171,7 +171,7 @@ function HeroSection() {
           <h1
             style={{
               fontFamily: "'Inter', sans-serif",
-              fontSize: "clamp(1.75rem, 4.7vw, 3.75rem)",
+              fontSize: "clamp(1.5rem, 3.75vw, 3rem)",
               fontWeight: 700,
               lineHeight: 1.1,
               letterSpacing: "-0.04em",
