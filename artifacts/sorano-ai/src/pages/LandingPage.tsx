@@ -1948,8 +1948,8 @@ export default function LandingPage() {
         <ProblemSection />
         <ProcessSection />
         <ServicesSection />
-        <WorkSection />
         <LiveShowcase />
+        <WorkSection />
         <WhoSection />
         <FounderBioBlock />
         <FinalCTA />
