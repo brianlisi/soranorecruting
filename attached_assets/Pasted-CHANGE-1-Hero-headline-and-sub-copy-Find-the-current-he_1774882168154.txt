@@ -1,0 +1,45 @@
+CHANGE 1 — Hero headline and sub-copy
+Find the current hero headline that reads:
+"Your Team Needs An AI Win."
+"We Build It In 5 Days."
+Replace it with this three-line headline:
+Line 1, white, same font size and weight as existing headline: "Show Up to Your Next Review"
+Line 2, white: "With Something Running."
+Line 3, amber #E8A020, same size as existing amber line: "We Build It In 5 Days."
+Then find the existing hero sub-copy that reads:
+"We build custom AI dashboards, automations, and workflow tools for managers who need to show results — fast, affordable, and without an IT department. You bring the problem. We deliver a working system. You own it completely."
+Replace it with:
+"We build institutional-grade dashboards, models, and analysis tools for directors and senior managers who need to show AI results — fast, without IT, and without a six-figure consulting engagement. You bring the workflow. We deliver the work product. You own it completely."
+Do not change any other element in the hero section. Do not touch the floating cards, the stats row, the buttons, the badge, or the testimonial ticker.
+
+CHANGE 2 — Add example builds section above the pricing card
+Find the pricing section that begins with the badge "THE OFFER" and the headline "One System. One Week. One Decision."
+Directly above the "THE OFFER" badge, insert a new block with the following layout:
+Full width, dark background matching the page. Padding top 60px, padding bottom 20px. Max-width 720px centered on the page.
+Add this small centered label in uppercase, amber #E8A020, font size 12px, letter spacing 0.1em, margin-bottom 24px:
+"WHAT WE TYPICALLY BUILD"
+Then add three items displayed as a single centered column, each separated by a thin horizontal rule in #2A2A2A. Each item has no card, no box, no border. Just text with generous padding above and below each item — 24px minimum.
+Item 1:
+Small amber label, uppercase, 11px, letter spacing 0.08em: "OPERATIONS"
+Main text, white, 17px, font-weight 500, max-width 600px centered:
+"A Monday morning dashboard that pulls your team's weekly KPIs automatically and emails a board-ready summary to your leadership before 8am — replacing the report someone rebuilds from scratch every week."
+Item 2:
+Small amber label, uppercase, 11px: "FINANCE"
+Main text, white, 17px, font-weight 500, max-width 600px centered:
+"A budget variance model that updates in real time from your existing spreadsheets, flags anomalies automatically, and generates a one-click executive summary your CFO can read in two minutes."
+Item 3:
+Small amber label, uppercase, 11px: "SALES / MARKETING"
+Main text, white, 17px, font-weight 500, max-width 600px centered:
+"An AI-powered pipeline report that pulls live CRM data, summarizes deal velocity, and produces a stakeholder-ready forecast your team stops arguing about because the numbers update themselves."
+After the three items, add one centered line in muted gray #666666, italic, font size 14px, margin-top 32px, margin-bottom 48px:
+"If you can describe the output, we can build it. We will confirm scope and price on the first call."
+Then let the existing "THE OFFER" badge and pricing card follow immediately beneath.
+
+CHANGE 3 — Fix the closing CTA scarcity line
+Find the line at the bottom of the final CTA section that reads:
+"3 spots available this month · Response within 24 hours · Fixed price before we start"
+Replace it with:
+"Response within 24 hours · Fixed price before we start · No pitch. No deck. No obligation."
+Keep the same font size, same muted styling, same centered alignment. Do not change anything else in the CTA section.
+
+Do not change any other section, component, copy, color, or layout anywhere on the page. Confirm each change as complete.

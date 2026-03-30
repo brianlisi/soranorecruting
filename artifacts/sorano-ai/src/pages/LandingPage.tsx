@@ -113,9 +113,10 @@ function HeroSection() {
   const wordsRef = useRef<HTMLSpanElement[]>([]);
 
   useEffect(() => {
-    const line1 = ["Your", "Team", "Needs", "An", "AI", "Win."];
-    const line2 = ["We", "Build", "It", "In", "5", "Days."];
-    const allWords = [...line1, ...line2];
+    const line1 = ["Show", "Up", "to", "Your", "Next", "Review"];
+    const line2 = ["With", "Something", "Running."];
+    const line3 = ["We", "Build", "It", "In", "5", "Days."];
+    const allWords = [...line1, ...line2, ...line3];
 
     allWords.forEach((_, i) => {
       const el = wordsRef.current[i];
@@ -125,8 +126,9 @@ function HeroSection() {
     });
   }, []);
 
-  const line1 = ["Your", "Team", "Needs", "An", "AI", "Win."];
-  const line2 = ["We", "Build", "It", "In", "5", "Days."];
+  const line1 = ["Show", "Up", "to", "Your", "Next", "Review"];
+  const line2 = ["With", "Something", "Running."];
+  const line3 = ["We", "Build", "It", "In", "5", "Days."];
   let wordIdx = 0;
 
   return (
@@ -193,7 +195,7 @@ function HeroSection() {
                 );
               })}
             </div>
-            <div>
+            <div style={{ marginBottom: "0.1em" }}>
               {line2.map((word, i) => {
                 const idx = wordIdx++;
                 return (
@@ -203,7 +205,24 @@ function HeroSection() {
                       if (el) wordsRef.current[idx] = el;
                     }}
                     className="hero-word"
-                    style={{ marginRight: "0.25em", color: "#f5a623" }}
+                    style={{ marginRight: "0.25em", color: "#f0ede8" }}
+                  >
+                    {word}
+                  </span>
+                );
+              })}
+            </div>
+            <div>
+              {line3.map((word, i) => {
+                const idx = wordIdx++;
+                return (
+                  <span
+                    key={i}
+                    ref={(el) => {
+                      if (el) wordsRef.current[idx] = el;
+                    }}
+                    className="hero-word"
+                    style={{ marginRight: "0.25em", color: "#E8A020" }}
                   >
                     {word}
                   </span>
@@ -223,10 +242,11 @@ function HeroSection() {
               lineHeight: 1.7,
             }}
           >
-            We build custom AI dashboards, automations, and workflow tools for
-            managers who need to show results — fast, affordable, and without
-            an IT department. You bring the problem. We deliver a working
-            system. You own it completely.
+            We build institutional-grade dashboards, models, and analysis tools
+            for directors and senior managers who need to show AI results —
+            fast, without IT, and without a six-figure consulting engagement.
+            You bring the workflow. We deliver the work product. You own it
+            completely.
           </p>
 
           <div
@@ -754,6 +774,47 @@ function ServicesSection() {
       </span>
 
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+
+        {/* What We Typically Build */}
+        <div style={{ maxWidth: "720px", margin: "0 auto", paddingTop: "0", paddingBottom: "20px" }}>
+          <div style={{ textAlign: "center", marginBottom: "24px" }}>
+            <span style={{ color: "#E8A020", fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em" }}>
+              WHAT WE TYPICALLY BUILD
+            </span>
+          </div>
+          {[
+            {
+              dept: "OPERATIONS",
+              body: "A Monday morning dashboard that pulls your team's weekly KPIs automatically and emails a board-ready summary to your leadership before 8am — replacing the report someone rebuilds from scratch every week.",
+            },
+            {
+              dept: "FINANCE",
+              body: "A budget variance model that updates in real time from your existing spreadsheets, flags anomalies automatically, and generates a one-click executive summary your CFO can read in two minutes.",
+            },
+            {
+              dept: "SALES / MARKETING",
+              body: "An AI-powered pipeline report that pulls live CRM data, summarizes deal velocity, and produces a stakeholder-ready forecast your team stops arguing about because the numbers update themselves.",
+            },
+          ].map((item, i, arr) => (
+            <div key={i}>
+              <div style={{ padding: "24px 0", textAlign: "center" }}>
+                <div style={{ color: "#E8A020", fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "10px" }}>
+                  {item.dept}
+                </div>
+                <p style={{ color: "#f0ede8", fontFamily: "'Inter', sans-serif", fontSize: "17px", fontWeight: 500, lineHeight: 1.65, maxWidth: "600px", margin: "0 auto" }}>
+                  {item.body}
+                </p>
+              </div>
+              {i < arr.length - 1 && (
+                <div style={{ height: "1px", background: "#2A2A2A" }} />
+              )}
+            </div>
+          ))}
+          <p style={{ color: "#666666", fontFamily: "'Inter', sans-serif", fontSize: "14px", fontStyle: "italic", textAlign: "center", marginTop: "32px", marginBottom: "48px" }}>
+            If you can describe the output, we can build it. We will confirm scope and price on the first call.
+          </p>
+        </div>
+
         <div className="reveal" style={{ textAlign: "center", marginBottom: "3rem" }}>
           <div
             className="label-style"
@@ -1904,8 +1965,7 @@ function FinalCTA() {
             letterSpacing: "0.02em",
           }}
         >
-          3 spots available this month · Response within 24 hours · Fixed
-          price before we start
+          Response within 24 hours · Fixed price before we start · No pitch. No deck. No obligation.
         </div>
       </div>
     </section>
