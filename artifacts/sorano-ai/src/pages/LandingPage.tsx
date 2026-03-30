@@ -163,7 +163,7 @@ function HeroSection() {
             }}
           >
             <span className="pulse-dot" />
-            <span>Your boss is about to ask what you are doing with AI.</span>
+            <span>Your Manager keeps asking, "When are we going to use AI?"</span>
           </div>
 
           <h1
