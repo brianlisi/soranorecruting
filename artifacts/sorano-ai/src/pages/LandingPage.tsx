@@ -1946,10 +1946,10 @@ export default function LandingPage() {
         <HeroSection />
         <MarqueeBar />
         <ProblemSection />
+        <ProcessSection />
         <ServicesSection />
         <WorkSection />
         <LiveShowcase />
-        <ProcessSection />
         <WhoSection />
         <FounderBioBlock />
         <FinalCTA />
