@@ -140,7 +140,7 @@ function HeroSection() {
         background: "#0f0f0f",
         position: "relative",
         overflow: "hidden",
-        padding: "96px 2.5rem 4rem",
+        padding: "48px 2.5rem 24px",
       }}
     >
       <div
@@ -155,7 +155,7 @@ function HeroSection() {
           zIndex: 1,
         }}
       >
-        <div style={{ maxWidth: "720px", width: "100%" }}>
+        <div style={{ maxWidth: "900px", width: "100%" }}>
           <div className="label-style"
             style={{
               display: "inline-flex",
@@ -171,14 +171,14 @@ function HeroSection() {
           <h1
             style={{
               fontFamily: "'Inter', sans-serif",
-              fontSize: "clamp(2.4rem, 4vw, 4rem)",
+              fontSize: "clamp(1.75rem, 4.7vw, 3.75rem)",
               fontWeight: 700,
-              lineHeight: 1.05,
+              lineHeight: 1.1,
               letterSpacing: "-0.04em",
-              marginBottom: "1rem",
+              marginBottom: "16px",
             }}
           >
-            <div style={{ marginBottom: "0.1em" }}>
+            <div style={{ marginBottom: "8px" }}>
               {line1.map((word, i) => {
                 const idx = wordIdx++;
                 return (
@@ -195,7 +195,7 @@ function HeroSection() {
                 );
               })}
             </div>
-            <div style={{ marginBottom: "0.1em" }}>
+            <div style={{ marginBottom: "8px" }}>
               {line2.map((word, i) => {
                 const idx = wordIdx++;
                 return (
@@ -238,7 +238,7 @@ function HeroSection() {
               color: "rgba(240,237,232,0.8)",
               maxWidth: "520px",
               marginTop: "0",
-              marginBottom: "1.5rem",
+              marginBottom: "24px",
               lineHeight: 1.7,
             }}
           >
@@ -253,7 +253,7 @@ function HeroSection() {
             style={{
               display: "flex",
               gap: "1rem",
-              marginBottom: "2rem",
+              marginBottom: "0",
               flexWrap: "wrap",
             }}
           >
@@ -269,8 +269,8 @@ function HeroSection() {
             style={{
               display: "flex",
               gap: "1.5rem",
-              marginTop: "1.5rem",
-              paddingTop: "1.5rem",
+              marginTop: "24px",
+              paddingTop: "16px",
               borderTop: "1px solid rgba(255,255,255,0.08)",
               flexWrap: "wrap",
             }}

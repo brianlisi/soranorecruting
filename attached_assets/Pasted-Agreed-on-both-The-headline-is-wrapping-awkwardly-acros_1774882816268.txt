@@ -1,0 +1,27 @@
+Agreed on both. The headline is wrapping awkwardly across three lines because the font is too large for the layout without the right panel visual to balance it. It needs to sit tighter and cleaner. And the testimonial ticker is your strongest social proof — real titles, real outcomes — and it is completely invisible above the fold. That needs to move up.
+Here is the prompt:
+
+I need the hero section of the Sorano AI landing page adjusted for spacing, layout, and testimonial placement. Do not touch any copy, colors, or other sections.
+CHANGE 1 — Reduce hero headline font size
+Find the hero headline:
+"Show Up to Your Next Review"
+"With Something Running."
+"We Build It In 5 Days."
+Reduce the font size so the entire headline fits cleanly on screen without awkward line breaks. Target: the first two lines should each sit on one line without wrapping. Suggested font size reduction from current to approximately 72px on desktop. Adjust line-height to 1.1 to keep it tight and confident. The amber line "We Build It In 5 Days." should match the same size reduction proportionally. Do not change font weight, color, or any copy.
+CHANGE 2 — Reduce hero section overall vertical padding
+The hero section currently has too much vertical padding causing the testimonial ticker to fall below the fold. Reduce the top and bottom padding of the hero section so that all of the following elements are visible above the fold on a standard 1080p desktop screen without scrolling:
+
+The badge
+The full three-line headline
+The sub-copy
+Both CTA buttons
+The stats row (13 systems shipped, 5 days, 100%, $0)
+The testimonial ticker
+
+Reduce padding-top to 48px and padding-bottom to 32px. Reduce the gap between the headline and sub-copy to 16px. Reduce the gap between sub-copy and buttons to 24px. Reduce the gap between buttons and stats row to 24px. Reduce the gap between stats row and testimonial ticker to 24px.
+CHANGE 3 — Move testimonial ticker above the fold
+The scrolling testimonial ticker currently sits below the stats row and is not visible without scrolling. Ensure it renders immediately below the stats row with no more than 24px gap between them. The ticker should be the last visible element before the fold on desktop. Do not change the ticker content, speed, styling, or any testimonial copy.
+CHANGE 4 — Add breathing room between headline lines
+Add a small margin-bottom of 8px between each line of the headline so the three lines feel intentionally spaced rather than stacked. Do not change the font size or weight beyond what is specified in Change 1.
+
+Do not change any other section, copy, color, component, or layout anywhere on the page. Test at 1280px wide desktop viewport to confirm all elements are visible above the fold before completing. Confirm each change as done.
