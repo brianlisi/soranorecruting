@@ -113,9 +113,9 @@ function HeroSection() {
   const wordsRef = useRef<HTMLSpanElement[]>([]);
 
   useEffect(() => {
-    const line1 = ["Show", "Up", "to", "Your", "Next", "Review"];
-    const line2 = ["With", "Something", "Running."];
-    const line3 = ["We", "Build", "It", "In", "5", "Days."];
+    const line1 = ["Turn", "your", "manual", "reporting"];
+    const line2 = ["into", "a", "live", "AI", "system"];
+    const line3 = ["in", "5", "days."];
     const allWords = [...line1, ...line2, ...line3];
 
     allWords.forEach((_, i) => {
@@ -126,9 +126,9 @@ function HeroSection() {
     });
   }, []);
 
-  const line1 = ["Show", "Up", "to", "Your", "Next", "Review"];
-  const line2 = ["With", "Something", "Running."];
-  const line3 = ["We", "Build", "It", "In", "5", "Days."];
+  const line1 = ["Turn", "your", "manual", "reporting"];
+  const line2 = ["into", "a", "live", "AI", "system"];
+  const line3 = ["in", "5", "days."];
   let wordIdx = 0;
 
   return (
@@ -165,7 +165,7 @@ function HeroSection() {
             }}
           >
             <span className="pulse-dot" />
-            <span>Your Manager keeps asking, "When are we going to use AI?"</span>
+            <span>BUILT FOR MANAGERS WHO NEED TO SHOW AI RESULTS FAST</span>
           </div>
 
           <h1
@@ -242,11 +242,10 @@ function HeroSection() {
               lineHeight: 1.7,
             }}
           >
-            We build institutional-grade dashboards, models, and analysis tools
-            for directors and senior managers who need to show AI results —
-            fast, without IT, and without a six-figure consulting engagement.
-            You bring the workflow. We deliver the work product. You own it
-            completely.
+            We build dashboards, models, and reporting workflows for directors
+            and senior managers who need something live before the next
+            leadership review. Fixed price. No IT dependency. You own
+            everything.
           </p>
 
           <div
@@ -258,11 +257,23 @@ function HeroSection() {
             }}
           >
             <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn-primary">
-              Book a Free 20-Min Call
+              Book My Free 20-Min Scoping Call
             </a>
             <a href="#work" className="btn-secondary">
-              See Our Work →
+              See a Live Example
             </a>
+          </div>
+
+          <div
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: "12px",
+              color: "rgba(240,237,232,0.6)",
+              marginTop: "12px",
+              letterSpacing: "0.01em",
+            }}
+          >
+            Get scope, timeline, and fixed price on the first call.
           </div>
 
           <div
@@ -388,8 +399,8 @@ function ProblemSection() {
   const cards = [
     {
       icon: <Megaphone size={22} color="#f5a623" />,
-      title: "Your next review is an AI audit",
-      body: "Leadership has moved past asking for roadmaps. They want to see what's live. Managers walking in with running dashboards are getting budget. Managers with screenshots are getting performance plans.",
+      title: "Your next review needs something live",
+      body: "Leadership has stopped asking for roadmaps. They want to see what is running. Managers with live dashboards are walking into reviews with answers. Everyone else is explaining why it is not ready yet.",
       clipping: (
         <div style={{ background: "#fff", borderRadius: "8px", overflow: "hidden", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>
           <div style={{ background: "#1e293b", padding: "6px 10px" }}>
@@ -411,8 +422,8 @@ function ProblemSection() {
     },
     {
       icon: <Clock size={22} color="#f5a623" />,
-      title: "Your peers are already shipping",
-      body: "The director down the hall automated their weekly reporting. The VP in finance has a live board-ready dashboard. Your boss is starting to notice who has answers and who has apologies.",
+      title: "Manual reporting is the bottleneck",
+      body: "If your team still rebuilds the same reports by hand every week, that time is the first thing leadership will cut. Automating one reporting workflow typically saves 5 to 15 hours per week.",
       clipping: (
         <div style={{ background: "#051c2c", borderRadius: "8px", overflow: "hidden", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>
           <div style={{ padding: "6px 10px", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
@@ -429,8 +440,8 @@ function ProblemSection() {
     },
     {
       icon: <Hand size={22} color="#f5a623" />,
-      title: "The 90-day clock is already running",
-      body: "The CEO directive is in motion. Teams that cannot show AI results by end of quarter are being restructured. Waiting for IT or a budget cycle is not a strategy.",
+      title: "Waiting on IT slows everything down",
+      body: "IT backlogs and procurement cycles move slowly. Managers who need to show results this quarter cannot wait months for a ticket to be resolved. You need something your team can own and run independently.",
       clipping: (
         <div style={{ background: "#f9f7f4", borderRadius: "8px", overflow: "hidden", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>
           <div style={{ background: "#e8e4de", padding: "6px 10px", borderBottom: "1px solid #d6d0c8" }}>
@@ -447,8 +458,8 @@ function ProblemSection() {
     },
     {
       icon: <Banknote size={22} color="#f5a623" />,
-      title: "Doing nothing is the highest-risk move",
-      body: "Goldman Sachs said 300M jobs. McKinsey said middle management first. Every week your team produces reports by hand is another week your boss has data on who is keeping up.",
+      title: "A working system beats another roadmap",
+      body: "Every leadership team is asking the same question: who on this team is actually doing something with AI? The answer they respect is a live system, not a presentation about one.",
       clipping: (
         <div style={{ background: "#0a0a0a", borderRadius: "8px", overflow: "hidden", fontFamily: "'Inter', sans-serif", fontSize: "10px", border: "1px solid rgba(255,255,255,0.08)" }}>
           <div style={{ padding: "6px 10px", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
@@ -497,10 +508,10 @@ function ProblemSection() {
               color: "#f0ede8",
             }}
           >
-            AI Is Restructuring Knowledge Work.
+            Your team still builds critical reports by hand.
             <br />
             <span style={{ color: "#f5a623" }}>
-              Your Boss Is Already Keeping Score.
+              We turn them into live systems.
             </span>
           </h2>
           <p
@@ -513,7 +524,7 @@ function ProblemSection() {
               lineHeight: 1.7,
             }}
           >
-            The managers who show a live AI system in their next review are getting budget and influence. The ones who can't are getting performance plans. There is no middle option anymore.
+            Leadership does not want another AI roadmap. They want to see something working. We help managers replace manual dashboards, reports, and analysis workflows with live systems they can actually show.
           </p>
         </div>
 
@@ -611,7 +622,7 @@ function ProblemSection() {
             fontStyle: "italic",
           }}
         >
-          The managers who cannot show a working system in 90 days are being reclassified as the bottleneck.
+          Leadership wants to see something working. Managers who can show live systems are getting more budget and more autonomy.
         </p>
       </div>
 
@@ -701,7 +712,7 @@ function ServicesSection() {
               color: "#f0ede8",
             }}
           >
-            One System. One Week. One Decision.
+            One workflow. One fixed price. Live in 5 days.
           </h2>
         </div>
 
@@ -772,7 +783,7 @@ function ServicesSection() {
               textAlign: "center",
             }}
           >
-            Institutional-grade dashboards, models, and analysis tools that replace the reports your team builds by hand. Board meetings. Budget reviews. Stakeholder presentations. Live, automated, yours forever.
+            We build the dashboard, model, or reporting workflow your team is still doing by hand — then hand it over fully built. Fixed price. No IT dependency. No ongoing platform fees.
           </p>
 
           <div
@@ -851,7 +862,7 @@ function ServicesSection() {
 
           <div style={{ textAlign: "center", marginTop: "0" }}>
             <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn-primary">
-              Book a Free 20-Min Call
+              Book My Free 20-Min Scoping Call
             </a>
             <div
               style={{
@@ -861,7 +872,7 @@ function ServicesSection() {
                 marginTop: "1rem",
               }}
             >
-              Every week your team spends doing this manually is a week your boss is waiting for results.
+              Get scope, timeline, and fixed price on the first call.
             </div>
           </div>
         </div>
@@ -1267,23 +1278,23 @@ function ProcessSection() {
   const steps = [
     {
       num: "01",
-      title: "You tell us the problem",
-      body: "Book a free 20-minute call. Tell us the one workflow that costs your team the most time. No prep required. No deck needed.",
+      title: "Show us the workflow",
+      body: "Book a free 20-minute call and show us the report, dashboard, or analysis workflow that costs your team the most time.",
     },
     {
       num: "02",
-      title: "We scope it same day",
-      body: "You get a fixed price and delivery date before we hang up. No proposals. No waiting. If it does not fit, we will tell you honestly.",
+      title: "Get scope and fixed price",
+      body: "We tell you what we would build, what it will do, how long it takes, and the fixed price before we start.",
     },
     {
       num: "03",
-      title: "We build it together",
-      body: "5 days. Daily progress updates. You stay as involved as you want. You see the build happen not just the final output.",
+      title: "We build it in 5 days",
+      body: "You get daily progress updates while we turn the workflow into a live dashboard, model, or reporting system.",
     },
     {
       num: "04",
-      title: "You own it completely",
-      body: "Full handoff, documentation, walkthrough, and 30 days of support. No subscriptions. No platform lock-in. Yours forever.",
+      title: "You own everything",
+      body: "Full handoff, documentation, walkthrough, and support. No subscriptions. No lock-in. Your team can run it independently.",
     },
   ];
 
@@ -1785,9 +1796,9 @@ function FinalCTA() {
             color: "#f0ede8",
           }}
         >
-          Show Up to Your Next Review
+          Show up to your next review
           <br />
-          With <span style={{ color: "#f5a623" }}>Something Running.</span>
+          with <span style={{ color: "#f5a623" }}>something running.</span>
         </h2>
 
         <p
@@ -1801,9 +1812,9 @@ function FinalCTA() {
             lineHeight: 1.7,
           }}
         >
-          Book a free 20-minute call. Tell us your biggest manual workflow
-          problem. We will tell you exactly what we would build, how long it
-          takes, and what it costs. No pitch. No obligation. No deck required.
+          Book a free 20-minute scoping call. Show us the manual workflow.
+          We will tell you what we would build, how fast we can ship it, and
+          the fixed price.
         </p>
 
         <div
@@ -1817,7 +1828,7 @@ function FinalCTA() {
           }}
         >
           <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn-primary">
-            Book a Free 20-Min Call
+            Book My Free 20-Min Scoping Call
           </a>
           <a href={EMAIL} className="btn-secondary">
             Send a Message
@@ -1834,7 +1845,7 @@ function FinalCTA() {
             letterSpacing: "0.02em",
           }}
         >
-          Response within 24 hours · Fixed price before we start · No pitch. No deck. No obligation.
+          No pitch. No deck required. Fixed scope before we start.
         </div>
       </div>
     </section>

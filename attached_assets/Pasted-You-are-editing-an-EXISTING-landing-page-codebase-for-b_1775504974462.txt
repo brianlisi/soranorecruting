@@ -1,0 +1,220 @@
+You are editing an EXISTING landing page codebase for buildwithsorano.com.
+
+Your task is to improve conversion clarity for traffic from email marketing and TikTok by updating COPY ONLY, with minimal structural change.
+
+IMPORTANT: THIS IS A SURGICAL EDIT TASK, NOT A REDESIGN TASK.
+
+NON-NEGOTIABLE GUARDRAILS
+- Do NOT drift from this task.
+- Do NOT redesign the page.
+- Do NOT change the visual style.
+- Do NOT change the design system.
+- Do NOT change fonts, font sizes, colors, spacing scale, shadows, borders, radii, imagery, icons, animations, or layout style.
+- Do NOT introduce a new visual direction.
+- Do NOT replace components unless absolutely necessary.
+- Do NOT add new libraries, dependencies, or frameworks.
+- Do NOT refactor unrelated code.
+- Do NOT change booking links, CTA destinations, forms, analytics, event tracking, or integrations.
+- Do NOT rename classes, IDs, selectors, tracking hooks, or component props unless absolutely necessary.
+- Do NOT invent new metrics, logos, proof points, client names, or testimonials.
+- Only use claims already present on the page.
+- Preserve responsiveness and existing interactions.
+- Keep edits minimal and targeted.
+- If a text element is split across spans for styling, preserve the structure and only replace the visible copy.
+- Prefer copy changes and section reordering over any structural UI change.
+- If a design improvement would require visual redesign, do NOT do it.
+
+PRIMARY OBJECTIVE
+Make the landing page instantly understandable within 5 seconds:
+1. what Sorano does,
+2. who it is for,
+3. what outcome the buyer gets,
+4. how fast it happens,
+5. and what to do next.
+
+CURRENT PROBLEM TO FIX
+The current page has a strong offer, but the hero is too theatrical and not literal enough. The page needs clearer plain-English messaging, a stronger primary CTA hierarchy, and less fear-heavy copy at the top.
+
+IMPLEMENT THESE EXACT COPY CHANGES
+
+================================
+1) HERO SECTION — REPLACE WITH THIS EXACT COPY
+================================
+
+Eyebrow / small preheadline:
+BUILT FOR MANAGERS WHO NEED TO SHOW AI RESULTS FAST
+
+Main headline:
+Turn your manual reporting into a live AI system in 5 days.
+
+Subheadline:
+We build dashboards, models, and reporting workflows for directors and senior managers who need something live before the next leadership review. Fixed price. No IT dependency. You own everything.
+
+Primary CTA button:
+Book My Free 20-Min Scoping Call
+
+Secondary CTA button:
+See a Live Example
+
+Microcopy below primary CTA:
+Get scope, timeline, and fixed price on the first call.
+
+IMPORTANT HERO RULES
+- Use this copy exactly unless a tiny adjustment is required to fit the existing component structure.
+- Preserve the current visual style and component styling.
+- Remove any faded, obscured, or hard-to-read hero word treatment that hurts readability, but do this without changing the design language.
+- Make the primary CTA clearly dominant using the existing button hierarchy/styles already in the codebase.
+- Keep the secondary CTA if it already exists or can be implemented using the same existing button pattern without style drift.
+
+================================
+2) PROOF BAR / TRUST METRICS — KEEP, BUT POSITION TO SUPPORT HERO
+================================
+
+Keep existing proof/metrics already on the page, especially:
+- 13 Systems Shipped
+- 5 days Average Build Time
+- 100% Client Ownership
+- $0 Ongoing Platform Fees
+
+Do not invent or alter these claims.
+Keep them very close to the hero so they reinforce the main promise immediately.
+
+================================
+3) “SOUND FAMILIAR?” / FEAR-HEAVY SECTION — TONE DOWN, MAKE MORE CREDIBLE
+================================
+
+Where the page currently uses overly aggressive fear framing, reduce the intensity and make it more outcome-focused.
+
+Replace the main section headline with:
+Your team still builds critical reports by hand.
+We turn them into live systems.
+
+Replace the supporting intro copy with:
+Leadership does not want another AI roadmap. They want to see something working. We help managers replace manual dashboards, reports, and analysis workflows with live systems they can actually show.
+
+If there are card titles or support blurbs in this section that are extremely fear-heavy, rewrite them to be more credible and practical while preserving urgency.
+
+Use this direction for card headings:
+- Your next review needs something live
+- Manual reporting is the bottleneck
+- Waiting on IT slows everything down
+- A working system beats another roadmap
+
+Do not make this section soft or generic.
+Keep urgency, but remove melodramatic phrasing.
+
+================================
+4) “HOW IT WORKS” SECTION — TIGHTEN LANGUAGE
+================================
+
+Keep the existing 4-step structure, but tighten the copy to be more direct.
+
+Use the following copy direction:
+
+Step 1 title:
+Show us the workflow
+
+Step 1 body:
+Book a free 20-minute call and show us the report, dashboard, or analysis workflow that costs your team the most time.
+
+Step 2 title:
+Get scope and fixed price
+
+Step 2 body:
+We tell you what we would build, what it will do, how long it takes, and the fixed price before we start.
+
+Step 3 title:
+We build it in 5 days
+
+Step 3 body:
+You get daily progress updates while we turn the workflow into a live dashboard, model, or reporting system.
+
+Step 4 title:
+You own everything
+
+Step 4 body:
+Full handoff, documentation, walkthrough, and support. No subscriptions. No lock-in. Your team can run it independently.
+
+================================
+5) OFFER SECTION — MAKE THE OFFER MORE PLAIN-ENGLISH
+================================
+
+Replace the main offer headline with:
+One workflow. One fixed price. Live in 5 days.
+
+Replace supporting copy with:
+We build the dashboard, model, or reporting workflow your team is still doing by hand — then hand it over fully built. Fixed price. No IT dependency. No ongoing platform fees.
+
+Keep the existing pricing and ownership claims already on the page.
+Do not change the actual price unless it is already sourced from existing content.
+
+================================
+6) FINAL CTA SECTION — MAKE THE CLOSE MORE DIRECT
+================================
+
+Replace the final CTA headline with:
+Show up to your next review with something running.
+
+Replace the supporting copy with:
+Book a free 20-minute scoping call. Show us the manual workflow. We will tell you what we would build, how fast we can ship it, and the fixed price.
+
+Primary CTA:
+Book My Free 20-Min Scoping Call
+
+Support microcopy:
+No pitch. No deck required. Fixed scope before we start.
+
+================================
+7) CTA CONSISTENCY RULES
+================================
+
+Standardize CTA copy across the page where appropriate.
+
+Preferred primary CTA:
+Book My Free 20-Min Scoping Call
+
+Preferred secondary CTA:
+See a Live Example
+
+If there are multiple variants of CTA text across the page, reduce inconsistency unless a section-specific variant is clearly better.
+
+================================
+8) WHAT NOT TO CHANGE
+================================
+
+Do NOT change:
+- brand colors
+- typography
+- layout patterns
+- section styling
+- image assets
+- logos
+- testimonials
+- proof claims
+- booking flow
+- navigation behavior
+- analytics
+- responsiveness
+
+If something is not directly related to copy clarity, CTA clarity, or section order, leave it alone.
+
+================================
+9) IMPLEMENTATION APPROACH
+================================
+
+- First inspect the existing codebase and identify the exact landing page files.
+- Only edit the files necessary for this page.
+- Reuse existing components and styles.
+- Make the smallest possible code changes to achieve the copy updates.
+- If the page uses reusable content constants or CMS-like objects, update copy there instead of duplicating strings.
+- Preserve semantic structure and accessibility.
+
+================================
+10) REQUIRED OUTPUT AFTER EDITING
+================================
+
+After making changes, provide:
+1. a concise summary of what changed,
+2. the exact files modified,
+3. confirmation that no design/style drift was introduced,
+4. confirmation that no new claims or fabricated proof points were added.
