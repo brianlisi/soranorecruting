@@ -1,0 +1,161 @@
+You are editing the EXISTING live landing page codebase for https://buildwithsorano.com/.
+
+IMPORTANT:
+Use the CURRENT LIVE PAGE as the source of truth for copy and hierarchy.
+Do not revert, rewrite, soften, embellish, or re-interpret the current live copy unless explicitly instructed below.
+
+This is a SURGICAL optimization pass, not a redesign and not a rewrite-from-scratch task.
+
+PRIMARY OBJECTIVE
+Improve conversion performance for traffic from:
+- email marketing
+- TikTok
+
+But preserve the current live messaging direction already on the site.
+
+NON-NEGOTIABLE GUARDRAILS
+- Do NOT drift from this task.
+- Do NOT redesign the page.
+- Do NOT make style or visual changes.
+- Do NOT change fonts, colors, spacing, shadows, borders, radii, imagery, iconography, animation, or layout style.
+- Do NOT change the design system.
+- Do NOT introduce a new aesthetic direction.
+- Do NOT rewrite the live hero copy unless explicitly instructed.
+- Do NOT rewrite sections that are already aligned with the current live messaging unless explicitly instructed.
+- Do NOT refactor unrelated code.
+- Do NOT add dependencies, packages, libraries, or frameworks.
+- Do NOT change analytics, event tracking, forms, booking links, or CTA destinations.
+- Do NOT rename classes, IDs, selectors, data attributes, or component APIs unless absolutely necessary.
+- Do NOT invent claims, testimonials, metrics, logos, client names, or proof points.
+- Do NOT remove responsiveness or break mobile behavior.
+- Do NOT change interactions unless necessary to improve CTA clarity using existing components.
+- Make the smallest possible set of edits.
+
+LIVE COPY THAT MUST BE PRESERVED
+Preserve these live sections exactly unless there is a technical reason they must remain split across elements for styling:
+
+Eyebrow:
+BUILT FOR MANAGERS WHO NEED TO SHOW AI RESULTS FAST
+
+Hero headline:
+Turn your manual reporting into a live AI system in 5 days.
+
+Hero subheadline:
+We build dashboards, models, and reporting workflows for directors and senior managers who need something live before the next leadership review. Fixed price. No IT dependency. You own everything.
+
+Hero microcopy:
+Get scope, timeline, and fixed price on the first call.
+
+“Sound Familiar?” section headline:
+Your team still builds critical reports by hand.
+We turn them into live systems.
+
+“Sound Familiar?” supporting copy:
+Leadership does not want another AI roadmap. They want to see something working. We help managers replace manual dashboards, reports, and analysis workflows with live systems they can actually show.
+
+“How It Works” step titles and direction:
+- Show us the workflow
+- Get scope and fixed price
+- We build it in 5 days
+- You own everything
+
+Offer section headline:
+One workflow. One fixed price. Live in 5 days.
+
+Final CTA headline:
+Show up to your next review
+with something running.
+
+Final CTA supporting copy:
+Book a free 20-minute scoping call. Show us the manual workflow. We will tell you what we would build, how fast we can ship it, and the fixed price.
+
+TASKS TO COMPLETE
+Your job is NOT to rewrite the page again.
+Your job is to optimize hierarchy, CTA clarity, and message match while preserving the current live copy direction.
+
+Implement only these improvements:
+
+1) HERO CTA HIERARCHY
+- Ensure there is one clearly dominant primary CTA in the hero using existing button styling.
+- Preserve the current primary CTA destination and functionality.
+- If there is a secondary CTA, make sure it supports proof and does not visually compete with the main CTA.
+- Do not introduce extra CTAs above the fold.
+
+2) ABOVE-THE-FOLD CLARITY
+- Preserve the current hero copy, but make sure it is rendered in the clearest possible readable hierarchy using the existing design system.
+- If headline words are split across spans or lines for styling, keep that structure only if readability remains strong.
+- Remove or reduce any implementation that makes the hero harder to scan, but do so without visual redesign.
+
+3) PROOF NEAR THE HERO
+- Keep existing proof elements close to the hero.
+- Preserve existing proof metrics already on the page, including:
+  - 13 Systems Shipped
+  - 5 days Average Build Time
+  - 100% Client Ownership
+  - $0 Ongoing Platform Fees
+- Do not alter claims.
+- Do not create new stats.
+
+4) CTA CONSISTENCY
+Standardize CTA language where appropriate.
+Preferred primary CTA:
+- Book My Free 20-Min Scoping Call
+If the live site currently uses a close variant, normalize toward this only where it improves consistency and does not affect tracking or integrations.
+
+Preferred proof-oriented secondary CTA:
+- See a Live Example
+Only use this if a secondary CTA already exists or can be implemented using the existing component system without style drift.
+
+5) TIKTOK + EMAIL MESSAGE MATCH
+- Preserve the current plain-English messaging.
+- Make sure the first screen instantly communicates:
+  - what Sorano does,
+  - who it’s for,
+  - the 5-day outcome,
+  - and the next step.
+- Do not add more copy to the hero.
+- If anything, reduce friction.
+
+6) KEEP THE PAGE CREDIBLE
+- Preserve urgency.
+- Do not reintroduce melodramatic or exaggerated fear-based language.
+- Keep the tone practical, outcome-driven, and commercially credible.
+
+TECHNICAL IMPLEMENTATION RULES
+- First inspect the codebase and identify the exact landing page files/components used by the live page.
+- Only edit files needed for this landing page.
+- Reuse existing components and styling primitives.
+- Prefer editing centralized content constants if they exist.
+- Preserve semantic HTML and accessibility.
+- Preserve mobile responsiveness.
+- Keep DOM changes minimal.
+
+DO NOT CHANGE
+- logos
+- brand colors
+- testimonials
+- images
+- layout patterns
+- section styling
+- booking flow
+- forms
+- analytics
+- tracking
+- integrations
+- unrelated components or pages
+
+SUCCESS CRITERIA
+The result should:
+- preserve the current live copy direction,
+- keep the current hero wording intact,
+- make the CTA hierarchy clearer,
+- improve scanability for email and TikTok traffic,
+- and introduce zero design/style drift.
+
+REQUIRED OUTPUT AFTER COMPLETION
+After making changes, provide:
+1. exact files changed,
+2. exact elements updated,
+3. confirmation that current live hero copy was preserved,
+4. confirmation that no design/style drift was introduced,
+5. confirmation that no fabricated claims or proof points were added.

@@ -121,7 +121,7 @@ function HeroSection() {
     allWords.forEach((_, i) => {
       const el = wordsRef.current[i];
       if (el) {
-        el.style.animationDelay = `${i * 80}ms`;
+        el.style.animationDelay = `${i * 40}ms`;
       }
     });
   }, []);
