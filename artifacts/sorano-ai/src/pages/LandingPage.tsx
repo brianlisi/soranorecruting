@@ -97,7 +97,7 @@ function Nav() {
       </div>
 
       <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn-primary" style={{ fontSize: "15px", padding: "11px 24px" }}>
-        Book a Free Call
+        Book a 20-Min Call
       </a>
 
       <style>{`
@@ -243,7 +243,7 @@ function HeroSection() {
             }}
           >
             We build dashboards, models, and reporting workflows for directors
-            and senior managers who need something live before the next
+            and senior managers who need a live system before the next
             leadership review. Fixed price. No IT dependency. You own
             everything.
           </p>
@@ -259,8 +259,8 @@ function HeroSection() {
             <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn-primary">
               Book My Free 20-Min Scoping Call
             </a>
-            <a href="#work" className="btn-secondary">
-              See a Live Example
+            <a href="#live-systems" className="btn-secondary">
+              See Live Systems
             </a>
           </div>
 
@@ -400,7 +400,7 @@ function ProblemSection() {
     {
       icon: <Megaphone size={22} color="#f5a623" />,
       title: "Your next review needs something live",
-      body: "Leadership has stopped asking for roadmaps. They want to see what is running. Managers with live dashboards are walking into reviews with answers. Everyone else is explaining why it is not ready yet.",
+      body: "Leadership wants to see what is already running. Managers with live dashboards walk into reviews with answers. Everyone else is explaining why it is not ready yet.",
       clipping: (
         <div style={{ background: "#fff", borderRadius: "8px", overflow: "hidden", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>
           <div style={{ background: "#1e293b", padding: "6px 10px" }}>
@@ -423,7 +423,7 @@ function ProblemSection() {
     {
       icon: <Clock size={22} color="#f5a623" />,
       title: "Manual reporting is the bottleneck",
-      body: "If your team still rebuilds the same reports by hand every week, that time is the first thing leadership will cut. Automating one reporting workflow typically saves 5 to 15 hours per week.",
+      body: "If your team still rebuilds the same reports by hand every week, leadership sees wasted time. Automating one workflow can save 5 to 15 hours per week.",
       clipping: (
         <div style={{ background: "#051c2c", borderRadius: "8px", overflow: "hidden", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>
           <div style={{ padding: "6px 10px", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
@@ -441,7 +441,7 @@ function ProblemSection() {
     {
       icon: <Hand size={22} color="#f5a623" />,
       title: "Waiting on IT slows everything down",
-      body: "IT backlogs and procurement cycles move slowly. Managers who need to show results this quarter cannot wait months for a ticket to be resolved. You need something your team can own and run independently.",
+      body: "IT backlogs and procurement cycles move slowly. If you need results this quarter, you need something your team can own and run independently.",
       clipping: (
         <div style={{ background: "#f9f7f4", borderRadius: "8px", overflow: "hidden", fontFamily: "'Inter', sans-serif", fontSize: "10px" }}>
           <div style={{ background: "#e8e4de", padding: "6px 10px", borderBottom: "1px solid #d6d0c8" }}>
@@ -459,7 +459,7 @@ function ProblemSection() {
     {
       icon: <Banknote size={22} color="#f5a623" />,
       title: "A working system beats another roadmap",
-      body: "Every leadership team is asking the same question: who on this team is actually doing something with AI? The answer they respect is a live system, not a presentation about one.",
+      body: "Leadership respects a live system more than another presentation about one. What gets attention is something running.",
       clipping: (
         <div style={{ background: "#0a0a0a", borderRadius: "8px", overflow: "hidden", fontFamily: "'Inter', sans-serif", fontSize: "10px", border: "1px solid rgba(255,255,255,0.08)" }}>
           <div style={{ padding: "6px 10px", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
@@ -1167,6 +1167,7 @@ function LiveShowcase() {
 
   return (
     <section
+      id="live-systems"
       style={{
         background: "#0a0a0a",
         padding: "4rem 0",
@@ -1203,8 +1204,7 @@ function LiveShowcase() {
             lineHeight: 1.7,
           }}
         >
-          Every tool below is built, deployed, and live. Hover any card to
-          interact with it directly.
+          Every tool below is built, deployed, and live. Hover any card to interact with the system directly.
         </p>
       </div>
 

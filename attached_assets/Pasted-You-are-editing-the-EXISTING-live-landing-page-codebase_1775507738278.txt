@@ -1,0 +1,317 @@
+You are editing the EXISTING live landing page codebase for:
+
+https://buildwithsorano.com/
+
+IMPORTANT:
+Use the CURRENT LIVE PAGE as the source of truth.
+This is a SURGICAL conversion optimization pass on the existing page.
+This is NOT a redesign, NOT a rebrand, and NOT a rewrite-from-scratch.
+
+PRIMARY GOAL
+Implement the following conversion improvements on the current live page:
+
+1. Standardize CTA language
+2. Make the secondary CTA clearly route to the Live Systems section
+3. Slightly tighten the hero subheadline
+4. Tighten the “Sound Familiar?” section copy for clarity and scanability
+5. Improve proof-flow from hero → live systems → case studies
+6. Preserve the current visual design and brand feel exactly
+
+NON-NEGOTIABLE GUARDRAILS
+- Do NOT drift from this task.
+- Do NOT redesign the page.
+- Do NOT change the visual style.
+- Do NOT change fonts, colors, spacing scale, shadows, borders, radii, imagery, iconography, animation, or layout style.
+- Do NOT introduce a new aesthetic direction.
+- Do NOT change the design system.
+- Do NOT make global CSS changes unless absolutely necessary for preserving existing behavior.
+- Do NOT refactor unrelated code.
+- Do NOT add packages, dependencies, libraries, or frameworks.
+- Do NOT change analytics, event tracking, booking links, forms, CTA destinations, or integrations, except to add the correct in-page anchor behavior for the secondary CTA.
+- Do NOT rename classes, IDs, selectors, tracking hooks, or component APIs unless absolutely necessary.
+- Do NOT invent claims, proof points, metrics, logos, testimonials, client names, or case studies.
+- Do NOT remove responsiveness or break mobile behavior.
+- Make the smallest possible set of edits.
+- Preserve the current layout and component structure wherever possible.
+- Prefer copy edits, anchor behavior, and content ordering over structural changes.
+
+CURRENT LIVE COPY TO PRESERVE UNLESS EXPLICITLY CHANGED BELOW
+Preserve the overall current messaging direction and tone of the live page.
+Do NOT revert to older copy.
+Do NOT reintroduce vague or overly theatrical hero messaging.
+
+IMPLEMENT THESE EXACT CHANGES
+
+==================================================
+1) HERO — KEEP CURRENT STRUCTURE, MAKE THESE EXACT COPY UPDATES
+==================================================
+
+Keep the existing eyebrow.
+
+Eyebrow:
+BUILT FOR MANAGERS WHO NEED TO SHOW AI RESULTS FAST
+
+Keep the hero headline exactly as:
+Turn your manual reporting
+into a live AI system
+in 5 days.
+
+Update the hero subheadline to this exact copy:
+We build dashboards, models, and reporting workflows for directors and senior managers who need a live system before the next leadership review. Fixed price. No IT dependency. You own everything.
+
+Keep the microcopy below the primary CTA as:
+Get scope, timeline, and fixed price on the first call.
+
+IMPORTANT:
+- Preserve the existing visual hierarchy and text styling.
+- Do not change the hero layout style.
+- Do not introduce new design treatments.
+- If the headline is split across spans/lines for styling, preserve that implementation unless it hurts readability.
+
+==================================================
+2) CTA STANDARDIZATION — APPLY ACROSS THE PAGE
+==================================================
+
+Standardize all major PRIMARY CTAs to:
+
+Book My Free 20-Min Scoping Call
+
+This includes:
+- Hero primary CTA
+- Final CTA section primary button
+- Any repeated primary CTA buttons on the page
+
+TOP NAV CTA RULE:
+If the full text “Book My Free 20-Min Scoping Call” fits in the existing top nav button without requiring any design/style changes, use it there too.
+If it does NOT fit cleanly without visual changes, use this shorter nav-only variant:
+
+Book a 20-Min Call
+
+In either case:
+- keep the same booking destination
+- keep the same button style
+- do not resize or redesign the nav button just to force longer copy
+
+SECONDARY CTA:
+Replace the current hero secondary CTA label with:
+
+See Live Systems
+
+Make this button scroll directly to the Live Systems section on the same page.
+
+IMPORTANT:
+- Do not make the secondary CTA visually compete with the primary CTA
+- Preserve existing button styles
+- Do not add extra CTAs above the fold
+
+==================================================
+3) LIVE SYSTEMS SECTION — MAKE THE HERO CTA ROUTE HERE CLEANLY
+==================================================
+
+Ensure the “See Live Systems” secondary CTA anchors directly to the Live Systems section.
+
+Add or confirm a stable anchor target on the section containing:
+
+Live Systems
+See the Work Running.
+These Are Not Mockups.
+
+Use smooth in-page scroll behavior only if the existing site already uses it or it can be added with minimal native implementation.
+Do not add a library for this.
+Do not redesign the section.
+
+Also update the supporting line under the Live Systems heading to this tighter copy:
+
+Every tool below is built, deployed, and live. Hover any card to interact with the system directly.
+
+Preserve the current section layout and cards.
+
+==================================================
+4) “SOUND FAMILIAR?” SECTION — TIGHTEN COPY ONLY
+==================================================
+
+Keep the section headline as:
+
+Your team still builds critical reports by hand.
+We turn them into live systems.
+
+Keep the supporting intro copy as-is OR update to this exact slightly tighter version if it improves readability in the existing component:
+
+Leadership does not want another AI roadmap. They want to see something working. We help managers replace manual dashboards, reports, and analysis workflows with live systems they can actually show.
+
+Now tighten the four card body copies to be more scannable.
+
+CARD 1
+Title:
+Your next review needs something live
+
+Body:
+Leadership wants to see what is already running. Managers with live dashboards walk into reviews with answers. Everyone else is explaining why it is not ready yet.
+
+CARD 2
+Title:
+Manual reporting is the bottleneck
+
+Body:
+If your team still rebuilds the same reports by hand every week, leadership sees wasted time. Automating one workflow can save 5 to 15 hours per week.
+
+CARD 3
+Title:
+Waiting on IT slows everything down
+
+Body:
+IT backlogs and procurement cycles move slowly. If you need results this quarter, you need something your team can own and run independently.
+
+CARD 4
+Title:
+A working system beats another roadmap
+
+Body:
+Leadership respects a live system more than another presentation about one. What gets attention is something running.
+
+IMPORTANT:
+- Preserve the existing card layout and styling
+- Do not change the visual card design
+- Do not remove the supporting visual inserts unless absolutely necessary
+- Do not add new cards
+
+==================================================
+5) “HOW IT WORKS” SECTION — KEEP CURRENT STRUCTURE, LIGHT COPY CLEANUP
+==================================================
+
+Preserve the current section layout and numbering.
+
+Keep the headline:
+From First Call to Live System in 5 Days
+
+Keep or use this subcopy:
+No discovery decks. No 6-week timelines. No surprise invoices. Just a working system.
+
+Use these exact step titles and bodies:
+
+Step 1 title:
+Show us the workflow
+
+Step 1 body:
+Book a free 20-minute call and show us the report, dashboard, or analysis workflow that costs your team the most time.
+
+Step 2 title:
+Get scope and fixed price
+
+Step 2 body:
+We tell you what we would build, what it will do, how long it takes, and the fixed price before we start.
+
+Step 3 title:
+We build it in 5 days
+
+Step 3 body:
+You get daily progress updates while we turn the workflow into a live dashboard, model, or reporting system.
+
+Step 4 title:
+You own everything
+
+Step 4 body:
+Full handoff, documentation, walkthrough, and support. No subscriptions. No lock-in. Your team can run it independently.
+
+==================================================
+6) PROOF FLOW — KEEP LIVE SYSTEMS AND CASE STUDIES PROMINENT
+==================================================
+
+Do NOT remove or weaken the existing proof sections.
+
+Preserve:
+- the proof metrics near the hero
+- the Live Systems section
+- the case study section beginning with:
+  13 Systems Shipped.
+  Zero Theoretical.
+
+Keep these proof metrics near the hero exactly as they currently appear:
+- 13 Systems Shipped
+- 5 days Average Build Time
+- 100% Client Ownership
+- $0 Ongoing Platform Fees
+
+Do not alter these claims.
+
+Do not move proof farther away from the hero.
+Do not bury the Live Systems section.
+
+==================================================
+7) FINAL CTA SECTION — STANDARDIZE TO MATCH PRIMARY CTA
+==================================================
+
+Keep the final CTA heading:
+
+Show up to your next review
+with something running.
+
+Keep the supporting copy:
+
+Book a free 20-minute scoping call. Show us the manual workflow. We will tell you what we would build, how fast we can ship it, and the fixed price.
+
+Standardize the primary CTA button there to:
+
+Book My Free 20-Min Scoping Call
+
+Keep supporting microcopy:
+No pitch. No deck required. Fixed scope before we start.
+
+==================================================
+8) DO NOT CHANGE THESE
+==================================================
+
+Do NOT change:
+- logos
+- images
+- screenshots
+- testimonials
+- case studies
+- pricing
+- brand colors
+- typography
+- section layouts
+- cards layout
+- hover behavior
+- booking flow
+- analytics
+- event tracking
+- integrations
+- navigation links
+- responsiveness
+
+Unless directly required for the CTA anchor behavior, leave implementation untouched.
+
+==================================================
+9) IMPLEMENTATION APPROACH
+==================================================
+
+Before editing:
+- inspect the existing codebase
+- identify the exact files/components rendering this landing page
+- edit only the necessary files
+- if content is centralized in constants/data objects, update it there instead of duplicating strings
+- preserve semantic HTML and accessibility
+- preserve mobile behavior
+
+Make the smallest possible code change set.
+
+==================================================
+10) REQUIRED OUTPUT AFTER COMPLETION
+==================================================
+
+After completing the edits, provide:
+
+1. A concise summary of exactly what changed
+2. The exact files modified
+3. A list of all CTA text changes made
+4. Confirmation that the secondary CTA now scrolls to Live Systems
+5. Confirmation that no design/style drift was introduced
+6. Confirmation that no fabricated claims or new proof points were added
+
+FINAL REMINDER
+Do not drift.
+Do not redesign.
+Do not “improve” the brand visually.
+Do not rewrite sections beyond the exact requested changes.
+Preserve the live page’s current look and feel exactly.
