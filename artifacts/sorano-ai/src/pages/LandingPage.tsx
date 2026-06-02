@@ -12,8 +12,8 @@ import {
   Database,
   FileText,
 } from "lucide-react";
+import { Link } from "wouter";
 
-const CALENDLY_URL = "https://calendly.com/brian-mobilerider/30min";
 const EMAIL = "mailto:hello@soranoai.ai";
 
 function useScrollReveal() {
@@ -96,9 +96,9 @@ function Nav() {
         ))}
       </div>
 
-      <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn-primary" style={{ fontSize: "15px", padding: "11px 24px" }}>
+      <Link href="/intake" className="btn-primary" style={{ fontSize: "15px", padding: "11px 24px" }}>
         Tell Us What You Need
-      </a>
+      </Link>
 
       <style>{`
         @media (max-width: 768px) {
@@ -256,9 +256,9 @@ function HeroSection() {
               flexWrap: "wrap",
             }}
           >
-            <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn-primary">
+            <Link href="/intake" className="btn-primary">
               Tell Us What You Need
-            </a>
+            </Link>
             <a href="#live-systems" className="btn-secondary">
               See Live Systems
             </a>
@@ -860,9 +860,9 @@ function ServicesSection() {
           </p>
 
           <div style={{ textAlign: "center", marginTop: "0" }}>
-            <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn-primary">
+            <Link href="/intake" className="btn-primary">
               Tell Us What You Need
-            </a>
+            </Link>
             <div
               style={{
                 fontFamily: "'Inter', sans-serif",
@@ -1741,9 +1741,9 @@ function FinalCTA() {
             flexWrap: "wrap",
           }}
         >
-          <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn-primary">
-            Book My Free 20-Min Scoping Call
-          </a>
+          <Link href="/intake" className="btn-primary">
+            Tell Us What You Need
+          </Link>
           <a href={EMAIL} className="btn-secondary">
             Send a Message
           </a>

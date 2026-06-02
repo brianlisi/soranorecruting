@@ -14,3 +14,33 @@ import * as zod from "zod";
 export const HealthCheckResponse = zod.object({
   status: zod.string(),
 });
+
+/**
+ * Stores a new intake form submission
+ * @summary Submit an intake request
+ */
+export const createIntakeSubmissionBodyNameMax = 200;
+
+export const createIntakeSubmissionBodyEmailMin = 3;
+export const createIntakeSubmissionBodyEmailMax = 320;
+
+export const createIntakeSubmissionBodyCompanyMax = 200;
+
+export const createIntakeSubmissionBodyRoleMax = 200;
+
+export const createIntakeSubmissionBodyProjectDetailsMax = 5000;
+
+export const CreateIntakeSubmissionBody = zod.object({
+  name: zod.string().min(1).max(createIntakeSubmissionBodyNameMax),
+  email: zod
+    .string()
+    .email()
+    .min(createIntakeSubmissionBodyEmailMin)
+    .max(createIntakeSubmissionBodyEmailMax),
+  company: zod.string().max(createIntakeSubmissionBodyCompanyMax).nullish(),
+  role: zod.string().max(createIntakeSubmissionBodyRoleMax).nullish(),
+  projectDetails: zod
+    .string()
+    .min(1)
+    .max(createIntakeSubmissionBodyProjectDetailsMax),
+});

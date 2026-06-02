@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: intake
+    description: Intake form operations
 paths:
   /healthz:
     get:
@@ -24,6 +26,25 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /intake:
+    post:
+      operationId: createIntakeSubmission
+      tags: [intake]
+      summary: Submit an intake request
+      description: Stores a new intake form submission
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/IntakeInput"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/IntakeSubmission"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +54,53 @@ components:
           type: string
       required:
         - status
-
+    IntakeInput:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 200
+        email:
+          type: string
+          format: email
+          minLength: 3
+          maxLength: 320
+        company:
+          type: ["string", "null"]
+          maxLength: 200
+        role:
+          type: ["string", "null"]
+          maxLength: 200
+        projectDetails:
+          type: string
+          minLength: 1
+          maxLength: 5000
+      required:
+        - name
+        - email
+        - projectDetails
+    IntakeSubmission:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string
+        company:
+          type: ["string", "null"]
+        role:
+          type: ["string", "null"]
+        projectDetails:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - name
+        - email
+        - projectDetails
+        - createdAt

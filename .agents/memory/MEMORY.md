@@ -1,0 +1,1 @@
+- [API codegen workflow](api-codegen-workflow.md) — openapi.yaml is the source of truth; edit it + run codegen to change client hooks AND server zod in lockstep; never hand-edit generated files.

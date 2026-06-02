@@ -5,9 +5,6 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-export interface HealthStatus {
-  status: string;
-}
 
 export interface IntakeInput {
   /**
@@ -35,16 +32,4 @@ export interface IntakeInput {
    * @maxLength 5000
    */
   projectDetails: string;
-}
-
-export interface IntakeSubmission {
-  id: number;
-  name: string;
-  email: string;
-  /** @nullable */
-  company?: string | null;
-  /** @nullable */
-  role?: string | null;
-  projectDetails: string;
-  createdAt: string;
 }

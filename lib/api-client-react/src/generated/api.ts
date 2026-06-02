@@ -5,18 +5,25 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import type {
+  MutationFunction,
   QueryFunction,
   QueryKey,
+  UseMutationOptions,
+  UseMutationResult,
   UseQueryOptions,
   UseQueryResult,
 } from "@tanstack/react-query";
 
-import type { HealthStatus } from "./api.schemas";
+import type {
+  HealthStatus,
+  IntakeInput,
+  IntakeSubmission,
+} from "./api.schemas";
 
 import { customFetch } from "../custom-fetch";
-import type { ErrorType } from "../custom-fetch";
+import type { ErrorType, BodyType } from "../custom-fetch";
 
 type AwaitedInput<T> = PromiseLike<T> | T;
 
@@ -99,3 +106,90 @@ export function useHealthCheck<
 
   return { ...query, queryKey: queryOptions.queryKey };
 }
+
+/**
+ * Stores a new intake form submission
+ * @summary Submit an intake request
+ */
+export const getCreateIntakeSubmissionUrl = () => {
+  return `/api/intake`;
+};
+
+export const createIntakeSubmission = async (
+  intakeInput: IntakeInput,
+  options?: RequestInit,
+): Promise<IntakeSubmission> => {
+  return customFetch<IntakeSubmission>(getCreateIntakeSubmissionUrl(), {
+    ...options,
+    method: "POST",
+    headers: { "Content-Type": "application/json", ...options?.headers },
+    body: JSON.stringify(intakeInput),
+  });
+};
+
+export const getCreateIntakeSubmissionMutationOptions = <
+  TError = ErrorType<unknown>,
+  TContext = unknown,
+>(options?: {
+  mutation?: UseMutationOptions<
+    Awaited<ReturnType<typeof createIntakeSubmission>>,
+    TError,
+    { data: BodyType<IntakeInput> },
+    TContext
+  >;
+  request?: SecondParameter<typeof customFetch>;
+}): UseMutationOptions<
+  Awaited<ReturnType<typeof createIntakeSubmission>>,
+  TError,
+  { data: BodyType<IntakeInput> },
+  TContext
+> => {
+  const mutationKey = ["createIntakeSubmission"];
+  const { mutation: mutationOptions, request: requestOptions } = options
+    ? options.mutation &&
+      "mutationKey" in options.mutation &&
+      options.mutation.mutationKey
+      ? options
+      : { ...options, mutation: { ...options.mutation, mutationKey } }
+    : { mutation: { mutationKey }, request: undefined };
+
+  const mutationFn: MutationFunction<
+    Awaited<ReturnType<typeof createIntakeSubmission>>,
+    { data: BodyType<IntakeInput> }
+  > = (props) => {
+    const { data } = props ?? {};
+
+    return createIntakeSubmission(data, requestOptions);
+  };
+
+  return { mutationFn, ...mutationOptions };
+};
+
+export type CreateIntakeSubmissionMutationResult = NonNullable<
+  Awaited<ReturnType<typeof createIntakeSubmission>>
+>;
+export type CreateIntakeSubmissionMutationBody = BodyType<IntakeInput>;
+export type CreateIntakeSubmissionMutationError = ErrorType<unknown>;
+
+/**
+ * @summary Submit an intake request
+ */
+export const useCreateIntakeSubmission = <
+  TError = ErrorType<unknown>,
+  TContext = unknown,
+>(options?: {
+  mutation?: UseMutationOptions<
+    Awaited<ReturnType<typeof createIntakeSubmission>>,
+    TError,
+    { data: BodyType<IntakeInput> },
+    TContext
+  >;
+  request?: SecondParameter<typeof customFetch>;
+}): UseMutationResult<
+  Awaited<ReturnType<typeof createIntakeSubmission>>,
+  TError,
+  { data: BodyType<IntakeInput> },
+  TContext
+> => {
+  return useMutation(getCreateIntakeSubmissionMutationOptions(options));
+};
