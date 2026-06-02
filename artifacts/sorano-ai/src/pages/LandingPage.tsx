@@ -97,7 +97,7 @@ function Nav() {
       </div>
 
       <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn-primary" style={{ fontSize: "15px", padding: "11px 24px" }}>
-        Book a 20-Min Call
+        Tell Us What You Need
       </a>
 
       <style>{`
@@ -257,7 +257,7 @@ function HeroSection() {
             }}
           >
             <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn-primary">
-              Book My Free 20-Min Scoping Call
+              Tell Us What You Need
             </a>
             <a href="#live-systems" className="btn-secondary">
               See Live Systems
@@ -273,7 +273,7 @@ function HeroSection() {
               letterSpacing: "0.01em",
             }}
           >
-            Get scope, timeline, and fixed price on the first call.
+            Get scope, timeline, and fixed price within 24 hours.
           </div>
 
           <div
@@ -308,88 +308,87 @@ function HeroSection() {
   );
 }
 
-function MarqueeBar() {
-  const items = [
-    { img: "https://i.pravatar.cc/40?img=1",  text: "Built our reporting dashboard in under a week. Showed it in my next leadership review.", role: "Director of Operations" },
-    { img: "https://i.pravatar.cc/40?img=11", text: "No IT ticket. No waiting. We owned everything on day one.", role: "VP Analytics" },
-    { img: "https://i.pravatar.cc/40?img=3",  text: "Fixed price meant I got budget approved in one conversation.", role: "Finance Manager" },
-    { img: "https://i.pravatar.cc/40?img=12", text: "My team stopped doing manual reports. That alone justified the cost.", role: "Senior Director" },
-    { img: "https://i.pravatar.cc/40?img=5",  text: "Showed leadership a live AI system in week two. No one else on the team did.", role: "Team Lead" },
-    { img: "https://i.pravatar.cc/40?img=14", text: "Done in 5 days exactly like they said. No bloat, no endless meetings.", role: "Director of Ops" },
-    { img: "https://i.pravatar.cc/40?img=7",  text: "We own the code. That mattered a lot to our legal and IT teams.", role: "Business Manager" },
-    { img: "https://i.pravatar.cc/40?img=15", text: "Finally something built for a manager budget, not a technology budget.", role: "VP Operations" },
+function OperatorHistoryStrip() {
+  const names = [
+    "NFL", "FloSports", "Sony Music", "Goldman Sachs", "Merrill Lynch",
+    "Morgan Stanley", "Slack", "Tableau", "Disney", "Harley Davidson",
+    "iHeart Radio", "Amazon Music", "Fenway Sports Group", "Snapchat", "Uber Freight",
   ];
-
-  const content = items.map((item, i) => (
-    <div
-      key={i}
-      style={{
-        display: "inline-flex",
-        alignItems: "center",
-        gap: "12px",
-        background: "#1a1a1a",
-        border: "1px solid rgba(255,255,255,0.08)",
-        borderRadius: "12px",
-        padding: "14px 18px",
-        width: "295px",
-        flexShrink: 0,
-        whiteSpace: "normal",
-      }}
-    >
-      <img
-        src={item.img}
-        alt=""
-        style={{
-          width: "40px",
-          height: "40px",
-          borderRadius: "50%",
-          objectFit: "cover",
-          flexShrink: 0,
-          border: "1.5px solid rgba(245,166,35,0.3)",
-        }}
-      />
-      <div style={{ minWidth: 0 }}>
-        <p style={{
-          color: "rgba(240,237,232,0.88)",
-          fontFamily: "'Inter', sans-serif",
-          fontSize: "12.5px",
-          lineHeight: 1.5,
-          margin: 0,
-          fontWeight: 400,
-          display: "-webkit-box",
-          WebkitLineClamp: 2,
-          WebkitBoxOrient: "vertical" as const,
-          overflow: "hidden",
-        }}>
-          {item.text}
-        </p>
-        <p style={{
-          color: "#f5a623",
-          fontFamily: "'Inter', sans-serif",
-          fontSize: "10.5px",
-          fontWeight: 600,
-          margin: "5px 0 0",
-          letterSpacing: "0.02em",
-        }}>
-          {item.role}
-        </p>
-      </div>
-    </div>
-  ));
 
   return (
     <div
       style={{
-        background: "#111",
+        background: "#0f0f0f",
         borderTop: "1px solid rgba(255,255,255,0.06)",
         borderBottom: "1px solid rgba(255,255,255,0.06)",
-        overflow: "hidden",
-        padding: "0 0",
+        padding: "3.5rem 0",
       }}
     >
-      <div className="marquee-track">
-        {content}
-        {content}
+      <div style={{ textAlign: "center", marginBottom: "24px" }}>
+        <span
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: "13px",
+            color: "#888",
+            letterSpacing: "0.15em",
+            textTransform: "uppercase",
+            fontWeight: 500,
+          }}
+        >
+          Clients and partners from our operator history
+        </span>
+      </div>
+      <div
+        style={{
+          overflow: "hidden",
+          position: "relative",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            left: 0,
+            top: 0,
+            bottom: 0,
+            width: "160px",
+            background: "linear-gradient(to right, #0f0f0f, transparent)",
+            zIndex: 2,
+            pointerEvents: "none",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            right: 0,
+            top: 0,
+            bottom: 0,
+            width: "160px",
+            background: "linear-gradient(to left, #0f0f0f, transparent)",
+            zIndex: 2,
+            pointerEvents: "none",
+          }}
+        />
+        <div className="marquee-track">
+          {names.concat(names).map((name, i) => (
+            <span
+              key={i}
+              style={{
+                display: "inline-block",
+                whiteSpace: "nowrap",
+                marginRight: "80px",
+                fontFamily: "'Inter', sans-serif",
+                fontSize: "16px",
+                fontWeight: 700,
+                color: "#fff",
+                opacity: 0.6,
+                letterSpacing: "0.06em",
+                textTransform: "uppercase",
+              }}
+            >
+              {name}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -862,7 +861,7 @@ function ServicesSection() {
 
           <div style={{ textAlign: "center", marginTop: "0" }}>
             <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn-primary">
-              Book My Free 20-Min Scoping Call
+              Tell Us What You Need
             </a>
             <div
               style={{
@@ -1638,10 +1637,12 @@ function FounderBioBlock() {
                 margin: 0,
               }}
             >
-              Sorano AI is run by a 23-year operator who has raised{" "}
-              <strong style={{ fontWeight: 700, color: "#fff" }}>$30M</strong>, built and sold companies, and shipped AI systems for{" "}
-              <strong style={{ fontWeight: 700, color: "#fff" }}>Fortune 500</strong> clients. We built this agency because smart managers kept hitting the same wall — mandate with no roadmap. We close that gap in{" "}
-              <strong style={{ fontWeight: 700, color: "#fff" }}>five days</strong>.
+              Sorano AI is run by{" "}
+              <strong style={{ fontWeight: 700, color: "#fff" }}>Brian Lisi</strong>, a 23-year technology operator. He led{" "}
+              <strong style={{ fontWeight: 700, color: "#fff" }}>IOIO.TV</strong> (OTT/SaaS, 7-year run), pioneered one of the first{" "}
+              <strong style={{ fontWeight: 700, color: "#fff" }}>AWS Media Services</strong> streaming platforms reaching users across 160+ countries, and built enterprise infrastructure for NFL, FUBO TV, Sony Music, FloSports, and Verizon Media. He runs{" "}
+              <strong style={{ fontWeight: 700, color: "#fff" }}>MobileRider Networks</strong> as the largest authorized U.S.{" "}
+              <strong style={{ fontWeight: 700, color: "#fff" }}>Akamai</strong> channel partner in the United States. Sorano AI exists because smart managers kept hitting the same wall — an AI mandate with no roadmap. We close that gap in five days.
             </p>
             <a
               href="https://linkedin.com/in/brianlisi"
@@ -1676,93 +1677,6 @@ function FounderBioBlock() {
           .bio-row a { text-align: center !important; }
         }
       `}</style>
-
-      <div
-        style={{
-          width: "100%",
-          height: "1px",
-          background: "rgba(255,255,255,0.08)",
-          margin: "3rem 0",
-        }}
-      />
-
-      {/* Partner ticker */}
-      <div>
-        <div style={{ textAlign: "center", marginBottom: "24px" }}>
-          <span
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: "13px",
-              color: "#888",
-              letterSpacing: "0.15em",
-              textTransform: "uppercase",
-              fontWeight: 500,
-            }}
-          >
-            Clients and partners from our operator history
-          </span>
-        </div>
-        <div
-          style={{
-            overflow: "hidden",
-            position: "relative",
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              left: 0,
-              top: 0,
-              bottom: 0,
-              width: "160px",
-              background: "linear-gradient(to right, #0f0f0f, transparent)",
-              zIndex: 2,
-              pointerEvents: "none",
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              right: 0,
-              top: 0,
-              bottom: 0,
-              width: "160px",
-              background: "linear-gradient(to left, #0f0f0f, transparent)",
-              zIndex: 2,
-              pointerEvents: "none",
-            }}
-          />
-          <div className="marquee-track">
-            {[
-              "NFL", "FloSports", "Sony Music", "Goldman Sachs", "Merrill Lynch",
-              "Morgan Stanley", "Slack", "Tableau", "Disney", "Harley Davidson",
-              "iHeart Radio", "Amazon Music", "Fenway Sports Group", "Snapchat", "Uber Freight",
-            ].concat([
-              "NFL", "FloSports", "Sony Music", "Goldman Sachs", "Merrill Lynch",
-              "Morgan Stanley", "Slack", "Tableau", "Disney", "Harley Davidson",
-              "iHeart Radio", "Amazon Music", "Fenway Sports Group", "Snapchat", "Uber Freight",
-            ]).map((name, i) => (
-              <span
-                key={i}
-                style={{
-                  display: "inline-block",
-                  whiteSpace: "nowrap",
-                  marginRight: "80px",
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "16px",
-                  fontWeight: 700,
-                  color: "#fff",
-                  opacity: 0.6,
-                  letterSpacing: "0.06em",
-                  textTransform: "uppercase",
-                }}
-              >
-                {name}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
     </section>
   );
 }
@@ -1929,7 +1843,7 @@ export default function LandingPage() {
       <Nav />
       <main>
         <HeroSection />
-        <MarqueeBar />
+        <OperatorHistoryStrip />
         <ProblemSection />
         <ProcessSection />
         <LiveShowcase />

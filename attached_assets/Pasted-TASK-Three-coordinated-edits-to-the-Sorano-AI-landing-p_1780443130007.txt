@@ -1,0 +1,62 @@
+TASK: Three coordinated edits to the Sorano AI landing page at buildwithsorano.com. Make ALL changes in order. Do not make any other changes. Do not modify other sections, copy, colors, components, or layout. Test at 1280px desktop and 390px mobile viewports before completing.
+
+================================================================
+CHANGE 1 — REPLACE THE ANONYMOUS TESTIMONIAL STRIP
+================================================================
+
+LOCATE: The horizontal scrolling testimonial strip directly below the hero stats row (the row that contains "13 SYSTEMS SHIPPED / 5 DAYS / 100% CLIENT OWNERSHIP / $0 ONGOING PLATFORM FEES"). 
+
+The strip currently contains testimonial cards with role-only attribution: "VP Analytics", "Finance Manager", "Senior Director", "Team Lead", "Director of Ops", "Business Mana[ger]".
+
+ACTION: 
+1. Delete the entire anonymous testimonial strip component, including all six (or however many) testimonial cards, the wrapper, and any horizontal-scroll container.
+2. In its place, insert the operator-history logo strip currently located in the "Who Built This" section at the bottom of the page (the one labeled "CLIENTS AND PARTNERS FROM OUR OPERATOR HISTORY" containing GOLDMAN SACHS, MERRILL LYNCH, MORGAN STANLEY, SLACK, TABLEAU, DISNEY, HARLEY DAVIDSON, iHEART).
+3. Keep the label text "CLIENTS AND PARTNERS FROM OUR OPERATOR HISTORY" above the logos in the new top position.
+4. Maintain identical styling: same logo grayscale treatment, same horizontal scroll/marquee behavior if present, same spacing rhythm.
+5. Remove the operator-history strip from its current location at the bottom of the "Who Built This" section. The bio paragraph and headshot stay where they are. Only the logo strip moves.
+
+================================================================
+CHANGE 2 — CHANGE PRIMARY CTA FROM CALL BOOKING TO INTAKE FORM
+================================================================
+
+LOCATE all instances of the following CTA button text on the page:
+- "Book a 20-Min Call" (top right header)
+- "Book My Free 20-Min Scoping Call" (hero primary CTA)
+- "Book My Free 20-Min Scoping Call" or "Book a 20-Min Call" (any other instance in pricing section, mid-page CTAs, or footer)
+
+ACTION:
+1. Replace ALL instances of the call-booking CTA copy with: "Tell Us What You Need"
+2. Change the href/onClick of every replaced button to route to the existing intake form page (the cream-background form at /intake or wherever the existing intake form lives on this domain — preserve the existing intake form URL, do not create a new form).
+3. For the supporting microcopy under the hero CTA buttons, change "Get scope, timeline, and fixed price on the first call." to: "Get scope, timeline, and fixed price within 24 hours."
+4. Keep the secondary CTA "See Live Systems" unchanged in copy and behavior — it still anchors to the live-systems section.
+5. Do not change button styling, colors, spacing, or layout — only copy and link destinations.
+
+================================================================
+CHANGE 3 — EXPAND THE "WHO BUILT THIS" BIO PARAGRAPH
+================================================================
+
+LOCATE: The bio paragraph in the "Who Built This" section, currently reading:
+"Sorano AI is run by a 23-year operator who has raised $30M, built and sold companies, and shipped AI systems for Fortune 500 clients. We built this agency because smart managers kept hitting the same wall — mandate with no roadmap. We close that gap in five days."
+
+ACTION: Replace the bio paragraph with the following expanded version. Keep the same styling, font, layout, and the headshot to its left. Keep the "linkedin.com/in/brianlisi →" link below.
+
+NEW BIO TEXT:
+"Sorano AI is run by Brian Lisi, a 23-year technology operator. He led IOIO.TV (OTT/SaaS, 7-year run), pioneered one of the first AWS Media Services streaming platforms reaching users across 160+ countries, and built enterprise infrastructure for NFL, FUBO TV, Sony Music, FloSports, and Verizon Media. He runs MobileRider Networks as the largest authorized U.S. Akamai channel partner in the United States. Sorano AI exists because smart managers kept hitting the same wall — an AI mandate with no roadmap. We close that gap in five days."
+
+Format the names "Brian Lisi", "IOIO.TV", "AWS Media Services", "MobileRider Networks", and "Akamai" in bold to match the existing bold treatment used in the original bio.
+
+================================================================
+VERIFICATION CHECKLIST — CONFIRM BEFORE COMPLETING
+================================================================
+
+[ ] The anonymous testimonial strip is fully removed from below the hero stats row.
+[ ] The operator-history logo strip (with section label "CLIENTS AND PARTNERS FROM OUR OPERATOR HISTORY") now appears directly below the hero stats row in place of the deleted testimonials.
+[ ] The operator-history logo strip is no longer present at the bottom of the "Who Built This" section. The bio paragraph and headshot remain; only the logo strip moved.
+[ ] Every "Book a 20-Min Call" and "Book My Free 20-Min Scoping Call" button now reads "Tell Us What You Need" and routes to the existing intake form URL.
+[ ] The hero microcopy reads "Get scope, timeline, and fixed price within 24 hours." (not "on the first call").
+[ ] The "Who Built This" bio paragraph is the new expanded version with proper nouns bolded.
+[ ] No other section, copy, color, font, component, or layout has been changed anywhere on the page.
+[ ] The page renders correctly at 1280px desktop and 390px mobile viewports. The logo strip in its new position is horizontally scrollable / readable on mobile.
+[ ] All existing internal anchors (#how-it-works, #what-we-build, etc.) still work.
+
+Report back with: (1) confirmation each verification item passes, (2) the URL the "Tell Us What You Need" buttons now route to, and (3) any anomalies discovered during the edit.
