@@ -113,7 +113,7 @@ function HeroSection() {
   const wordsRef = useRef<HTMLSpanElement[]>([]);
 
   useEffect(() => {
-    const line1 = ["The", "AI", "build", "your", "team", "needs."];
+    const line1 = ["The", "AI", "build", "you", "need."];
     const line2 = ["In", "5", "days.", "Not", "5", "months."];
     const allWords = [...line1, ...line2];
 
@@ -125,7 +125,7 @@ function HeroSection() {
     });
   }, []);
 
-  const line1 = ["The", "AI", "build", "your", "team", "needs."];
+  const line1 = ["The", "AI", "build", "you", "need."];
   const line2 = ["In", "5", "days.", "Not", "5", "months."];
   let wordIdx = 0;
 
@@ -138,7 +138,7 @@ function HeroSection() {
         background: "#0f0f0f",
         position: "relative",
         overflow: "hidden",
-        padding: "80px 2.5rem 20px",
+        padding: "80px 2.5rem 84px",
       }}
     >
       <div
