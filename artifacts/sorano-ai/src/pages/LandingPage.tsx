@@ -138,9 +138,9 @@ function HeroSection() {
         background: "#0f0f0f",
         position: "relative",
         overflow: "hidden",
-        minHeight: "85vh",
-        paddingTop: "120px",
-        paddingBottom: "80px",
+        minHeight: "auto",
+        paddingTop: "110px",
+        paddingBottom: "40px",
         paddingLeft: "2.5rem",
         paddingRight: "2.5rem",
       }}
@@ -163,7 +163,7 @@ function HeroSection() {
               display: "inline-flex",
               alignItems: "center",
               gap: "0.6rem",
-              marginBottom: "0.8rem",
+              marginBottom: "1.5rem",
             }}
           >
             <span className="pulse-dot" />
@@ -176,7 +176,7 @@ function HeroSection() {
               fontFamily: "'Inter', sans-serif",
               fontWeight: 700,
               marginTop: "0",
-              marginBottom: "20px",
+              marginBottom: "16px",
             }}
           >
             <div style={{ marginBottom: "4px" }}>
@@ -230,7 +230,7 @@ function HeroSection() {
               color: "rgba(240,237,232,0.8)",
               maxWidth: "520px",
               marginTop: "0",
-              marginBottom: "24px",
+              marginBottom: "20px",
               lineHeight: 1.7,
             }}
           >
@@ -286,10 +286,10 @@ function OperatorHistoryStrip() {
         background: "#0f0f0f",
         borderTop: "1px solid rgba(255,255,255,0.06)",
         borderBottom: "1px solid rgba(255,255,255,0.06)",
-        padding: "3.5rem 0",
+        padding: "1.5rem 0 2rem",
       }}
     >
-      <div style={{ textAlign: "center", marginBottom: "24px" }}>
+      <div style={{ textAlign: "center", marginBottom: "16px" }}>
         <span
           style={{
             fontFamily: "'Inter', sans-serif",
