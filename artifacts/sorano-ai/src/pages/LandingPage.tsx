@@ -113,10 +113,9 @@ function HeroSection() {
   const wordsRef = useRef<HTMLSpanElement[]>([]);
 
   useEffect(() => {
-    const line1 = ["Turn", "your", "manual", "reporting"];
-    const line2 = ["into", "a", "live", "AI", "system"];
-    const line3 = ["in", "5", "days."];
-    const allWords = [...line1, ...line2, ...line3];
+    const line1 = ["The", "AI", "build", "your", "team", "needs."];
+    const line2 = ["In", "5", "days.", "Not", "5", "months."];
+    const allWords = [...line1, ...line2];
 
     allWords.forEach((_, i) => {
       const el = wordsRef.current[i];
@@ -126,9 +125,8 @@ function HeroSection() {
     });
   }, []);
 
-  const line1 = ["Turn", "your", "manual", "reporting"];
-  const line2 = ["into", "a", "live", "AI", "system"];
-  const line3 = ["in", "5", "days."];
+  const line1 = ["The", "AI", "build", "your", "team", "needs."];
+  const line2 = ["In", "5", "days.", "Not", "5", "months."];
   let wordIdx = 0;
 
   return (
@@ -155,7 +153,7 @@ function HeroSection() {
           zIndex: 1,
         }}
       >
-        <div style={{ maxWidth: "900px", width: "100%" }}>
+        <div style={{ maxWidth: "1200px", width: "100%" }}>
           <div className="label-style"
             style={{
               display: "inline-flex",
@@ -165,20 +163,19 @@ function HeroSection() {
             }}
           >
             <span className="pulse-dot" />
-            <span>BUILT FOR MANAGERS WHO NEED TO SHOW AI RESULTS FAST</span>
+            <span>FOR DIRECTORS AND VPS UNDER PRESSURE TO SHIP AI</span>
           </div>
 
           <h1
+            className="hero-headline"
             style={{
               fontFamily: "'Inter', sans-serif",
-              fontSize: "clamp(1.5rem, 3.75vw, 3rem)",
               fontWeight: 700,
-              lineHeight: 1.1,
-              letterSpacing: "-0.04em",
-              marginBottom: "16px",
+              marginTop: "0",
+              marginBottom: "20px",
             }}
           >
-            <div style={{ marginBottom: "8px" }}>
+            <div style={{ marginBottom: "4px" }}>
               {line1.map((word, i) => {
                 const idx = wordIdx++;
                 return (
@@ -195,9 +192,10 @@ function HeroSection() {
                 );
               })}
             </div>
-            <div style={{ marginBottom: "8px" }}>
+            <div>
               {line2.map((word, i) => {
                 const idx = wordIdx++;
+                const accent = i === 1 || i === 2;
                 return (
                   <span
                     key={i}
@@ -205,24 +203,7 @@ function HeroSection() {
                       if (el) wordsRef.current[idx] = el;
                     }}
                     className="hero-word"
-                    style={{ marginRight: "0.25em", color: "#f0ede8" }}
-                  >
-                    {word}
-                  </span>
-                );
-              })}
-            </div>
-            <div>
-              {line3.map((word, i) => {
-                const idx = wordIdx++;
-                return (
-                  <span
-                    key={i}
-                    ref={(el) => {
-                      if (el) wordsRef.current[idx] = el;
-                    }}
-                    className="hero-word"
-                    style={{ marginRight: "0.25em", color: "#E8A020" }}
+                    style={{ marginRight: "0.25em", color: accent ? "#E8A020" : "#f0ede8" }}
                   >
                     {word}
                   </span>
@@ -242,10 +223,9 @@ function HeroSection() {
               lineHeight: 1.7,
             }}
           >
-            We build dashboards, models, and reporting workflows for directors
-            and senior managers who need a live system before the next
-            leadership review. Fixed price. No IT dependency. You own
-            everything.
+            Dashboards, automations, and workflows — built to spec, integrated
+            with your data, fully owned by you. Fixed price. No IT dependency.
+            No retainers.
           </p>
 
           <div
@@ -274,32 +254,6 @@ function HeroSection() {
             }}
           >
             Get scope, timeline, and fixed price within 24 hours.
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              gap: "1.5rem",
-              marginTop: "24px",
-              paddingTop: "16px",
-              borderTop: "1px solid rgba(255,255,255,0.08)",
-              flexWrap: "wrap",
-            }}
-          >
-            {[
-              { num: "13", label: "Systems Shipped" },
-              { num: "5 days", label: "Average Build Time" },
-              { num: "100%", label: "Client Ownership" },
-              { num: "$0", label: "Ongoing Platform Fees" },
-            ].map((stat, i) => (
-              <div key={stat.label} style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
-                <div>
-                  <div className="stat-number">{stat.num}</div>
-                  <div className="stat-label">{stat.label}</div>
-                </div>
-                {i < 3 && <div className="hero-stat-divider" style={{ width: "1px", height: "40px", background: "rgba(255,255,255,0.1)" }} />}
-              </div>
-            ))}
           </div>
         </div>
 
@@ -387,6 +341,37 @@ function OperatorHistoryStrip() {
             >
               {name}
             </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function StatRow() {
+  return (
+    <div style={{ background: "#0f0f0f", padding: "40px 2.5rem 56px" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: "1.5rem",
+            flexWrap: "wrap",
+          }}
+        >
+          {[
+            { num: "13", label: "Systems Shipped" },
+            { num: "5 days", label: "Average Build Time" },
+            { num: "100%", label: "Client Ownership" },
+            { num: "$0", label: "Ongoing Platform Fees" },
+          ].map((stat, i) => (
+            <div key={stat.label} style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
+              <div>
+                <div className="stat-number">{stat.num}</div>
+                <div className="stat-label">{stat.label}</div>
+              </div>
+              {i < 3 && <div className="hero-stat-divider" style={{ width: "1px", height: "40px", background: "rgba(255,255,255,0.1)" }} />}
+            </div>
           ))}
         </div>
       </div>
@@ -1844,6 +1829,7 @@ export default function LandingPage() {
       <main>
         <HeroSection />
         <OperatorHistoryStrip />
+        <StatRow />
         <ProblemSection />
         <ProcessSection />
         <LiveShowcase />

@@ -223,6 +223,26 @@
   animation: word-in 0.5s ease forwards;
 }
 
+.hero-headline {
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .hero-headline {
+    font-size: 66px;
+    line-height: 1.05;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-headline {
+    font-size: 88px;
+    line-height: 1.0;
+  }
+}
+
 /* Section watermark numbers */
 .watermark {
   font-family: 'Inter', sans-serif;

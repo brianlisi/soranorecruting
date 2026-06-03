@@ -1,0 +1,162 @@
+TASK: Five coordinated edits to the Sorano AI landing page at buildwithsorano.com. Make ALL changes in the order specified. Do not make any other changes. Do not modify other sections, copy, colors, components, fonts, or layout beyond what is specified. Test at 1280px desktop, 1024px tablet, and 390px mobile viewports before reporting completion.
+
+================================================================
+CHANGE 1 — REWRITE HERO COPY AND ENLARGE TYPOGRAPHY
+================================================================
+
+LOCATE: The hero section at the top of the page. It currently contains:
+
+- Eyebrow badge: "BUILT FOR MANAGERS WHO NEED TO SHOW AI RESULTS FAST"
+- Headline: "Turn your manual reporting into a live AI system in 5 days." (with "in 5 days." rendered in orange/amber accent)
+- Sub-copy: "We build dashboards, models, and reporting workflows for directors and senior managers who need a live system before the next leadership review. Fixed price. No IT dependency. You own everything."
+- Two CTA buttons (currently "Book My Free 20-Min Scoping Call" and "See Live Systems")
+- Microcopy under CTAs: "Get scope, timeline, and fixed price on the first call."
+
+ACTION:
+
+1. Replace the eyebrow badge text with: "FOR DIRECTORS AND VPS UNDER PRESSURE TO SHIP AI"
+   Keep identical badge styling — same orange/amber border treatment, same caps, same letter-spacing, same dot indicator.
+
+2. Replace the headline. The new headline is TWO LINES, with strict line-break control:
+
+   Line 1: "The AI build your team needs."
+   Line 2: "In 5 days. Not 5 months."
+
+   In Line 2, render the phrase "5 days" in the orange/amber accent color currently used on "in 5 days." in the existing headline. Keep "Not 5 months." in the default headline white. Do not accent any other words.
+
+3. Enlarge the headline typography significantly. Current rendered size is approximately 72-80px on 1280px desktop. New sizes:
+
+   - Desktop (≥1280px): 104px, line-height 1.0, letter-spacing -0.02em, font-weight 700 (or whatever the current bold weight is — match it)
+   - Tablet (768-1279px): 76px, line-height 1.05, same letter-spacing and weight
+   - Mobile (<768px): 48px, line-height 1.1, same letter-spacing and weight
+
+   The headline should span the full width of the content container (matching the current container max-width, not literally edge-to-edge of viewport). Do NOT add any image, icon, or visual element to the right side of the hero — the typography itself is the visual anchor. The right side of the hero remains intentionally empty.
+
+4. Replace the sub-copy paragraph with: "Dashboards, automations, and workflows — built to spec, integrated with your data, fully owned by you. Fixed price. No IT dependency. No retainers."
+
+   Keep identical paragraph styling, color, and width constraints. The sub-copy should remain noticeably smaller than the headline (current rendered size is fine, do not enlarge).
+
+5. Update the microcopy under the CTA buttons. Replace "Get scope, timeline, and fixed price on the first call." with: "Get scope, timeline, and fixed price within 24 hours."
+
+6. Verify the eyebrow → headline → sub-copy → CTA buttons → microcopy vertical rhythm still feels balanced after the typography enlargement. Add proportional top/bottom margin to the headline if needed so the hero does not feel cramped or visually unbalanced. Do not add more than 24px of additional vertical spacing in total.
+
+================================================================
+CHANGE 2 — CHANGE PRIMARY CTA FROM CALL BOOKING TO INTAKE FORM
+================================================================
+
+LOCATE all instances of call-booking CTA buttons across the page:
+- The header navigation button (top right): "Book a 20-Min Call"
+- The hero primary CTA: "Book My Free 20-Min Scoping Call"
+- Any other instances of "Book a 20-Min Call" or "Book My Free 20-Min Scoping Call" in the pricing section, mid-page CTAs, or footer
+
+ACTION:
+
+1. Replace ALL instances of the call-booking CTA copy with: "Tell Us What You Need"
+
+2. Change the href/onClick destination of every replaced button to route to the existing intake form (the cream-background form on the site, currently at /intake or whatever the existing intake form path is). Preserve the existing intake form URL — do NOT create a new form route or new form component.
+
+3. Keep the secondary CTA "See Live Systems" unchanged in copy, styling, and anchor behavior — it still scrolls to the live-systems section.
+
+4. Do not change CTA button styling, colors, dimensions, hover states, or any visual treatment. Only the copy and the link destination change.
+
+================================================================
+CHANGE 3 — MOVE STAT ROW BELOW OPERATOR LOGO STRIP
+================================================================
+
+LOCATE: The horizontal stat row currently rendered directly below the hero CTAs, containing four stat blocks:
+- "13 SYSTEMS SHIPPED"
+- "5 DAYS AVERAGE BUILD TIME"
+- "100% CLIENT OWNERSHIP"
+- "$0 ONGOING PLATFORM FEES"
+
+ACTION:
+
+1. Remove the stat row from its current location directly below the hero microcopy. It should no longer appear immediately under the CTAs.
+
+2. After the operator-history logo strip is moved into position by Change 4 below (directly under the hero), the stat row will be repositioned immediately below the operator-history logo strip.
+
+3. Preserve all existing stat row styling — identical numbers, identical orange accent on the figures, identical labels, identical spacing, identical horizontal divider lines between blocks. Only the location changes.
+
+================================================================
+CHANGE 4 — REPLACE ANONYMOUS TESTIMONIAL STRIP WITH OPERATOR LOGO STRIP
+================================================================
+
+LOCATE: The horizontal scrolling testimonial strip directly below the hero (currently sitting under the stat row, before Change 3 reorders it). The strip contains role-only anonymous testimonial cards: "VP Analytics", "Finance Manager", "Senior Director", "Team Lead", "Director of Ops", "Business Mana[ger]" and quotes.
+
+Also LOCATE: The operator-history logo strip at the bottom of the "Who Built This" section (labeled "CLIENTS AND PARTNERS FROM OUR OPERATOR HISTORY"), containing logos GOLDMAN SACHS, MERRILL LYNCH, MORGAN STANLEY, SLACK, TABLEAU, DISNEY, HARLEY DAVIDSON, iHEART.
+
+ACTION:
+
+1. Delete the entire anonymous testimonial strip — all cards, the wrapper, any horizontal-scroll container, and the section if it has one.
+
+2. Move the operator-history logo strip from the bottom of the "Who Built This" section UP to the position immediately below the hero (where the testimonial strip just was).
+
+3. Keep the section label "CLIENTS AND PARTNERS FROM OUR OPERATOR HISTORY" with the logos in the new top position.
+
+4. Maintain identical styling: same grayscale logo treatment, same horizontal scroll or marquee behavior if present, same spacing rhythm above and below.
+
+5. The stat row from Change 3 should now render IMMEDIATELY BELOW this newly relocated operator-history logo strip.
+
+6. The "Who Built This" section retains its headline, the bio paragraph, the headshot, and the LinkedIn link. ONLY the logo strip is removed from the bottom of that section. Do not add anything new to the bottom of "Who Built This" to fill the empty space — the section ending with the LinkedIn link is acceptable.
+
+Resulting vertical order after Changes 3 and 4:
+
+   Hero (eyebrow → headline → sub-copy → CTAs → microcopy)
+   ↓
+   Operator-history logo strip ("CLIENTS AND PARTNERS FROM OUR OPERATOR HISTORY")
+   ↓
+   Stat row (13 / 5 days / 100% / $0)
+   ↓
+   [continues into existing "SOUND FAMILIAR?" problems section, unchanged]
+
+================================================================
+CHANGE 5 — EXPAND THE "WHO BUILT THIS" BIO PARAGRAPH
+================================================================
+
+LOCATE: The bio paragraph in the "Who Built This" section, currently reading:
+"Sorano AI is run by a 23-year operator who has raised $30M, built and sold companies, and shipped AI systems for Fortune 500 clients. We built this agency because smart managers kept hitting the same wall — mandate with no roadmap. We close that gap in five days."
+
+ACTION:
+
+Replace the bio paragraph with the following expanded version. Keep the same styling, font, color, line-height, and column layout. Keep the existing headshot to the left of the paragraph. Keep the "linkedin.com/in/brianlisi →" link below the paragraph.
+
+NEW BIO TEXT:
+
+"Sorano AI is run by Brian Lisi, a 23-year technology operator. He led IOIO.TV (OTT/SaaS, 7-year run), pioneered one of the first AWS Media Services streaming platforms reaching users across 160+ countries, and built enterprise infrastructure for NFL, FUBO TV, Sony Music, FloSports, and Verizon Media. He runs MobileRider Networks as the largest authorized U.S. Akamai channel partner. Sorano AI exists because smart managers kept hitting the same wall — an AI mandate with no roadmap. We close that gap in five days."
+
+Apply bold formatting to the following names within the paragraph, matching the bold treatment used in the original bio:
+- Brian Lisi
+- IOIO.TV
+- AWS Media Services
+- MobileRider Networks
+- Akamai
+- five days (at the end of the paragraph)
+
+================================================================
+VERIFICATION CHECKLIST — CONFIRM ALL BEFORE REPORTING COMPLETION
+================================================================
+
+[ ] Hero eyebrow reads "FOR DIRECTORS AND VPS UNDER PRESSURE TO SHIP AI"
+[ ] Hero headline reads on two lines: "The AI build your team needs." / "In 5 days. Not 5 months." with only "5 days" in orange accent
+[ ] Hero headline renders at approximately 104px on 1280px desktop, 76px on tablet, 48px on mobile, with tight line-height and -0.02em letter-spacing
+[ ] Hero sub-copy reads "Dashboards, automations, and workflows — built to spec, integrated with your data, fully owned by you. Fixed price. No IT dependency. No retainers."
+[ ] Microcopy under hero CTAs reads "Get scope, timeline, and fixed price within 24 hours."
+[ ] No image, icon, or visual element has been added to the right side of the hero — that space remains empty
+[ ] All instances of "Book a 20-Min Call" / "Book My Free 20-Min Scoping Call" now read "Tell Us What You Need" and route to the existing intake form URL
+[ ] The "See Live Systems" secondary CTA is unchanged in copy and behavior
+[ ] The anonymous testimonial strip is fully removed from below the hero
+[ ] The operator-history logo strip now appears directly below the hero, with the section label "CLIENTS AND PARTNERS FROM OUR OPERATOR HISTORY"
+[ ] The stat row (13 / 5 days / 100% / $0) now appears directly below the operator-history logo strip, with identical styling to before
+[ ] The operator-history logo strip is no longer present at the bottom of the "Who Built This" section
+[ ] The "Who Built This" bio paragraph reads the new expanded version with the specified bold treatments on Brian Lisi, IOIO.TV, AWS Media Services, MobileRider Networks, Akamai, and "five days"
+[ ] The headshot and LinkedIn link in the "Who Built This" section remain in place and visually balanced after the bio paragraph expansion
+[ ] No other section, copy, color, font, component, image, or layout has been changed anywhere on the page
+[ ] Page renders correctly at 1280px desktop, 1024px tablet, and 390px mobile viewports with no overflow, broken layouts, or unreadable typography
+[ ] All existing internal anchor links (#work, #services, #pricing, #process, #how-it-works, #what-we-build, etc.) still resolve correctly
+[ ] The headline at oversized desktop sizing does not overflow the content container or push the hero into excessive vertical height (the hero should still fit within ~85-95% of the initial viewport height on a 1280×800 screen)
+
+Report back with:
+(1) Confirmation that each verification checklist item passes
+(2) The exact URL that the "Tell Us What You Need" buttons now route to
+(3) Screenshots or descriptions of the hero at desktop, tablet, and mobile widths
+(4) Any anomalies, conflicts, or judgment calls made during the edit
