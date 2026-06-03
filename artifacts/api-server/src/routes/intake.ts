@@ -25,6 +25,7 @@ router.get("/intake/submissions", async (req, res) => {
       .select()
       .from(intakeSubmissionsTable)
       .orderBy(desc(intakeSubmissionsTable.createdAt));
+    res.set("Cache-Control", "no-store");
     res.status(200).json(submissions);
   } catch (err) {
     req.log.error({ err }, "Failed to list intake submissions");

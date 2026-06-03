@@ -8,6 +8,13 @@ import {
 
 const STORAGE_KEY = "sorano_admin_key";
 
+// Register the auth token getter at module load so it is in place before the
+// query fires on first render. The getter reads sessionStorage live, so it
+// always reflects the current key (including after login/logout).
+setAuthTokenGetter(() =>
+  typeof window === "undefined" ? null : sessionStorage.getItem(STORAGE_KEY),
+);
+
 const labelStyle: React.CSSProperties = {
   display: "block",
   fontFamily: "'Inter', sans-serif",
@@ -69,13 +76,6 @@ export default function AdminPage() {
     typeof window === "undefined" ? null : sessionStorage.getItem(STORAGE_KEY),
   );
   const [pending, setPending] = useState("");
-
-  useEffect(() => {
-    setAuthTokenGetter(() =>
-      typeof window === "undefined" ? null : sessionStorage.getItem(STORAGE_KEY),
-    );
-    return () => setAuthTokenGetter(null);
-  }, []);
 
   const query = useListIntakeSubmissions({
     query: {
