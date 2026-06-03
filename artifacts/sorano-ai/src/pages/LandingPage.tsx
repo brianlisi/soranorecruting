@@ -195,7 +195,7 @@ function HeroSection() {
             <div>
               {line2.map((word, i) => {
                 const idx = wordIdx++;
-                const accent = i === 1 || i === 2;
+                const accent = i === 1;
                 return (
                   <span
                     key={i}
@@ -205,7 +205,14 @@ function HeroSection() {
                     className="hero-word"
                     style={{ marginRight: "0.25em", color: accent ? "#E8A020" : "#f0ede8" }}
                   >
-                    {word}
+                    {i === 2 ? (
+                      <>
+                        <span style={{ color: "#E8A020" }}>days</span>
+                        <span style={{ color: "#f0ede8" }}>.</span>
+                      </>
+                    ) : (
+                      word
+                    )}
                   </span>
                 );
               })}
