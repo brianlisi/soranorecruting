@@ -134,11 +134,15 @@ function HeroSection() {
       id="hero"
       style={{
         display: "flex",
-        alignItems: "flex-start",
+        alignItems: "center",
         background: "#0f0f0f",
         position: "relative",
         overflow: "hidden",
-        padding: "80px 2.5rem 84px",
+        minHeight: "85vh",
+        paddingTop: "120px",
+        paddingBottom: "80px",
+        paddingLeft: "2.5rem",
+        paddingRight: "2.5rem",
       }}
     >
       <div
