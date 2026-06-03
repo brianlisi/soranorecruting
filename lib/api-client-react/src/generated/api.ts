@@ -193,3 +193,79 @@ export const useCreateIntakeSubmission = <
 > => {
   return useMutation(getCreateIntakeSubmissionMutationOptions(options));
 };
+
+/**
+ * Returns all intake submissions, newest first. Requires admin authorization.
+ * @summary List intake submissions
+ */
+export const getListIntakeSubmissionsUrl = () => {
+  return `/api/intake/submissions`;
+};
+
+export const listIntakeSubmissions = async (
+  options?: RequestInit,
+): Promise<IntakeSubmission[]> => {
+  return customFetch<IntakeSubmission[]>(getListIntakeSubmissionsUrl(), {
+    ...options,
+    method: "GET",
+  });
+};
+
+export const getListIntakeSubmissionsQueryKey = () => {
+  return [`/api/intake/submissions`] as const;
+};
+
+export const getListIntakeSubmissionsQueryOptions = <
+  TData = Awaited<ReturnType<typeof listIntakeSubmissions>>,
+  TError = ErrorType<void>,
+>(options?: {
+  query?: UseQueryOptions<
+    Awaited<ReturnType<typeof listIntakeSubmissions>>,
+    TError,
+    TData
+  >;
+  request?: SecondParameter<typeof customFetch>;
+}) => {
+  const { query: queryOptions, request: requestOptions } = options ?? {};
+
+  const queryKey = queryOptions?.queryKey ?? getListIntakeSubmissionsQueryKey();
+
+  const queryFn: QueryFunction<
+    Awaited<ReturnType<typeof listIntakeSubmissions>>
+  > = ({ signal }) => listIntakeSubmissions({ signal, ...requestOptions });
+
+  return { queryKey, queryFn, ...queryOptions } as UseQueryOptions<
+    Awaited<ReturnType<typeof listIntakeSubmissions>>,
+    TError,
+    TData
+  > & { queryKey: QueryKey };
+};
+
+export type ListIntakeSubmissionsQueryResult = NonNullable<
+  Awaited<ReturnType<typeof listIntakeSubmissions>>
+>;
+export type ListIntakeSubmissionsQueryError = ErrorType<void>;
+
+/**
+ * @summary List intake submissions
+ */
+
+export function useListIntakeSubmissions<
+  TData = Awaited<ReturnType<typeof listIntakeSubmissions>>,
+  TError = ErrorType<void>,
+>(options?: {
+  query?: UseQueryOptions<
+    Awaited<ReturnType<typeof listIntakeSubmissions>>,
+    TError,
+    TData
+  >;
+  request?: SecondParameter<typeof customFetch>;
+}): UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+  const queryOptions = getListIntakeSubmissionsQueryOptions(options);
+
+  const query = useQuery(queryOptions) as UseQueryResult<TData, TError> & {
+    queryKey: QueryKey;
+  };
+
+  return { ...query, queryKey: queryOptions.queryKey };
+}

@@ -54,3 +54,28 @@ export const CreateIntakeSubmissionBody = zod.object({
     .min(1)
     .max(createIntakeSubmissionBodyProjectDetailsMax),
 });
+
+/**
+ * Returns all intake submissions, newest first. Requires admin authorization.
+ * @summary List intake submissions
+ */
+export const ListIntakeSubmissionsResponseItem = zod.object({
+  id: zod.number(),
+  name: zod.string(),
+  email: zod.string(),
+  mobile: zod.string().nullish(),
+  company: zod.string().nullish(),
+  role: zod.string().nullish(),
+  companySize: zod.enum([
+    "Under 50",
+    "50-250",
+    "250-1,000",
+    "1,000-5,000",
+    "5,000+",
+  ]),
+  projectDetails: zod.string(),
+  createdAt: zod.date(),
+});
+export const ListIntakeSubmissionsResponse = zod.array(
+  ListIntakeSubmissionsResponseItem,
+);

@@ -45,6 +45,23 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/IntakeSubmission"
+  /intake/submissions:
+    get:
+      operationId: listIntakeSubmissions
+      tags: [intake]
+      summary: List intake submissions
+      description: Returns all intake submissions, newest first. Requires admin authorization.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/IntakeSubmission"
+        "401":
+          description: Unauthorized
 components:
   schemas:
     HealthStatus:
