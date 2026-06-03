@@ -8,4 +8,6 @@
 
 export * from "./healthStatus";
 export * from "./intakeInput";
+export * from "./intakeInputCompanySize";
 export * from "./intakeSubmission";
+export * from "./intakeSubmissionCompanySize";

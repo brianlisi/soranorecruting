@@ -5,6 +5,7 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
+import type { IntakeInputCompanySize } from "./intakeInputCompanySize";
 
 export interface IntakeInput {
   /**
@@ -18,6 +19,11 @@ export interface IntakeInput {
    */
   email: string;
   /**
+   * @maxLength 40
+   * @nullable
+   */
+  mobile?: string | null;
+  /**
    * @maxLength 200
    * @nullable
    */
@@ -27,6 +33,7 @@ export interface IntakeInput {
    * @nullable
    */
   role?: string | null;
+  companySize: IntakeInputCompanySize;
   /**
    * @minLength 1
    * @maxLength 5000

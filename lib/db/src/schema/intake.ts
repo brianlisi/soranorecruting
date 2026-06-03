@@ -6,8 +6,10 @@ export const intakeSubmissionsTable = pgTable("intake_submissions", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   email: text("email").notNull(),
+  mobile: text("mobile"),
   company: text("company"),
   role: text("role"),
+  companySize: text("company_size").notNull(),
   projectDetails: text("project_details").notNull(),
   createdAt: timestamp("created_at", { withTimezone: true })
     .notNull()

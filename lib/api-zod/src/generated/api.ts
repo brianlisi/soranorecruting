@@ -24,6 +24,8 @@ export const createIntakeSubmissionBodyNameMax = 200;
 export const createIntakeSubmissionBodyEmailMin = 3;
 export const createIntakeSubmissionBodyEmailMax = 320;
 
+export const createIntakeSubmissionBodyMobileMax = 40;
+
 export const createIntakeSubmissionBodyCompanyMax = 200;
 
 export const createIntakeSubmissionBodyRoleMax = 200;
@@ -37,8 +39,16 @@ export const CreateIntakeSubmissionBody = zod.object({
     .email()
     .min(createIntakeSubmissionBodyEmailMin)
     .max(createIntakeSubmissionBodyEmailMax),
+  mobile: zod.string().max(createIntakeSubmissionBodyMobileMax).nullish(),
   company: zod.string().max(createIntakeSubmissionBodyCompanyMax).nullish(),
   role: zod.string().max(createIntakeSubmissionBodyRoleMax).nullish(),
+  companySize: zod.enum([
+    "Under 50",
+    "50-250",
+    "250-1,000",
+    "1,000-5,000",
+    "5,000+",
+  ]),
   projectDetails: zod
     .string()
     .min(1)

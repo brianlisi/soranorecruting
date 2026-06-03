@@ -9,6 +9,17 @@ export interface HealthStatus {
   status: string;
 }
 
+export type IntakeInputCompanySize =
+  (typeof IntakeInputCompanySize)[keyof typeof IntakeInputCompanySize];
+
+export const IntakeInputCompanySize = {
+  Under_50: "Under 50",
+  "50-250": "50-250",
+  "250-1,000": "250-1,000",
+  "1,000-5,000": "1,000-5,000",
+  "5,000+": "5,000+",
+} as const;
+
 export interface IntakeInput {
   /**
    * @minLength 1
@@ -21,6 +32,11 @@ export interface IntakeInput {
    */
   email: string;
   /**
+   * @maxLength 40
+   * @nullable
+   */
+  mobile?: string | null;
+  /**
    * @maxLength 200
    * @nullable
    */
@@ -30,6 +46,7 @@ export interface IntakeInput {
    * @nullable
    */
   role?: string | null;
+  companySize: IntakeInputCompanySize;
   /**
    * @minLength 1
    * @maxLength 5000
@@ -37,14 +54,28 @@ export interface IntakeInput {
   projectDetails: string;
 }
 
+export type IntakeSubmissionCompanySize =
+  (typeof IntakeSubmissionCompanySize)[keyof typeof IntakeSubmissionCompanySize];
+
+export const IntakeSubmissionCompanySize = {
+  Under_50: "Under 50",
+  "50-250": "50-250",
+  "250-1,000": "250-1,000",
+  "1,000-5,000": "1,000-5,000",
+  "5,000+": "5,000+",
+} as const;
+
 export interface IntakeSubmission {
   id: number;
   name: string;
   email: string;
   /** @nullable */
+  mobile?: string | null;
+  /** @nullable */
   company?: string | null;
   /** @nullable */
   role?: string | null;
+  companySize: IntakeSubmissionCompanySize;
   projectDetails: string;
   createdAt: string;
 }

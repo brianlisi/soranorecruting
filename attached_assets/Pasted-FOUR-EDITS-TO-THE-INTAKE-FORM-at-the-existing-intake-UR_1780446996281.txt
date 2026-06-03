@@ -1,0 +1,44 @@
+FOUR EDITS TO THE INTAKE FORM at the existing intake URL:
+
+1. AUDIT AND FIX field default styling.
+   - The "Name" field placeholder "Your full name" should NOT appear highlighted, selected, or background-colored on default page load. If the field is autofocused on page load, remove the autofocus — let the user click into the first field themselves.
+   - The "Work email" field label should NOT have any word highlighted with a background color. The label should render as plain text "Work email *" with the asterisk in the standard required-field color.
+
+2. ADD an optional Mobile field.
+   - Position: directly below the "Work email" field, above the Company/Role row
+   - Label: "Mobile (optional)"
+   - Helper text below the field, in small lighter gray: "I'll text first, not call."
+   - Field type: tel
+   - Not required.
+
+3. ADD a Company Size dropdown.
+   - Position: directly below the Company/Role row, above the "What do you need?" textarea
+   - Label: "Company size"
+   - Required.
+   - Options:
+     - Under 50
+     - 50-250
+     - 250-1,000
+     - 1,000-5,000
+     - 5,000+
+   - Default: empty/placeholder reading "Select team size"
+
+4. ADD consent + confirmation micro-text below the "Send My Request" button.
+   - Two lines of small (12px) lighter-gray text directly below the submit button:
+     Line 1: "By submitting, you agree to be contacted about your project. No marketing emails."
+     Line 2 (with slight top margin): "Within 24 hours you'll get a fixed price, scope, and timeline by email."
+   - Both lines centered, matching the width of the form card.
+
+Keep all existing form styling, layout, colors, CTA copy, and the cream background unchanged. Only the four edits above are applied.
+
+VERIFICATION:
+[ ] Name field placeholder is unstyled plain placeholder text on default page load (no blue highlight, no autofocus)
+[ ] "Work email" label renders as plain text with no word-level highlight
+[ ] Mobile field appears between Work email and Company/Role row, marked optional, with the "I'll text first, not call" helper text
+[ ] Company Size dropdown appears between the Company/Role row and the "What do you need?" textarea, marked required, with five options
+[ ] Two lines of confirmation/consent text render below the Send My Request button
+[ ] Form still submits successfully end-to-end with the new field structure
+[ ] Existing form data destination (webhook/email/database) receives the new fields: mobile (nullable), company_size (required)
+[ ] Form renders correctly at desktop (1280px) and mobile (390px) widths
+
+Report back with screenshots at desktop and mobile, and confirm the form submission still reaches its destination with the new field structure.

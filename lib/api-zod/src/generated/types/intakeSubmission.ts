@@ -5,15 +5,19 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
+import type { IntakeSubmissionCompanySize } from "./intakeSubmissionCompanySize";
 
 export interface IntakeSubmission {
   id: number;
   name: string;
   email: string;
   /** @nullable */
+  mobile?: string | null;
+  /** @nullable */
   company?: string | null;
   /** @nullable */
   role?: string | null;
+  companySize: IntakeSubmissionCompanySize;
   projectDetails: string;
   createdAt: Date;
 }

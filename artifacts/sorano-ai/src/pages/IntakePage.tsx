@@ -1,13 +1,18 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "wouter";
-import { useCreateIntakeSubmission } from "@workspace/api-client-react";
+import {
+  useCreateIntakeSubmission,
+  type IntakeInputCompanySize,
+} from "@workspace/api-client-react";
 
 type IntakeFormValues = {
   name: string;
   email: string;
+  mobile: string;
   company: string;
   role: string;
+  companySize: string;
   projectDetails: string;
 };
 
@@ -41,6 +46,21 @@ const errorStyle: React.CSSProperties = {
   marginTop: "6px",
 };
 
+const helperStyle: React.CSSProperties = {
+  fontFamily: "'Inter', sans-serif",
+  fontSize: "12px",
+  color: "#8a8378",
+  marginTop: "6px",
+};
+
+const consentStyle: React.CSSProperties = {
+  fontFamily: "'Inter', sans-serif",
+  fontSize: "12px",
+  color: "#8a8378",
+  lineHeight: 1.5,
+  textAlign: "center",
+};
+
 export default function IntakePage() {
   const [submitted, setSubmitted] = useState(false);
   const mutation = useCreateIntakeSubmission();
@@ -53,8 +73,10 @@ export default function IntakePage() {
     defaultValues: {
       name: "",
       email: "",
+      mobile: "",
       company: "",
       role: "",
+      companySize: "",
       projectDetails: "",
     },
   });
@@ -65,8 +87,10 @@ export default function IntakePage() {
         data: {
           name: values.name.trim(),
           email: values.email.trim(),
+          mobile: values.mobile.trim() || null,
           company: values.company.trim() || null,
           role: values.role.trim() || null,
+          companySize: values.companySize as IntakeInputCompanySize,
           projectDetails: values.projectDetails.trim(),
         },
       },
@@ -246,6 +270,20 @@ export default function IntakePage() {
                   {errors.email && <div style={errorStyle}>{errors.email.message}</div>}
                 </div>
 
+                <div style={{ marginBottom: "1.25rem" }}>
+                  <label style={labelStyle} htmlFor="mobile">
+                    Mobile (optional)
+                  </label>
+                  <input
+                    id="mobile"
+                    type="tel"
+                    style={inputStyle}
+                    placeholder="(555) 555-5555"
+                    {...register("mobile")}
+                  />
+                  <div style={helperStyle}>I'll text first, not call.</div>
+                </div>
+
                 <div
                   className="intake-row"
                   style={{
@@ -276,6 +314,31 @@ export default function IntakePage() {
                       {...register("role")}
                     />
                   </div>
+                </div>
+
+                <div style={{ marginBottom: "1.25rem" }}>
+                  <label style={labelStyle} htmlFor="companySize">
+                    Company size *
+                  </label>
+                  <select
+                    id="companySize"
+                    style={{ ...inputStyle, cursor: "pointer" }}
+                    {...register("companySize", {
+                      required: "Company size is required",
+                    })}
+                  >
+                    <option value="" disabled>
+                      Select team size
+                    </option>
+                    <option value="Under 50">Under 50</option>
+                    <option value="50-250">50-250</option>
+                    <option value="250-1,000">250-1,000</option>
+                    <option value="1,000-5,000">1,000-5,000</option>
+                    <option value="5,000+">5,000+</option>
+                  </select>
+                  {errors.companySize && (
+                    <div style={errorStyle}>{errors.companySize.message}</div>
+                  )}
                 </div>
 
                 <div style={{ marginBottom: "1.5rem" }}>
@@ -333,6 +396,15 @@ export default function IntakePage() {
                 >
                   {mutation.isPending ? "Sending…" : "Send My Request"}
                 </button>
+
+                <div style={{ ...consentStyle, marginTop: "16px" }}>
+                  By submitting, you agree to be contacted about your project. No
+                  marketing emails.
+                </div>
+                <div style={{ ...consentStyle, marginTop: "8px" }}>
+                  Within 24 hours you'll get a fixed price, scope, and timeline by
+                  email.
+                </div>
               </form>
             </>
           )}

@@ -66,12 +66,23 @@ components:
           format: email
           minLength: 3
           maxLength: 320
+        mobile:
+          type: ["string", "null"]
+          maxLength: 40
         company:
           type: ["string", "null"]
           maxLength: 200
         role:
           type: ["string", "null"]
           maxLength: 200
+        companySize:
+          type: string
+          enum:
+            - "Under 50"
+            - "50-250"
+            - "250-1,000"
+            - "1,000-5,000"
+            - "5,000+"
         projectDetails:
           type: string
           minLength: 1
@@ -79,6 +90,7 @@ components:
       required:
         - name
         - email
+        - companySize
         - projectDetails
     IntakeSubmission:
       type: object
@@ -89,10 +101,20 @@ components:
           type: string
         email:
           type: string
+        mobile:
+          type: ["string", "null"]
         company:
           type: ["string", "null"]
         role:
           type: ["string", "null"]
+        companySize:
+          type: string
+          enum:
+            - "Under 50"
+            - "50-250"
+            - "250-1,000"
+            - "1,000-5,000"
+            - "5,000+"
         projectDetails:
           type: string
         createdAt:
@@ -102,5 +124,6 @@ components:
         - id
         - name
         - email
+        - companySize
         - projectDetails
         - createdAt
