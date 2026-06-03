@@ -1,1 +1,2 @@
 - [API codegen workflow](api-codegen-workflow.md) — openapi.yaml is the source of truth; edit it + run codegen to change client hooks AND server zod in lockstep; never hand-edit generated files.
+- [Vite client env vars on Replit](vite-env-vars-on-replit.md) — VITE_-prefixed shared env vars reach import.meta.env (inlined, public, not secret); restart the web workflow after changing.
