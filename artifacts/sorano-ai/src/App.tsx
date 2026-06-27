@@ -3,6 +3,7 @@ import { Router, Route, Switch, useLocation } from "wouter";
 import LandingPage from "@/pages/LandingPage";
 import IntakePage from "@/pages/IntakePage";
 import AdminPage from "@/pages/AdminPage";
+import PmLandingPage from "@/pages/PmLandingPage";
 import NotFound from "@/pages/not-found";
 import { trackPageView } from "@/lib/analytics";
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" component={LandingPage} />
         <Route path="/intake" component={IntakePage} />
         <Route path="/admin" component={AdminPage} />
+        <Route path="/pm" component={PmLandingPage} />
         <Route component={NotFound} />
       </Switch>
     </Router>
