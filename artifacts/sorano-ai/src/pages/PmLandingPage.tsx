@@ -204,7 +204,7 @@ export default function PmLandingPage() {
             <span className="label-style">For residential property management companies · 80–400 doors</span>
             <h1 className="hero-headline font-display" style={{ marginTop: 22, maxWidth: 940 }}>
               Every maintenance ticket eats 7–12 messages{" "}
-              <span className="text-amber">before a vendor is even scheduled.</span>
+              <span style={{ color: "#1E5BB8" }}>before a vendor is even scheduled.</span>
             </h1>
             <p style={{ fontSize: 18, color: "rgba(11,24,40,0.75)", maxWidth: 660, margin: "22px 0 28px" }}>
               I build and run AI that handles the maintenance coordination loop end to end — intake, triage, owner
@@ -364,7 +364,7 @@ export default function PmLandingPage() {
           </a>
           <p className="reveal" style={{ marginTop: 16, fontSize: 13, color: "rgba(11,24,40,0.5)" }}>
             Prefer email?{" "}
-            <a href={EMAIL} className="text-amber" style={{ textDecoration: "none" }}>
+            <a href={EMAIL} style={{ color: "#1E5BB8", textDecoration: "none" }}>
               hello@soranoai.ai
             </a>
           </p>
