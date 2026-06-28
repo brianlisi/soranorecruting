@@ -15,26 +15,30 @@
   --color-accent-foreground: hsl(var(--accent-foreground));
   --font-sans: var(--app-font-sans);
   --font-display: var(--app-font-display);
+  --font-mono: var(--app-font-mono);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
 }
 
 :root {
-  --background: 0 0% 6%;
-  --foreground: 36 25% 93%;
-  --border: 0 0% 100% / 0.08;
-  --card: 0 0% 100% / 0.04;
-  --card-foreground: 36 25% 93%;
-  --primary: 37 90% 56%;
-  --primary-foreground: 0 0% 6%;
-  --muted: 0 0% 100% / 0.04;
-  --muted-foreground: 36 25% 93% / 0.5;
-  --accent: 37 90% 56%;
-  --accent-foreground: 0 0% 6%;
-  --radius: 0.5rem;
+  /* lighter-sovereign: light surfaces, navy primary structural, red accent */
+  --background: 216 33% 97%;       /* #F5F7FA */
+  --foreground: 213 57% 10%;       /* #0B1828 */
+  --border: 216 18% 89%;           /* #DEE2E8 */
+  --card: 0 0% 100%;               /* #FFFFFF */
+  --card-foreground: 213 57% 10%;  /* #0B1828 */
+  --primary: 2 78% 53%;            /* #E5322B red — CTAs */
+  --primary-foreground: 0 0% 100%; /* white on red */
+  --muted: 216 33% 97%;            /* #F5F7FA */
+  --muted-foreground: 215 16% 47%; /* #65758B */
+  --accent: 216 72% 42%;           /* #1E5BB8 navy */
+  --accent-foreground: 0 0% 100%;  /* white */
+  --radius: 0.625rem;
   --app-font-sans: 'Inter', sans-serif;
   --app-font-display: 'Inter', sans-serif;
+  --app-font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
+  --shadow: 0 1px 2px hsl(214 60% 18% / .04), 0 10px 28px -12px hsl(214 60% 18% / .12);
 }
 
 @layer base {
@@ -50,8 +54,8 @@
 
   body {
     font-family: var(--app-font-sans);
-    background-color: #0f0f0f;
-    color: #f0ede8;
+    background-color: #F5F7FA;
+    color: #0B1828;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -73,76 +77,77 @@
   line-height: 1.7;
 }
 
-/* Amber accent color */
+/* Accent color (class names kept for JSX compatibility) */
 .text-amber {
-  color: #f5a623;
+  color: #E5322B;
 }
 
 .bg-amber {
-  background-color: #f5a623;
+  background-color: #E5322B;
 }
 
-/* Label style */
+/* Label / kicker — mono uppercase, navy */
 .label-style {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--app-font-mono);
   font-size: 11px;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #f5a623;
-  border: 1px solid rgba(245, 166, 35, 0.3);
-  background: rgba(245, 166, 35, 0.08);
+  letter-spacing: 0.14em;
+  color: #1E5BB8;
+  border: 1px solid rgba(30, 91, 184, 0.22);
+  background: rgba(30, 91, 184, 0.06);
   padding: 4px 10px;
   border-radius: 4px;
   display: inline-block;
 }
 
-/* Glass card */
+/* Card — white surface, hairline border, soft navy shadow */
 .glass-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #FFFFFF;
+  border: 1px solid #DEE2E8;
   border-radius: 12px;
+  box-shadow: var(--shadow);
   transition: all 0.2s ease;
 }
 
 .glass-card:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(245, 166, 35, 0.2);
+  background: #FFFFFF;
+  border-color: rgba(30, 91, 184, 0.45);
   transform: translateY(-2px);
 }
 
-/* Primary button */
+/* Primary button — red bg, white text */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5a623;
-  color: #0f0f0f;
+  background-color: #E5322B;
+  color: #FFFFFF;
   border: none;
-  border-radius: 6px;
+  border-radius: 9px;
   padding: 12px 28px;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  transition: filter 0.2s ease, background-color 0.2s ease;
   white-space: nowrap;
 }
 
 .btn-primary:hover {
-  background-color: #dc9420;
+  background-color: #C72A24;
 }
 
-/* Secondary button */
+/* Secondary button — outline on light */
 .btn-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: #f0ede8;
-  border: 1px solid rgba(240, 237, 232, 0.25);
-  border-radius: 6px;
+  color: #0B1828;
+  border: 1px solid #DEE2E8;
+  border-radius: 9px;
   padding: 12px 28px;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
@@ -154,7 +159,7 @@
 }
 
 .btn-secondary:hover {
-  border-color: rgba(240, 237, 232, 0.5);
+  border-color: #1E5BB8;
   background: transparent;
 }
 
@@ -169,7 +174,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #f5a623;
+  background-color: #E5322B;
   animation: pulse-dot 1.8s ease-in-out infinite;
   flex-shrink: 0;
 }
@@ -243,49 +248,49 @@
   }
 }
 
-/* Section watermark numbers */
+/* Section watermark numbers — navy, faint */
 .watermark {
   font-family: 'Inter', sans-serif;
   font-size: 20rem;
-  color: #f5a623;
-  opacity: 0.03;
+  color: #1E5BB8;
+  opacity: 0.04;
   position: absolute;
   pointer-events: none;
   line-height: 1;
   user-select: none;
 }
 
-/* Stat number style */
+/* Stat number style — navy structural */
 .stat-number {
   font-family: 'Inter', sans-serif;
   font-size: 2rem;
-  color: #f5a623;
+  color: #1E5BB8;
   line-height: 1.0;
   font-weight: 700;
   letter-spacing: -0.03em;
 }
 
 .stat-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
+  font-family: var(--app-font-mono);
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: rgba(240, 237, 232, 0.78);
+  letter-spacing: 0.12em;
+  color: #65758B;
   margin-top: 0.35rem;
 }
 
-/* Process timeline connector */
+/* Process timeline connector — navy */
 .process-connector {
   flex: 1;
   height: 1px;
-  background: #f5a623;
+  background: #1E5BB8;
   opacity: 0.4;
   align-self: center;
   position: relative;
   top: -1.5rem;
 }
 
-/* Check circle */
+/* Check circle — institutional green */
 .check-circle {
   display: flex;
   align-items: center;
@@ -293,7 +298,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #22c55e;
+  background-color: #0F6E56;
   flex-shrink: 0;
 }
 
@@ -302,29 +307,29 @@
   height: 12px;
 }
 
-/* Tag pill */
+/* Tag pill — navy tint */
 .tag-pill {
   display: inline-flex;
   align-items: center;
-  background: rgba(245, 166, 35, 0.1);
-  color: #f5a623;
+  background: rgba(30, 91, 184, 0.1);
+  color: #1E5BB8;
   border-radius: 4px;
   padding: 3px 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--app-font-mono);
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.04em;
 }
 
-/* Delivered badge */
+/* Delivered badge — green */
 .delivered-badge {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--app-font-mono);
   font-size: 10px;
   font-weight: 500;
-  color: #22c55e;
+  color: #0F6E56;
   letter-spacing: 0.04em;
 }
 
@@ -332,16 +337,17 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #22c55e;
+  background-color: #0F6E56;
   flex-shrink: 0;
 }
 
-/* Tech stack pill */
+/* Tech stack pill — light chip with hairline border */
 .stack-pill {
   display: inline-flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.07);
-  color: rgba(240, 237, 232, 0.78);
+  background: #F5F7FA;
+  color: #65758B;
+  border: 1px solid #DEE2E8;
   border-radius: 20px;
   padding: 3px 10px;
   font-family: 'Inter', sans-serif;
@@ -352,7 +358,7 @@
 @media (max-width: 768px) {
   .watermark {
     font-size: 10rem;
-    opacity: 0.03;
+    opacity: 0.04;
   }
 
   .process-connector {

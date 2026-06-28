@@ -20,7 +20,7 @@ const labelStyle: React.CSSProperties = {
   fontFamily: "'Inter', sans-serif",
   fontSize: "13px",
   fontWeight: 600,
-  color: "#3a352e",
+  color: "#DEE2E8",
   letterSpacing: "0.02em",
   marginBottom: "8px",
 };
@@ -29,9 +29,9 @@ const inputStyle: React.CSSProperties = {
   width: "100%",
   fontFamily: "'Inter', sans-serif",
   fontSize: "15px",
-  color: "#1a1713",
-  background: "#fffdf9",
-  border: "1px solid #d9d2c5",
+  color: "#0B1828",
+  background: "#FFFFFF",
+  border: "1px solid #65758B",
   borderRadius: "10px",
   padding: "12px 14px",
   outline: "none",
@@ -45,7 +45,7 @@ const thStyle: React.CSSProperties = {
   fontWeight: 700,
   letterSpacing: "0.08em",
   textTransform: "uppercase",
-  color: "rgba(240,237,232,0.5)",
+  color: "rgba(11,24,40,0.5)",
   padding: "0 16px 12px",
   whiteSpace: "nowrap",
 };
@@ -53,9 +53,9 @@ const thStyle: React.CSSProperties = {
 const tdStyle: React.CSSProperties = {
   fontFamily: "'Inter', sans-serif",
   fontSize: "14px",
-  color: "#f0ede8",
+  color: "#0B1828",
   padding: "14px 16px",
-  borderTop: "1px solid rgba(240,237,232,0.08)",
+  borderTop: "1px solid rgba(11,24,40,0.08)",
   verticalAlign: "top",
 };
 
@@ -119,7 +119,7 @@ export default function AdminPage() {
     <div
       style={{
         minHeight: "100vh",
-        background: "#0f0f0f",
+        background: "#F5F7FA",
         padding: "3rem 1.5rem 5rem",
       }}
     >
@@ -139,7 +139,7 @@ export default function AdminPage() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "14px",
-              color: "rgba(240,237,232,0.7)",
+              color: "rgba(11,24,40,0.7)",
               textDecoration: "none",
               fontWeight: 500,
             }}
@@ -153,9 +153,9 @@ export default function AdminPage() {
                 fontFamily: "'Inter', sans-serif",
                 fontSize: "13px",
                 fontWeight: 600,
-                color: "rgba(240,237,232,0.7)",
+                color: "rgba(11,24,40,0.7)",
                 background: "transparent",
-                border: "1px solid rgba(240,237,232,0.2)",
+                border: "1px solid rgba(11,24,40,0.2)",
                 borderRadius: "8px",
                 padding: "8px 14px",
                 cursor: "pointer",
@@ -171,7 +171,7 @@ export default function AdminPage() {
             fontFamily: "'Inter', sans-serif",
             fontSize: "clamp(1.6rem, 4vw, 2.2rem)",
             fontWeight: 700,
-            color: "#f0ede8",
+            color: "#0B1828",
             margin: "0 0 0.5rem",
           }}
         >
@@ -181,7 +181,7 @@ export default function AdminPage() {
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "15px",
-            color: "rgba(240,237,232,0.55)",
+            color: "rgba(11,24,40,0.55)",
             margin: "0 0 2.5rem",
           }}
         >
@@ -194,7 +194,7 @@ export default function AdminPage() {
           <form
             onSubmit={handleLogin}
             style={{
-              background: "#f0ede8",
+              background: "#0B1828",
               borderRadius: "16px",
               padding: "clamp(1.5rem, 4vw, 2.25rem)",
               maxWidth: "420px",
@@ -233,8 +233,8 @@ export default function AdminPage() {
                 fontFamily: "'Inter', sans-serif",
                 fontSize: "15px",
                 fontWeight: 700,
-                color: "#0f0f0f",
-                background: "#f5a623",
+                color: "#FFFFFF",
+                background: "#E5322B",
                 border: "none",
                 borderRadius: "10px",
                 padding: "13px 20px",
@@ -245,7 +245,7 @@ export default function AdminPage() {
             </button>
           </form>
         ) : query.isLoading ? (
-          <p style={{ fontFamily: "'Inter', sans-serif", color: "rgba(240,237,232,0.6)" }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", color: "rgba(11,24,40,0.6)" }}>
             Loading…
           </p>
         ) : query.isError && !unauthorized ? (
@@ -255,12 +255,12 @@ export default function AdminPage() {
         ) : submissions.length === 0 ? (
           <div
             style={{
-              border: "1px dashed rgba(240,237,232,0.2)",
+              border: "1px dashed rgba(11,24,40,0.2)",
               borderRadius: "14px",
               padding: "3rem 1.5rem",
               textAlign: "center",
               fontFamily: "'Inter', sans-serif",
-              color: "rgba(240,237,232,0.5)",
+              color: "rgba(11,24,40,0.5)",
               fontSize: "15px",
             }}
           >
@@ -270,7 +270,7 @@ export default function AdminPage() {
           <div
             style={{
               overflowX: "auto",
-              border: "1px solid rgba(240,237,232,0.1)",
+              border: "1px solid rgba(11,24,40,0.1)",
               borderRadius: "14px",
             }}
           >
@@ -288,19 +288,19 @@ export default function AdminPage() {
               <tbody>
                 {submissions.map((s) => (
                   <tr key={s.id}>
-                    <td style={{ ...tdStyle, whiteSpace: "nowrap", color: "rgba(240,237,232,0.6)" }}>
+                    <td style={{ ...tdStyle, whiteSpace: "nowrap", color: "rgba(11,24,40,0.6)" }}>
                       {formatDate(s.createdAt)}
                     </td>
                     <td style={{ ...tdStyle, fontWeight: 600 }}>{s.name}</td>
                     <td style={tdStyle}>
                       <a
                         href={`mailto:${s.email}`}
-                        style={{ color: "#f5a623", textDecoration: "none" }}
+                        style={{ color: "#E5322B", textDecoration: "none" }}
                       >
                         {s.email}
                       </a>
                       {s.mobile && (
-                        <div style={{ color: "rgba(240,237,232,0.6)", marginTop: "4px" }}>
+                        <div style={{ color: "rgba(11,24,40,0.6)", marginTop: "4px" }}>
                           {s.mobile}
                         </div>
                       )}
@@ -308,7 +308,7 @@ export default function AdminPage() {
                     <td style={tdStyle}>
                       {s.company || "—"}
                       {s.role && (
-                        <div style={{ color: "rgba(240,237,232,0.6)", marginTop: "4px" }}>
+                        <div style={{ color: "rgba(11,24,40,0.6)", marginTop: "4px" }}>
                           {s.role}
                         </div>
                       )}

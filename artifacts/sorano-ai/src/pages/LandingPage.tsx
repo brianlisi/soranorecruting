@@ -47,7 +47,7 @@ function Nav() {
         zIndex: 100,
         background: "rgba(15,15,15,0.92)",
         backdropFilter: "blur(16px)",
-        borderBottom: "1px solid rgba(255,255,255,0.08)",
+        borderBottom: "1px solid rgba(11,24,40,0.08)",
         padding: "0 2.5rem",
         height: "76px",
         display: "flex",
@@ -79,16 +79,16 @@ function Nav() {
               fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
               fontWeight: 400,
-              color: "rgba(240,237,232,0.88)",
+              color: "rgba(11,24,40,0.88)",
               textDecoration: "none",
               transition: "color 0.2s ease",
             }}
             onMouseEnter={(e) => {
-              (e.target as HTMLAnchorElement).style.color = "#f5a623";
+              (e.target as HTMLAnchorElement).style.color = "#E5322B";
             }}
             onMouseLeave={(e) => {
               (e.target as HTMLAnchorElement).style.color =
-                "rgba(240,237,232,0.88)";
+                "rgba(11,24,40,0.88)";
             }}
           >
             {link}
@@ -135,7 +135,7 @@ function HeroSection() {
       style={{
         display: "flex",
         alignItems: "center",
-        background: "#0f0f0f",
+        background: "#F5F7FA",
         position: "relative",
         overflow: "hidden",
         minHeight: "auto",
@@ -189,7 +189,7 @@ function HeroSection() {
                       if (el) wordsRef.current[idx] = el;
                     }}
                     className="hero-word"
-                    style={{ marginRight: "0.25em", color: "#f0ede8" }}
+                    style={{ marginRight: "0.25em", color: "#0B1828" }}
                   >
                     {word}
                   </span>
@@ -207,12 +207,12 @@ function HeroSection() {
                       if (el) wordsRef.current[idx] = el;
                     }}
                     className="hero-word"
-                    style={{ marginRight: "0.25em", color: accent ? "#E8A020" : "#f0ede8" }}
+                    style={{ marginRight: "0.25em", color: accent ? "#E5322B" : "#0B1828" }}
                   >
                     {i === 2 ? (
                       <>
-                        <span style={{ color: "#E8A020" }}>days</span>
-                        <span style={{ color: "#f0ede8" }}>.</span>
+                        <span style={{ color: "#E5322B" }}>days</span>
+                        <span style={{ color: "#0B1828" }}>.</span>
                       </>
                     ) : (
                       word
@@ -227,7 +227,7 @@ function HeroSection() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "17px",
-              color: "rgba(240,237,232,0.8)",
+              color: "rgba(11,24,40,0.8)",
               maxWidth: "520px",
               marginTop: "0",
               marginBottom: "20px",
@@ -259,7 +259,7 @@ function HeroSection() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "12px",
-              color: "rgba(240,237,232,0.6)",
+              color: "rgba(11,24,40,0.6)",
               marginTop: "12px",
               letterSpacing: "0.01em",
             }}
@@ -283,9 +283,9 @@ function OperatorHistoryStrip() {
   return (
     <div
       style={{
-        background: "#0f0f0f",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
-        borderBottom: "1px solid rgba(255,255,255,0.06)",
+        background: "#F5F7FA",
+        borderTop: "1px solid rgba(11,24,40,0.06)",
+        borderBottom: "1px solid rgba(11,24,40,0.06)",
         padding: "1.5rem 0 2rem",
       }}
     >
@@ -316,7 +316,7 @@ function OperatorHistoryStrip() {
             top: 0,
             bottom: 0,
             width: "160px",
-            background: "linear-gradient(to right, #0f0f0f, transparent)",
+            background: "linear-gradient(to right, #F5F7FA, transparent)",
             zIndex: 2,
             pointerEvents: "none",
           }}
@@ -328,7 +328,7 @@ function OperatorHistoryStrip() {
             top: 0,
             bottom: 0,
             width: "160px",
-            background: "linear-gradient(to left, #0f0f0f, transparent)",
+            background: "linear-gradient(to left, #F5F7FA, transparent)",
             zIndex: 2,
             pointerEvents: "none",
           }}
@@ -344,7 +344,7 @@ function OperatorHistoryStrip() {
                 fontFamily: "'Inter', sans-serif",
                 fontSize: "16px",
                 fontWeight: 700,
-                color: "#fff",
+                color: "#0B1828",
                 opacity: 0.6,
                 letterSpacing: "0.06em",
                 textTransform: "uppercase",
@@ -361,7 +361,7 @@ function OperatorHistoryStrip() {
 
 function StatRow() {
   return (
-    <div style={{ background: "#0f0f0f", padding: "40px 2.5rem 56px" }}>
+    <div style={{ background: "#F5F7FA", padding: "40px 2.5rem 56px" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <div
           style={{
@@ -381,7 +381,7 @@ function StatRow() {
                 <div className="stat-number">{stat.num}</div>
                 <div className="stat-label">{stat.label}</div>
               </div>
-              {i < 3 && <div className="hero-stat-divider" style={{ width: "1px", height: "40px", background: "rgba(255,255,255,0.1)" }} />}
+              {i < 3 && <div className="hero-stat-divider" style={{ width: "1px", height: "40px", background: "rgba(11,24,40,0.1)" }} />}
             </div>
           ))}
         </div>
@@ -393,7 +393,7 @@ function StatRow() {
 function ProblemSection() {
   const cards = [
     {
-      icon: <Megaphone size={22} color="#f5a623" />,
+      icon: <Megaphone size={22} color="#1E5BB8" />,
       title: "Your next review needs something live",
       body: "Leadership wants to see what is already running. Managers with live dashboards walk into reviews with answers. Everyone else is explaining why it is not ready yet.",
       clipping: (
@@ -416,7 +416,7 @@ function ProblemSection() {
       ),
     },
     {
-      icon: <Clock size={22} color="#f5a623" />,
+      icon: <Clock size={22} color="#1E5BB8" />,
       title: "Manual reporting is the bottleneck",
       body: "If your team still rebuilds the same reports by hand every week, leadership sees wasted time. Automating one workflow can save 5 to 15 hours per week.",
       clipping: (
@@ -434,7 +434,7 @@ function ProblemSection() {
       ),
     },
     {
-      icon: <Hand size={22} color="#f5a623" />,
+      icon: <Hand size={22} color="#1E5BB8" />,
       title: "Waiting on IT slows everything down",
       body: "IT backlogs and procurement cycles move slowly. If you need results this quarter, you need something your team can own and run independently.",
       clipping: (
@@ -452,7 +452,7 @@ function ProblemSection() {
       ),
     },
     {
-      icon: <Banknote size={22} color="#f5a623" />,
+      icon: <Banknote size={22} color="#1E5BB8" />,
       title: "A working system beats another roadmap",
       body: "Leadership respects a live system more than another presentation about one. What gets attention is something running.",
       clipping: (
@@ -475,7 +475,7 @@ function ProblemSection() {
     <section
       id="problem"
       style={{
-        background: "#0f0f0f",
+        background: "#F5F7FA",
         padding: "7rem 2.5rem",
         position: "relative",
         overflow: "hidden",
@@ -500,12 +500,12 @@ function ProblemSection() {
               fontWeight: 700,
               lineHeight: 1.1,
               letterSpacing: "-0.03em",
-              color: "#f0ede8",
+              color: "#0B1828",
             }}
           >
             Your team still builds critical reports by hand.
             <br />
-            <span style={{ color: "#f5a623" }}>
+            <span style={{ color: "#E5322B" }}>
               We turn them into live systems.
             </span>
           </h2>
@@ -513,7 +513,7 @@ function ProblemSection() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
-              color: "rgba(240,237,232,0.8)",
+              color: "rgba(11,24,40,0.8)",
               maxWidth: "520px",
               marginTop: "1.25rem",
               lineHeight: 1.7,
@@ -538,7 +538,7 @@ function ProblemSection() {
               className="glass-card reveal"
               style={{
                 padding: "1.75rem",
-                borderLeft: "2px solid #f5a623",
+                borderLeft: "2px solid #1E5BB8",
                 borderRadius: "0",
                 animationDelay: `${i * 80}ms`,
                 transitionDelay: `${i * 80}ms`,
@@ -553,8 +553,8 @@ function ProblemSection() {
                         width: "36px",
                         height: "36px",
                         flexShrink: 0,
-                        background: "rgba(245,166,35,0.1)",
-                        border: "1px solid rgba(245,166,35,0.2)",
+                        background: "rgba(229,50,43,0.1)",
+                        border: "1px solid rgba(229,50,43,0.2)",
                         borderRadius: "8px",
                         display: "flex",
                         alignItems: "center",
@@ -568,7 +568,7 @@ function ProblemSection() {
                         fontFamily: "'Inter', sans-serif",
                         fontSize: "15px",
                         fontWeight: 600,
-                        color: "#f0ede8",
+                        color: "#0B1828",
                         margin: 0,
                         lineHeight: 1.3,
                       }}
@@ -580,7 +580,7 @@ function ProblemSection() {
                     style={{
                       fontFamily: "'Inter', sans-serif",
                       fontSize: "14px",
-                      color: "rgba(240,237,232,0.8)",
+                      color: "rgba(11,24,40,0.8)",
                       lineHeight: 1.65,
                       margin: 0,
                     }}
@@ -611,7 +611,7 @@ function ProblemSection() {
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)",
-            color: "#f0ede8",
+            color: "#0B1828",
             lineHeight: 1.65,
             fontWeight: 400,
             fontStyle: "italic",
@@ -635,7 +635,7 @@ function ServicesSection() {
     <section
       id="services"
       style={{
-        background: "#0f0f0f",
+        background: "#F5F7FA",
         padding: "7rem 2.5rem",
         position: "relative",
         overflow: "hidden",
@@ -653,7 +653,7 @@ function ServicesSection() {
         {/* What We Typically Build */}
         <div style={{ maxWidth: "720px", margin: "0 auto", paddingTop: "0", paddingBottom: "20px" }}>
           <div style={{ textAlign: "center", marginBottom: "24px" }}>
-            <span style={{ color: "#E8A020", fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em" }}>
+            <span style={{ color: "#E5322B", fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em" }}>
               WHAT WE TYPICALLY BUILD
             </span>
           </div>
@@ -673,10 +673,10 @@ function ServicesSection() {
           ].map((item, i, arr) => (
             <div key={i}>
               <div style={{ padding: "24px 0", textAlign: "center" }}>
-                <div style={{ color: "#E8A020", fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "10px" }}>
+                <div style={{ color: "#E5322B", fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "10px" }}>
                   {item.dept}
                 </div>
-                <p style={{ color: "#f0ede8", fontFamily: "'Inter', sans-serif", fontSize: "17px", fontWeight: 500, lineHeight: 1.65, maxWidth: "600px", margin: "0 auto" }}>
+                <p style={{ color: "#0B1828", fontFamily: "'Inter', sans-serif", fontSize: "17px", fontWeight: 500, lineHeight: 1.65, maxWidth: "600px", margin: "0 auto" }}>
                   {item.body}
                 </p>
               </div>
@@ -685,7 +685,7 @@ function ServicesSection() {
               )}
             </div>
           ))}
-          <p style={{ color: "#666666", fontFamily: "'Inter', sans-serif", fontSize: "14px", fontStyle: "italic", textAlign: "center", marginTop: "32px", marginBottom: "48px" }}>
+          <p style={{ color: "#65758B", fontFamily: "'Inter', sans-serif", fontSize: "14px", fontStyle: "italic", textAlign: "center", marginTop: "32px", marginBottom: "48px" }}>
             If you can describe the output, we can build it. We will confirm scope and price on the first call.
           </p>
         </div>
@@ -704,7 +704,7 @@ function ServicesSection() {
               fontWeight: 700,
               lineHeight: 1.1,
               letterSpacing: "-0.03em",
-              color: "#f0ede8",
+              color: "#0B1828",
             }}
           >
             One workflow. One fixed price. Live in 5 days.
@@ -717,7 +717,7 @@ function ServicesSection() {
             maxWidth: "780px",
             margin: "0 auto",
             padding: "60px 48px",
-            borderTop: "3px solid #f5a623",
+            borderTop: "3px solid #1E5BB8",
           }}
         >
           <div
@@ -735,7 +735,7 @@ function ServicesSection() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "1.8rem",
                   fontWeight: 600,
-                  color: "#f0ede8",
+                  color: "#0B1828",
                   lineHeight: 1.1,
                 }}
               >
@@ -748,7 +748,7 @@ function ServicesSection() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "52px",
                   fontWeight: 800,
-                  color: "#f5a623",
+                  color: "#E5322B",
                   lineHeight: 1,
                 }}
               >
@@ -758,7 +758,7 @@ function ServicesSection() {
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "12px",
-                  color: "rgba(240,237,232,0.78)",
+                  color: "rgba(11,24,40,0.78)",
                   marginTop: "0.4rem",
                   textAlign: "center",
                 }}
@@ -772,7 +772,7 @@ function ServicesSection() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
-              color: "rgba(240,237,232,0.9)",
+              color: "rgba(11,24,40,0.9)",
               marginTop: "1.25rem",
               lineHeight: 1.7,
               textAlign: "center",
@@ -783,7 +783,7 @@ function ServicesSection() {
 
           <div
             style={{
-              borderTop: "1px solid rgba(255,255,255,0.08)",
+              borderTop: "1px solid rgba(11,24,40,0.08)",
               margin: "1.5rem 0",
             }}
           />
@@ -829,7 +829,7 @@ function ServicesSection() {
                     style={{
                       fontFamily: "'Inter', sans-serif",
                       fontSize: "14px",
-                      color: "rgba(240,237,232,0.9)",
+                      color: "rgba(11,24,40,0.9)",
                       lineHeight: 1.6,
                     }}
                   >
@@ -844,7 +844,7 @@ function ServicesSection() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "14px",
-              color: "#666666",
+              color: "#65758B",
               fontStyle: "italic",
               textAlign: "center",
               maxWidth: "480px",
@@ -863,7 +863,7 @@ function ServicesSection() {
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontSize: "12px",
-                color: "rgba(240,237,232,0.7)",
+                color: "rgba(11,24,40,0.7)",
                 marginTop: "1rem",
               }}
             >
@@ -940,12 +940,12 @@ function WorkSection() {
               fontWeight: 700,
               lineHeight: 1.1,
               letterSpacing: "-0.03em",
-              color: "#f0ede8",
+              color: "#0B1828",
             }}
           >
             13 Systems Shipped.
             <br />
-            <span style={{ color: "#f5a623" }}>
+            <span style={{ color: "#E5322B" }}>
               Zero Theoretical.
             </span>
           </h2>
@@ -953,7 +953,7 @@ function WorkSection() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
-              color: "rgba(240,237,232,0.8)",
+              color: "rgba(11,24,40,0.8)",
               maxWidth: "520px",
               marginTop: "1.25rem",
               lineHeight: 1.7,
@@ -1006,7 +1006,7 @@ function WorkSection() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "1.3rem",
                   fontWeight: 600,
-                  color: "#f0ede8",
+                  color: "#0B1828",
                   lineHeight: 1.25,
                   marginTop: "0.25rem",
                 }}
@@ -1018,7 +1018,7 @@ function WorkSection() {
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "13px",
-                  color: "rgba(240,237,232,0.8)",
+                  color: "rgba(11,24,40,0.8)",
                   lineHeight: 1.65,
                 }}
               >
@@ -1123,9 +1123,9 @@ function LiveShowcase() {
             fontSize: "10px",
             textTransform: "uppercase",
             letterSpacing: "0.06em",
-            color: "#f5a623",
-            background: "rgba(245,166,35,0.12)",
-            border: "1px solid rgba(245,166,35,0.3)",
+            color: "#E5322B",
+            background: "rgba(229,50,43,0.12)",
+            border: "1px solid rgba(229,50,43,0.3)",
             borderRadius: "20px",
             padding: "3px 10px",
           }}
@@ -1137,7 +1137,7 @@ function LiveShowcase() {
             fontFamily: "'Inter', sans-serif",
             fontSize: "1.15rem",
             fontWeight: 600,
-            color: "#f0ede8",
+            color: "#0B1828",
             marginTop: "6px",
             display: "block",
             lineHeight: 1.2,
@@ -1149,7 +1149,7 @@ function LiveShowcase() {
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "12px",
-            color: "rgba(240,237,232,0.7)",
+            color: "rgba(11,24,40,0.7)",
             marginTop: "2px",
             display: "block",
           }}
@@ -1164,7 +1164,7 @@ function LiveShowcase() {
     <section
       id="live-systems"
       style={{
-        background: "#0a0a0a",
+        background: "#F5F7FA",
         padding: "4rem 0",
         overflow: "hidden",
       }}
@@ -1180,12 +1180,12 @@ function LiveShowcase() {
             fontWeight: 700,
             lineHeight: 1.1,
             letterSpacing: "-0.03em",
-            color: "#f0ede8",
+            color: "#0B1828",
           }}
         >
           See the Work Running.
           <br />
-          <span style={{ color: "#f5a623" }}>
+          <span style={{ color: "#E5322B" }}>
             These Are Not Mockups.
           </span>
         </h2>
@@ -1193,7 +1193,7 @@ function LiveShowcase() {
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "15px",
-            color: "rgba(240,237,232,0.82)",
+            color: "rgba(11,24,40,0.82)",
             maxWidth: "500px",
             margin: "1.25rem auto 0",
             lineHeight: 1.7,
@@ -1229,7 +1229,7 @@ function LiveShowcase() {
           marginTop: "1.5rem",
           fontFamily: "'Inter', sans-serif",
           fontSize: "12px",
-          color: "rgba(255,255,255,0.3)",
+          color: "rgba(11,24,40,0.3)",
         }}
       >
         Hover any card to interact with the live system · Built and deployed
@@ -1251,12 +1251,12 @@ function LiveShowcase() {
           border-radius: 12px;
           overflow: hidden;
           position: relative;
-          border: 1px solid rgba(255,255,255,0.08);
+          border: 1px solid rgba(11,24,40,0.08);
           transition: border-color 0.2s;
           cursor: pointer;
         }
         .showcase-card:hover {
-          border-color: rgba(245,166,35,0.5);
+          border-color: rgba(229,50,43,0.5);
         }
         .showcase-card iframe {
           pointer-events: none;
@@ -1297,7 +1297,7 @@ function ProcessSection() {
     <section
       id="process"
       style={{
-        background: "#0d0d0d",
+        background: "#F5F7FA",
         padding: "7rem 2.5rem",
         position: "relative",
         overflow: "hidden",
@@ -1305,7 +1305,7 @@ function ProcessSection() {
     >
       <span
         className="watermark"
-        style={{ top: "-2rem", right: "-2rem", color: "#0f0f0f", opacity: 0.03 }}
+        style={{ top: "-2rem", right: "-2rem", color: "#1E5BB8", opacity: 0.04 }}
       >
         04
       </span>
@@ -1325,7 +1325,7 @@ function ProcessSection() {
               fontWeight: 700,
               lineHeight: 1.1,
               letterSpacing: "-0.03em",
-              color: "#f0ede8",
+              color: "#0B1828",
             }}
           >
             From First Call to Live System in 5 Days
@@ -1334,7 +1334,7 @@ function ProcessSection() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "15px",
-              color: "#f0ede8",
+              color: "#0B1828",
               maxWidth: "520px",
               marginTop: "1.25rem",
               lineHeight: 1.7,
@@ -1367,7 +1367,7 @@ function ProcessSection() {
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "3rem",
                     fontWeight: 800,
-                    color: "rgba(255,255,255,0.2)",
+                    color: "rgba(11,24,40,0.2)",
                     lineHeight: 1,
                     marginBottom: "1rem",
                   }}
@@ -1379,7 +1379,7 @@ function ProcessSection() {
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "15px",
                     fontWeight: 500,
-                    color: "#f0ede8",
+                    color: "#0B1828",
                     marginBottom: "0.6rem",
                   }}
                 >
@@ -1389,7 +1389,7 @@ function ProcessSection() {
                   style={{
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "13px",
-                    color: "#f0ede8",
+                    color: "#0B1828",
                     lineHeight: 1.65,
                   }}
                 >
@@ -1404,7 +1404,7 @@ function ProcessSection() {
                   style={{
                     width: "2rem",
                     height: "1px",
-                    background: "#f5a623",
+                    background: "#E5322B",
                     opacity: 0.4,
                     alignSelf: "start",
                     marginTop: "1.6rem",
@@ -1430,17 +1430,17 @@ function ProcessSection() {
 function WhoSection() {
   const cards = [
     {
-      icon: <Building2 size={22} color="#f5a623" />,
+      icon: <Building2 size={22} color="#1E5BB8" />,
       title: "You need a work product, not a pilot",
       body: "Your company is rolling out AI and leadership wants results. Not a proof of concept that dies in a meeting. A live system your team uses to produce the reports, dashboards, and analysis that used to take days.",
     },
     {
-      icon: <GitBranch size={22} color="#f5a623" />,
+      icon: <GitBranch size={22} color="#1E5BB8" />,
       title: "You have a specific deliverable in mind",
       body: "A board deck that updates automatically. A budget model that pulls live data. A stakeholder report that used to take your team eight hours every week. If you can describe the output, we can build it.",
     },
     {
-      icon: <Zap size={22} color="#f5a623" />,
+      icon: <Zap size={22} color="#1E5BB8" />,
       title: "You can make a fast decision",
       body: "Not enterprise procurement. Not a six-month approval chain. You can greenlight $1,497 this week if it means walking into your next review with something that runs.",
     },
@@ -1450,7 +1450,7 @@ function WhoSection() {
     <section
       id="pricing"
       style={{
-        background: "#0f0f0f",
+        background: "#F5F7FA",
         padding: "7rem 2.5rem",
         position: "relative",
         overflow: "hidden",
@@ -1475,12 +1475,12 @@ function WhoSection() {
               fontWeight: 700,
               lineHeight: 1.1,
               letterSpacing: "-0.03em",
-              color: "#f0ede8",
+              color: "#0B1828",
             }}
           >
             Built for Managers.
             <br />
-            <span style={{ color: "#f5a623" }}>
+            <span style={{ color: "#E5322B" }}>
               Not IT Departments.
             </span>
           </h2>
@@ -1510,8 +1510,8 @@ function WhoSection() {
                     width: "36px",
                     height: "36px",
                     flexShrink: 0,
-                    background: "rgba(245,166,35,0.1)",
-                    border: "1px solid rgba(245,166,35,0.2)",
+                    background: "rgba(229,50,43,0.1)",
+                    border: "1px solid rgba(229,50,43,0.2)",
                     borderRadius: "8px",
                     display: "flex",
                     alignItems: "center",
@@ -1525,7 +1525,7 @@ function WhoSection() {
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "15px",
                     fontWeight: 600,
-                    color: "#f0ede8",
+                    color: "#0B1828",
                     margin: 0,
                     lineHeight: 1.3,
                   }}
@@ -1537,7 +1537,7 @@ function WhoSection() {
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "14px",
-                  color: "rgba(240,237,232,0.8)",
+                  color: "rgba(11,24,40,0.8)",
                   lineHeight: 1.65,
                 }}
               >
@@ -1561,9 +1561,9 @@ function FounderBioBlock() {
   return (
     <section
       style={{
-        background: "#0f0f0f",
+        background: "#F5F7FA",
         padding: "9rem 2.5rem",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
+        borderTop: "1px solid rgba(11,24,40,0.06)",
       }}
     >
       <div
@@ -1584,7 +1584,7 @@ function FounderBioBlock() {
           style={{
             width: "120px",
             height: "3px",
-            background: "#f5a623",
+            background: "#E5322B",
             margin: "0 auto 3rem",
           }}
         />
@@ -1613,8 +1613,8 @@ function FounderBioBlock() {
               borderRadius: "50%",
               objectFit: "cover",
               objectPosition: "50% 2%",
-              border: "3px solid rgba(245,166,35,0.4)",
-              boxShadow: "0 0 0 6px rgba(245,166,35,0.08)",
+              border: "3px solid rgba(229,50,43,0.4)",
+              boxShadow: "0 0 0 6px rgba(229,50,43,0.08)",
               flexShrink: 0,
               backgroundColor: "#333333",
               display: "block",
@@ -1627,18 +1627,18 @@ function FounderBioBlock() {
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontSize: "clamp(18px, 2.5vw, 22px)",
-                color: "#f0ede8",
+                color: "#0B1828",
                 lineHeight: 1.75,
                 fontWeight: 400,
                 margin: 0,
               }}
             >
               Sorano AI is run by{" "}
-              <strong style={{ fontWeight: 700, color: "#fff" }}>Brian Lisi</strong>, a 23-year technology operator. He led{" "}
-              <strong style={{ fontWeight: 700, color: "#fff" }}>IOIO.TV</strong> (OTT/SaaS, 7-year run), pioneered one of the first{" "}
-              <strong style={{ fontWeight: 700, color: "#fff" }}>AWS Media Services</strong> streaming platforms reaching users across 160+ countries, and built enterprise infrastructure for NFL, FUBO TV, Sony Music, FloSports, and Verizon Media. He runs{" "}
-              <strong style={{ fontWeight: 700, color: "#fff" }}>MobileRider Networks</strong> as the largest authorized U.S.{" "}
-              <strong style={{ fontWeight: 700, color: "#fff" }}>Akamai</strong> channel partner in the United States. Sorano AI exists because smart managers kept hitting the same wall — an AI mandate with no roadmap. We close that gap in five days.
+              <strong style={{ fontWeight: 700, color: "#0B1828" }}>Brian Lisi</strong>, a 23-year technology operator. He led{" "}
+              <strong style={{ fontWeight: 700, color: "#0B1828" }}>IOIO.TV</strong> (OTT/SaaS, 7-year run), pioneered one of the first{" "}
+              <strong style={{ fontWeight: 700, color: "#0B1828" }}>AWS Media Services</strong> streaming platforms reaching users across 160+ countries, and built enterprise infrastructure for NFL, FUBO TV, Sony Music, FloSports, and Verizon Media. He runs{" "}
+              <strong style={{ fontWeight: 700, color: "#0B1828" }}>MobileRider Networks</strong> as the largest authorized U.S.{" "}
+              <strong style={{ fontWeight: 700, color: "#0B1828" }}>Akamai</strong> channel partner in the United States. Sorano AI exists because smart managers kept hitting the same wall — an AI mandate with no roadmap. We close that gap in five days.
             </p>
             <a
               href="https://linkedin.com/in/brianlisi"
@@ -1649,7 +1649,7 @@ function FounderBioBlock() {
                 marginTop: "8px",
                 fontFamily: "'Inter', sans-serif",
                 fontSize: "14px",
-                color: "#E8A020",
+                color: "#E5322B",
                 textDecoration: "none",
                 fontWeight: 500,
               }}
@@ -1681,11 +1681,11 @@ function FinalCTA() {
   return (
     <section
       style={{
-        background: "#0f0f0f",
+        background: "#F5F7FA",
         padding: "6rem 2.5rem",
         position: "relative",
         overflow: "hidden",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
+        borderTop: "1px solid rgba(11,24,40,0.06)",
       }}
     >
       <div
@@ -1703,12 +1703,12 @@ function FinalCTA() {
             fontWeight: 700,
             lineHeight: 1.1,
             letterSpacing: "-0.03em",
-            color: "#f0ede8",
+            color: "#0B1828",
           }}
         >
           Show up to your next review
           <br />
-          with <span style={{ color: "#f5a623" }}>something running.</span>
+          with <span style={{ color: "#E5322B" }}>something running.</span>
         </h2>
 
         <p
@@ -1716,7 +1716,7 @@ function FinalCTA() {
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "16px",
-            color: "rgba(240,237,232,0.8)",
+            color: "rgba(11,24,40,0.8)",
             maxWidth: "500px",
             margin: "1.25rem auto 0",
             lineHeight: 1.7,
@@ -1750,7 +1750,7 @@ function FinalCTA() {
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "12px",
-            color: "rgba(240,237,232,0.78)",
+            color: "rgba(11,24,40,0.78)",
             marginTop: "1.25rem",
             letterSpacing: "0.02em",
           }}
@@ -1766,14 +1766,14 @@ function Footer() {
   return (
     <footer
       style={{
-        background: "#0a0a0a",
+        background: "#F5F7FA",
         padding: "2rem 2.5rem",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
         flexWrap: "wrap",
         gap: "1rem",
-        borderTop: "1px solid rgba(255,255,255,0.05)",
+        borderTop: "1px solid rgba(11,24,40,0.05)",
       }}
     >
       <a
@@ -1800,16 +1800,16 @@ function Footer() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "12px",
-              color: "rgba(240,237,232,0.82)",
+              color: "rgba(11,24,40,0.82)",
               textDecoration: "none",
               transition: "color 0.2s ease",
             }}
             onMouseEnter={(e) => {
-              (e.target as HTMLAnchorElement).style.color = "#f5a623";
+              (e.target as HTMLAnchorElement).style.color = "#E5322B";
             }}
             onMouseLeave={(e) => {
               (e.target as HTMLAnchorElement).style.color =
-                "rgba(240,237,232,0.82)";
+                "rgba(11,24,40,0.82)";
             }}
           >
             {link.label}
@@ -1822,7 +1822,7 @@ function Footer() {
           fontFamily: "'Inter', sans-serif",
           fontSize: "0.875rem",
           fontWeight: 400,
-          color: "rgba(240,237,232,0.65)",
+          color: "rgba(11,24,40,0.65)",
         }}
       >
         © 2026 Sorano AI. All rights reserved.

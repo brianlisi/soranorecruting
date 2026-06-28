@@ -21,7 +21,7 @@ const labelStyle: React.CSSProperties = {
   fontFamily: "'Inter', sans-serif",
   fontSize: "13px",
   fontWeight: 600,
-  color: "#3a352e",
+  color: "#DEE2E8",
   letterSpacing: "0.02em",
   marginBottom: "8px",
 };
@@ -30,9 +30,9 @@ const inputStyle: React.CSSProperties = {
   width: "100%",
   fontFamily: "'Inter', sans-serif",
   fontSize: "15px",
-  color: "#1a1713",
-  background: "#fffdf9",
-  border: "1px solid #d9d2c5",
+  color: "#0B1828",
+  background: "#FFFFFF",
+  border: "1px solid #65758B",
   borderRadius: "10px",
   padding: "12px 14px",
   outline: "none",
@@ -49,14 +49,14 @@ const errorStyle: React.CSSProperties = {
 const helperStyle: React.CSSProperties = {
   fontFamily: "'Inter', sans-serif",
   fontSize: "12px",
-  color: "#8a8378",
+  color: "#65758B",
   marginTop: "6px",
 };
 
 const consentStyle: React.CSSProperties = {
   fontFamily: "'Inter', sans-serif",
   fontSize: "12px",
-  color: "#8a8378",
+  color: "#65758B",
   lineHeight: 1.5,
   textAlign: "center",
 };
@@ -104,7 +104,7 @@ export default function IntakePage() {
     <div
       style={{
         minHeight: "100vh",
-        background: "#0f0f0f",
+        background: "#F5F7FA",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -118,7 +118,7 @@ export default function IntakePage() {
             display: "inline-block",
             fontFamily: "'Inter', sans-serif",
             fontSize: "14px",
-            color: "rgba(240,237,232,0.7)",
+            color: "rgba(11,24,40,0.7)",
             textDecoration: "none",
             marginBottom: "2rem",
             fontWeight: 500,
@@ -129,7 +129,7 @@ export default function IntakePage() {
 
         <div
           style={{
-            background: "#f0ede8",
+            background: "#0B1828",
             borderRadius: "20px",
             padding: "clamp(1.75rem, 4vw, 3rem)",
             boxShadow: "0 30px 80px rgba(0,0,0,0.45)",
@@ -142,8 +142,8 @@ export default function IntakePage() {
                   width: "56px",
                   height: "56px",
                   borderRadius: "50%",
-                  background: "#f5a623",
-                  color: "#0f0f0f",
+                  background: "#E5322B",
+                  color: "#FFFFFF",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -159,7 +159,7 @@ export default function IntakePage() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "1.75rem",
                   fontWeight: 700,
-                  color: "#1a1713",
+                  color: "#0B1828",
                   margin: "0 0 0.75rem",
                 }}
               >
@@ -169,7 +169,7 @@ export default function IntakePage() {
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "15px",
-                  color: "#4a443b",
+                  color: "#DEE2E8",
                   lineHeight: 1.7,
                   margin: "0 auto",
                   maxWidth: "420px",
@@ -186,8 +186,8 @@ export default function IntakePage() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "14px",
                   fontWeight: 600,
-                  color: "#0f0f0f",
-                  background: "#f5a623",
+                  color: "#FFFFFF",
+                  background: "#E5322B",
                   borderRadius: "10px",
                   padding: "12px 22px",
                   textDecoration: "none",
@@ -205,7 +205,7 @@ export default function IntakePage() {
                   fontWeight: 700,
                   letterSpacing: "0.14em",
                   textTransform: "uppercase",
-                  color: "#b07d15",
+                  color: "#1E5BB8",
                   marginBottom: "0.75rem",
                 }}
               >
@@ -216,7 +216,7 @@ export default function IntakePage() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "clamp(1.6rem, 4vw, 2.2rem)",
                   fontWeight: 700,
-                  color: "#1a1713",
+                  color: "#0B1828",
                   lineHeight: 1.2,
                   margin: "0 0 0.75rem",
                 }}
@@ -227,7 +227,7 @@ export default function IntakePage() {
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "15px",
-                  color: "#4a443b",
+                  color: "#DEE2E8",
                   lineHeight: 1.6,
                   margin: "0 0 2rem",
                 }}
@@ -384,8 +384,8 @@ export default function IntakePage() {
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "16px",
                     fontWeight: 700,
-                    color: "#0f0f0f",
-                    background: "#f5a623",
+                    color: "#FFFFFF",
+                    background: "#E5322B",
                     border: "none",
                     borderRadius: "12px",
                     padding: "15px 24px",
